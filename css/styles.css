@@ -1,0 +1,21 @@
+/* ============================================================
+   styles.css — single entry point.
+   Order matters: tokens → reset → base → layout → components
+   → sections → effects → responsive (last, so it overrides).
+   ============================================================ */
+@import "variables.css";
+@import "reset.css";
+@import "base.css";
+@import "layout.css";
+@import "components.css";
+@import "navbar.css";
+@import "hero.css";
+@import "about.css";
+@import "skills.css";
+@import "projects.css";
+@import "journey.css";
+@import "contact.css";
+@import "footer.css";
+@import "cursor.css";
+@import "animations.css";
+@import "responsive.css";

@@ -1,0 +1,63 @@
+/* ============================================================
+   variables.css — design tokens (colors, fonts, spacing, etc.)
+   Dark is the default theme (set on <html class="dark">).
+   The .light class overrides the palette for light mode.
+   ============================================================ */
+:root {
+  /* ---- Fonts ---- */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-arabic: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ---- Accent (shared across themes) — Indigo → Violet ---- */
+  --accent: #6366f1;
+  --accent-light: #a855f7;
+  --accent-glow: rgba(99, 102, 241, 0.18);
+  --gradient: linear-gradient(120deg, var(--accent), var(--accent-light));
+
+  /* ---- Spacing scale ---- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7rem;
+
+  /* ---- Layout ---- */
+  --max-width: 1100px;
+  --gutter: 1.5rem;
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+
+  /* ---- Misc ---- */
+  --nav-height: 72px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 0.4s var(--ease);
+}
+
+/* ---- Dark theme (default) ---- */
+:root,
+.dark {
+  --bg-primary: #0a0a12;
+  --bg-secondary: #12121c;
+  --text-primary: #ece9f5;
+  --text-secondary: #a0a0c4;
+  --text-muted: #6c6c94;
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --hairline: rgba(255, 255, 255, 0.07);
+}
+
+/* ---- Light theme ---- */
+.light {
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #555580;
+  --text-muted: #8888aa;
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --card-shadow: rgba(0, 0, 0, 0.06);
+  --hairline: rgba(0, 0, 0, 0.07);
+}

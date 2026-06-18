@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a12" />
+
+  <!-- Primary meta -->
+  <title data-i18n="meta.title">Mohammed Shakarneh — Web Developer</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.description"
+    content="Mohammed Shakarneh — Web & PHP Backend Developer. Full-stack PHP/MySQL apps, Python desktop software, and data analysis." />
+  <meta name="author" content="Mohammed Shakarneh" />
+  <meta name="keywords" content="Mohammed Shakarneh, Web Developer, PHP, MySQL, JavaScript, Python, Java, Backend, Portfolio" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohammed Shakarneh — Web Developer" />
+  <meta property="og:description"
+    content="Full-stack PHP/MySQL apps, Python desktop software, and data analysis. 3rd-year IT student in Russia, from Palestine." />
+  <meta property="og:url" content="https://shakarneh.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Skip link -->
+  <a href="#main" class="skip-link" data-i18n="nav.skip">Skip to content</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="container nav-inner" aria-label="Primary">
+      <a href="#hero" class="nav-logo" aria-label="Mohammed Shakarneh — home">
+        <span class="nav-logo-mark">MS</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#journey" class="nav-link" data-i18n="nav.journey">Journey</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <!-- Language switcher -->
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+          <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+        </div>
+
+        <!-- Theme toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Mobile menu button -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero-blobs" aria-hidden="true">
+        <span class="blob blob-1" data-parallax="0.25"></span>
+        <span class="blob blob-2" data-parallax="0.4"></span>
+        <span class="blob blob-3" data-parallax="0.15"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <p class="hero-greeting reveal" data-i18n="hero.greeting">Hello, I'm</p>
+        <h1 class="hero-name reveal" data-i18n="hero.name">Mohammed Shakarneh</h1>
+        <h2 class="hero-roles reveal">
+          <span class="typewriter" id="typewriter"></span><span class="caret" aria-hidden="true">|</span>
+        </h2>
+        <p class="hero-tagline reveal" data-i18n="hero.tagline">
+          I build clean, functional web applications — from database to interface.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_work">View Projects</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta_contact">Contact Me</a>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="about.subtitle">Building with purpose.</span>
+          <h2 class="section-title" data-i18n="about.title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <p class="about-text reveal" data-i18n="about.text"></p>
+
+          <div class="about-tech reveal">
+            <span class="about-tech-label" data-i18n="about.tech_label">Core technologies</span>
+            <ul class="tech-row" id="tech-row" aria-label="Core technologies">
+              <li><i class="fa-brands fa-php"></i><span>PHP</span></li>
+              <li><i class="fa-brands fa-js"></i><span>JavaScript</span></li>
+              <li><i class="fa-brands fa-java"></i><span>Java</span></li>
+              <li><i class="fa-brands fa-python"></i><span>Python</span></li>
+              <li><i class="fa-solid fa-database"></i><span>MySQL</span></li>
+              <li><i class="fa-brands fa-git-alt"></i><span>Git</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="skills.subtitle">Tools I work with every day.</span>
+          <h2 class="section-title" data-i18n="skills.title">Skills</h2>
+        </div>
+
+        <div class="skills-grid" id="skills-grid"><!-- rendered by JS --></div>
+
+        <div class="skills-tools reveal">
+          <span class="about-tech-label" data-i18n="skills.tools_label">Tools &amp; environments</span>
+          <ul class="tag-row" id="tools-row">
+            <li class="tag">VS Code</li>
+            <li class="tag">IntelliJ IDEA</li>
+            <li class="tag">Jupyter Notebook</li>
+            <li class="tag">XAMPP</li>
+            <li class="tag">phpMyAdmin</li>
+            <li class="tag">Inno Setup</li>
+            <li class="tag">PyInstaller</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="projects.subtitle">Real things I've built and shipped.</span>
+          <h2 class="section-title" data-i18n="projects.title">Projects</h2>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"><!-- rendered by JS --></div>
+      </div>
+    </section>
+
+    <!-- ===================== JOURNEY ===================== -->
+    <section class="section journey" id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="journey.subtitle">Where I've been and what I've learned.</span>
+          <h2 class="section-title" data-i18n="journey.title">My Journey</h2>
+        </div>
+
+        <ol class="timeline" id="timeline"><!-- rendered by JS --></ol>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="contact.subtitle">Have a project or opportunity? Let's talk.</span>
+          <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="mailto:itshakarnehmohammed@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="contact-label" data-i18n="contact.email_label">Email</span>
+            <span class="contact-value">itshakarnehmohammed@gmail.com</span>
+          </a>
+          <a class="contact-card reveal" href="https://github.com/Shakarneh" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+            <span class="contact-label" data-i18n="contact.github_label">GitHub</span>
+            <span class="contact-value">github.com/Shakarneh</span>
+          </a>
+          <a class="contact-card reveal" href="https://linkedin.com/in/mohammed-shakarneh-9575a340a" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i>
+            <span class="contact-label" data-i18n="contact.linkedin_label">LinkedIn</span>
+            <span class="contact-value">mohammed-shakarneh</span>
+          </a>
+          <a class="contact-card reveal" href="https://t.me/MR_shakarneh" target="_blank" rel="noopener">
+            <i class="fa-brands fa-telegram"></i>
+            <span class="contact-label" data-i18n="contact.telegram_label">Telegram</span>
+            <span class="contact-value">@MR_shakarneh</span>
+          </a>
+          <a class="contact-card reveal" href="tel:+79996079442">
+            <i class="fa-solid fa-phone"></i>
+            <span class="contact-label" data-i18n="contact.phone_label">Phone</span>
+            <span class="contact-value" dir="ltr">+7 999 607 9442</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy" data-i18n="footer.rights">© 2026 Mohammed Shakarneh</p>
+      <div class="footer-social">
+        <a href="https://github.com/Shakarneh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/mohammed-shakarneh-9575a340a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://t.me/MR_shakarneh" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

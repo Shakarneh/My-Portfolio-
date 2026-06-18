@@ -1,0 +1,63 @@
+/* ============================================================
+   about.css — about section layout + tech row.
+   ============================================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.about-text {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.about-tech-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+}
+
+.tech-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.tech-row li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.1rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: transform 0.3s var(--ease), color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.tech-row li i {
+  font-size: 1.7rem;
+  color: var(--accent-light);
+  transition: transform 0.3s var(--ease);
+}
+
+.tech-row li:hover {
+  transform: translateY(-4px);
+  color: var(--text-primary);
+  border-color: var(--accent);
+}
+
+.tech-row li:hover i {
+  transform: scale(1.15);
+}

@@ -1,0 +1,410 @@
+{
+  "en": {
+    "meta": {
+      "title": "Mohammed Shakarneh — Web Developer",
+      "description": "Mohammed Shakarneh — Web & PHP Backend Developer. Full-stack PHP/MySQL apps, Python desktop software, and data analysis. 3rd-year IT student in Russia, from Palestine."
+    },
+    "nav": {
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "journey": "Journey",
+      "contact": "Contact",
+      "skip": "Skip to content"
+    },
+    "hero": {
+      "greeting": "Hello, I'm",
+      "name": "Mohammed Shakarneh",
+      "roles": ["Web Developer", "PHP Backend Developer", "Data Enthusiast"],
+      "tagline": "I build clean, functional web applications — from database to interface. Currently a 3rd-year IT student in Russia, originally from Palestine.",
+      "cta_work": "View Projects",
+      "cta_contact": "Contact Me"
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "Building with purpose.",
+      "text": "I'm Mohammed Shakarneh, a 3rd-year Information Systems & Technologies student at BSTU (Belgorod, Russia), originally from Palestine. I taught myself web development alongside my university studies — building real projects, not just following tutorials. I've created full-stack PHP/MySQL websites with authentication systems, a Python desktop app with auto-updates, data analysis projects processing hundreds of thousands of rows, and Java applications covering OOP, XML, and database integration. Before university, I ran my own eBay store for two years — handling everything from product sourcing to customer support in Russian and English. I'm looking for opportunities to grow as a developer and contribute to real projects.",
+      "tech_label": "Core technologies"
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "Tools I work with every day.",
+      "tools_label": "Tools & environments",
+      "items": [
+        { "name": "HTML / CSS", "level": 85 },
+        { "name": "PHP / MySQL", "level": 75 },
+        { "name": "JavaScript", "level": 70 },
+        { "name": "Python", "level": 65 },
+        { "name": "Java", "level": 60 },
+        { "name": "SQL / Databases", "level": 75 },
+        { "name": "Git / GitHub", "level": 70 },
+        { "name": "Docker (basic)", "level": 35 }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Real things I've designed, built, and shipped.",
+      "featured_badge": "Featured",
+      "btn_code": "Code",
+      "btn_demo": "Live Demo",
+      "items": [
+        {
+          "title": "My-Notes Desktop App",
+          "description": "A desktop notes app for Windows with Arabic RTL support, rich text editor (bold, italic, underline, lists), automatic dark/light theme, 3-language interface (Arabic/English/Russian), trash bin, pin notes, search, spell check, and image support. Built with Python backend and web-based UI. 4 versions released with installer.",
+          "highlight": "4 releases published (latest v1.3.0) — real product with installer"
+        },
+        {
+          "title": "AI Website — Artificial Intelligence",
+          "description": "Full-stack website about Artificial Intelligence built with PHP, MySQL, and JavaScript. Features user registration and login with sessions, admin panel with CRUD operations for users, pages, messages, and reviews. Deployed on real hosting.",
+          "highlight": ""
+        },
+        {
+          "title": "Berezka Restaurant",
+          "description": "Restaurant website with booking system, contact page, dynamic menu, and responsive design. Features PHP backend for booking handler.",
+          "highlight": "14 commits — actively maintained"
+        },
+        {
+          "title": "COVID-19 Data Analysis",
+          "description": "Analysis of real-world COVID-19 data from Our World in Data (Kaggle). Processed 350,085 rows across 255 locations (2020–2023). Includes visualizations: top 10 countries by cases, deaths by continent, and global trend charts.",
+          "highlight": ""
+        },
+        {
+          "title": "Online Store Analytics Dashboard",
+          "description": "SQL-based analytics dashboard for an online store database. Complex queries for best-selling products, top customers by revenue, and monthly revenue trends. Database includes users, products, and orders tables.",
+          "highlight": ""
+        },
+        {
+          "title": "Supermarket Sales Analysis",
+          "description": "Business analysis of supermarket sales data — identifying revenue trends by product category, monthly sales patterns, and payment method distribution. Includes visual charts for sales by product, monthly revenue, and payment distribution.",
+          "highlight": ""
+        },
+        {
+          "title": "Java University Labs",
+          "description": "Five progressive Java lab assignments covering core concepts: basic syntax (conditions, loops, arrays), code conventions with log4j2 logging, OOP with inheritance and constructors, regular expressions for IPv4/IPv6 extraction, and MySQL database operations with JDBC and XML parsing (SAX/DOM) for a medicine catalog.",
+          "highlight": ""
+        }
+      ]
+    },
+    "journey": {
+      "title": "My Journey",
+      "subtitle": "Where I've been and what I've learned.",
+      "items": [
+        {
+          "period": "2025 — Present",
+          "role": "Self-taught Developer",
+          "place": "",
+          "text": "Building and deploying full-stack web applications, desktop apps, and data analysis projects. All code on GitHub."
+        },
+        {
+          "period": "2023 — 2027",
+          "role": "B.Sc. Information Systems & Technologies",
+          "place": "BSTU named after V.G. Shukhov, Belgorod, Russia",
+          "text": "Key grades: Web Technologies — 5, IT Project Management — 5."
+        },
+        {
+          "period": "2023",
+          "role": "Preparatory Faculty",
+          "place": "Southwestern State University (SWSU), Kursk, Russia",
+          "text": "Foundation year preparing for university studies in Russian."
+        },
+        {
+          "period": "2022 — 2023",
+          "role": "Russian Language Certificate",
+          "place": "RCSC + Al-Istiqlal University, Bethlehem, Palestine",
+          "text": "250-hour Russian language course."
+        },
+        {
+          "period": "2021 — 2023",
+          "role": "eBay Seller / Entrepreneur",
+          "place": "",
+          "text": "Built and managed an online store from scratch — inventory, pricing, logistics, customer support in Russian and English. 100% positive reviews."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "subtitle": "Have a project or opportunity? Let's talk.",
+      "email_label": "Email",
+      "github_label": "GitHub",
+      "linkedin_label": "LinkedIn",
+      "telegram_label": "Telegram",
+      "phone_label": "Phone"
+    },
+    "footer": {
+      "rights": "© 2026 Mohammed Shakarneh",
+      "built": "Built with vanilla HTML, CSS & JavaScript."
+    }
+  },
+  "ru": {
+    "meta": {
+      "title": "Мохаммед Шакарнех — Веб-разработчик",
+      "description": "Мохаммед Шакарнех — Веб- и PHP Backend-разработчик. Full-stack приложения на PHP/MySQL, десктопное ПО на Python и анализ данных. Студент 3-го курса ИТ в России, родом из Палестины."
+    },
+    "nav": {
+      "about": "Обо мне",
+      "skills": "Навыки",
+      "projects": "Проекты",
+      "journey": "Путь",
+      "contact": "Контакты",
+      "skip": "Перейти к содержанию"
+    },
+    "hero": {
+      "greeting": "Привет, я",
+      "name": "Мохаммед Шакарнех",
+      "roles": ["Веб-разработчик", "PHP Backend-разработчик", "Энтузиаст данных"],
+      "tagline": "Создаю чистые, функциональные веб-приложения — от базы данных до интерфейса. Студент 3-го курса ИТ-направления в России, родом из Палестины.",
+      "cta_work": "Смотреть проекты",
+      "cta_contact": "Связаться"
+    },
+    "about": {
+      "title": "Обо мне",
+      "subtitle": "Создаю осознанно.",
+      "text": "Я Мохаммед Шакарнех, студент 3-го курса направления «Информационные системы и технологии» в БГТУ (Белгород, Россия), родом из Палестины. Я самостоятельно изучил веб-разработку параллельно с учёбой в университете — создавая реальные проекты, а не просто следуя урокам. Я разработал full-stack сайты на PHP/MySQL с системами аутентификации, десктопное приложение на Python с автообновлениями, проекты анализа данных, обрабатывающие сотни тысяч строк, и приложения на Java, охватывающие ООП, XML и работу с базами данных. До университета я два года вёл собственный магазин на eBay — занимаясь всем: от поиска товаров до поддержки клиентов на русском и английском. Я ищу возможности расти как разработчик и участвовать в реальных проектах.",
+      "tech_label": "Основные технологии"
+    },
+    "skills": {
+      "title": "Навыки",
+      "subtitle": "Инструменты, с которыми работаю каждый день.",
+      "tools_label": "Инструменты и среды",
+      "items": [
+        { "name": "HTML / CSS", "level": 85 },
+        { "name": "PHP / MySQL", "level": 75 },
+        { "name": "JavaScript", "level": 70 },
+        { "name": "Python", "level": 65 },
+        { "name": "Java", "level": 60 },
+        { "name": "SQL / Базы данных", "level": 75 },
+        { "name": "Git / GitHub", "level": 70 },
+        { "name": "Docker (базовый)", "level": 35 }
+      ]
+    },
+    "projects": {
+      "title": "Проекты",
+      "subtitle": "Реальные вещи, которые я спроектировал, построил и выпустил.",
+      "featured_badge": "Избранное",
+      "btn_code": "Код",
+      "btn_demo": "Демо",
+      "items": [
+        {
+          "title": "Десктоп-приложение My-Notes",
+          "description": "Десктопное приложение для заметок под Windows с поддержкой арабского RTL, форматированным редактором (жирный, курсив, подчёркивание, списки), автоматической тёмной/светлой темой, интерфейсом на 3 языках (арабский/английский/русский), корзиной, закреплением заметок, поиском, проверкой орфографии и поддержкой изображений. Создано на Python с веб-интерфейсом. Выпущено 4 версии с установщиком.",
+          "highlight": "Опубликовано 4 релиза (последний v1.3.0) — реальный продукт с установщиком"
+        },
+        {
+          "title": "AI Website — Искусственный интеллект",
+          "description": "Full-stack сайт об искусственном интеллекте на PHP, MySQL и JavaScript. Регистрация и вход пользователей с сессиями, админ-панель с CRUD-операциями для пользователей, страниц, сообщений и отзывов. Развёрнут на реальном хостинге.",
+          "highlight": ""
+        },
+        {
+          "title": "Ресторан «Берёзка»",
+          "description": "Сайт ресторана с системой бронирования, страницей контактов, динамическим меню и адаптивным дизайном. PHP-бэкенд для обработки бронирований.",
+          "highlight": "14 коммитов — активно поддерживается"
+        },
+        {
+          "title": "Анализ данных COVID-19",
+          "description": "Анализ реальных данных COVID-19 из Our World in Data (Kaggle). Обработано 350 085 строк по 255 локациям (2020–2023). Включает визуализации: топ-10 стран по случаям, смерти по континентам и графики мировых трендов.",
+          "highlight": ""
+        },
+        {
+          "title": "Аналитическая панель интернет-магазина",
+          "description": "Аналитическая панель на SQL для базы данных интернет-магазина. Сложные запросы для самых продаваемых товаров, топ-клиентов по выручке и месячных трендов выручки. База содержит таблицы пользователей, товаров и заказов.",
+          "highlight": ""
+        },
+        {
+          "title": "Анализ продаж супермаркета",
+          "description": "Бизнес-анализ данных о продажах супермаркета — выявление трендов выручки по категориям товаров, месячных паттернов продаж и распределения способов оплаты. Включает графики продаж по товарам, месячной выручки и распределения платежей.",
+          "highlight": ""
+        },
+        {
+          "title": "Университетские лабы по Java",
+          "description": "Пять последовательных лабораторных по Java, охватывающих основы: базовый синтаксис (условия, циклы, массивы), соглашения о коде с логированием log4j2, ООП с наследованием и конструкторами, регулярные выражения для извлечения IPv4/IPv6 и операции с MySQL через JDBC с разбором XML (SAX/DOM) для каталога лекарств.",
+          "highlight": ""
+        }
+      ]
+    },
+    "journey": {
+      "title": "Мой путь",
+      "subtitle": "Где я был и чему научился.",
+      "items": [
+        {
+          "period": "2025 — наст. время",
+          "role": "Самоучка-разработчик",
+          "place": "",
+          "text": "Разработка и развёртывание full-stack веб-приложений, десктопных приложений и проектов анализа данных. Весь код на GitHub."
+        },
+        {
+          "period": "2023 — 2027",
+          "role": "Бакалавр «Информационные системы и технологии»",
+          "place": "БГТУ им. В.Г. Шухова, Белгород, Россия",
+          "text": "Ключевые оценки: Веб-технологии — 5, Управление ИТ-проектами — 5."
+        },
+        {
+          "period": "2023",
+          "role": "Подготовительный факультет",
+          "place": "Юго-Западный государственный университет (ЮЗГУ), Курск, Россия",
+          "text": "Подготовительный год к обучению в университете на русском языке."
+        },
+        {
+          "period": "2022 — 2023",
+          "role": "Сертификат по русскому языку",
+          "place": "РЦНК + Университет Аль-Истикляль, Вифлеем, Палестина",
+          "text": "250-часовой курс русского языка."
+        },
+        {
+          "period": "2021 — 2023",
+          "role": "Продавец на eBay / Предприниматель",
+          "place": "",
+          "text": "Построил и вёл интернет-магазин с нуля — склад, ценообразование, логистика, поддержка клиентов на русском и английском. 100% положительных отзывов."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Связаться",
+      "subtitle": "Есть проект или возможность? Давайте поговорим.",
+      "email_label": "Эл. почта",
+      "github_label": "GitHub",
+      "linkedin_label": "LinkedIn",
+      "telegram_label": "Telegram",
+      "phone_label": "Телефон"
+    },
+    "footer": {
+      "rights": "© 2026 Мохаммед Шакарнех",
+      "built": "Создано на чистых HTML, CSS и JavaScript."
+    }
+  },
+  "ar": {
+    "meta": {
+      "title": "محمد شكارنه — مطوّر ويب",
+      "description": "محمد شقارنة — مطوّر ويب و PHP Backend. تطبيقات full-stack بـ PHP/MySQL، برامج سطح مكتب بلغة Python، وتحليل بيانات. طالب سنة ثالثة تقنية معلومات في روسيا، من فلسطين."
+    },
+    "nav": {
+      "about": "عنّي",
+      "skills": "المهارات",
+      "projects": "المشاريع",
+      "journey": "مسيرتي",
+      "contact": "تواصل",
+      "skip": "تخطَّ إلى المحتوى"
+    },
+    "hero": {
+      "greeting": "مرحبًا، أنا",
+      "name": "محمد شكارنه",
+      "roles": ["مطوّر ويب", "مطوّر PHP Backend", "مهتم بالبيانات"],
+      "tagline": "أبني تطبيقات ويب نظيفة وعملية — من قاعدة البيانات إلى الواجهة. طالب سنة ثالثة تقنية معلومات في روسيا، من فلسطين.",
+      "cta_work": "عرض المشاريع",
+      "cta_contact": "تواصل معي"
+    },
+    "about": {
+      "title": "عنّي",
+      "subtitle": "أبني بهدف.",
+      "text": "أنا محمد شقارنة، طالب سنة ثالثة في تخصص نظم وتقنيات المعلومات في جامعة BSTU (بيلغورود، روسيا)، أصلي من فلسطين. تعلّمت تطوير الويب ذاتيًا بالتوازي مع دراستي الجامعية — أبني مشاريع حقيقية، لا مجرد متابعة دروس. أنشأت مواقع full-stack بـ PHP/MySQL مع أنظمة مصادقة، وتطبيق سطح مكتب بلغة Python مع تحديثات تلقائية، ومشاريع تحليل بيانات تعالج مئات الآلاف من الصفوف، وتطبيقات Java تغطي البرمجة الكائنية و XML والتكامل مع قواعد البيانات. قبل الجامعة، أدرت متجري الخاص على eBay لمدة عامين — من توفير المنتجات إلى دعم العملاء بالروسية والإنجليزية. أبحث عن فرص لأتطوّر كمطوّر وأساهم في مشاريع حقيقية.",
+      "tech_label": "التقنيات الأساسية"
+    },
+    "skills": {
+      "title": "المهارات",
+      "subtitle": "الأدوات التي أعمل بها كل يوم.",
+      "tools_label": "الأدوات وبيئات العمل",
+      "items": [
+        { "name": "HTML / CSS", "level": 85 },
+        { "name": "PHP / MySQL", "level": 75 },
+        { "name": "JavaScript", "level": 70 },
+        { "name": "Python", "level": 65 },
+        { "name": "Java", "level": 60 },
+        { "name": "SQL / قواعد البيانات", "level": 75 },
+        { "name": "Git / GitHub", "level": 70 },
+        { "name": "Docker (أساسي)", "level": 35 }
+      ]
+    },
+    "projects": {
+      "title": "المشاريع",
+      "subtitle": "أشياء حقيقية صمّمتها وبنيتها وأطلقتها.",
+      "featured_badge": "مميّز",
+      "btn_code": "الكود",
+      "btn_demo": "عرض مباشر",
+      "items": [
+        {
+          "title": "تطبيق My-Notes لسطح المكتب",
+          "description": "تطبيق ملاحظات لسطح المكتب على ويندوز مع دعم العربية RTL، ومحرّر نصوص منسّق (عريض، مائل، تسطير، قوائم)، وثيم داكن/فاتح تلقائي، وواجهة بثلاث لغات (عربي/إنجليزي/روسي)، وسلة محذوفات، وتثبيت الملاحظات، وبحث، وتدقيق إملائي، ودعم الصور. مبني بـ Python وواجهة ويب. تم إصدار 4 نسخ مع مثبّت.",
+          "highlight": "4 إصدارات منشورة (الأحدث v1.3.0) — منتج حقيقي مع مثبّت"
+        },
+        {
+          "title": "موقع AI — الذكاء الاصطناعي",
+          "description": "موقع full-stack عن الذكاء الاصطناعي مبني بـ PHP و MySQL و JavaScript. يتضمّن تسجيل ودخول المستخدمين بالجلسات، ولوحة تحكّم بعمليات CRUD للمستخدمين والصفحات والرسائل والتقييمات. منشور على استضافة حقيقية.",
+          "highlight": ""
+        },
+        {
+          "title": "مطعم بيريوزكا",
+          "description": "موقع مطعم بنظام حجز، وصفحة تواصل، وقائمة طعام ديناميكية، وتصميم متجاوب. يتضمّن خلفية PHP لمعالجة الحجوزات.",
+          "highlight": "14 commit — تتم صيانته باستمرار"
+        },
+        {
+          "title": "تحليل بيانات COVID-19",
+          "description": "تحليل بيانات حقيقية لكوفيد-19 من Our World in Data (Kaggle). معالجة 350,085 صفًا عبر 255 موقعًا (2020–2023). يشمل رسومًا بيانية: أعلى 10 دول بالحالات، والوفيات حسب القارة، ومخططات الاتجاهات العالمية.",
+          "highlight": ""
+        },
+        {
+          "title": "لوحة تحليلات متجر إلكتروني",
+          "description": "لوحة تحليلات مبنية على SQL لقاعدة بيانات متجر إلكتروني. استعلامات معقّدة لأكثر المنتجات مبيعًا، وأفضل العملاء بالإيرادات، واتجاهات الإيرادات الشهرية. تتضمّن القاعدة جداول المستخدمين والمنتجات والطلبات.",
+          "highlight": ""
+        },
+        {
+          "title": "تحليل مبيعات سوبرماركت",
+          "description": "تحليل أعمال لبيانات مبيعات سوبرماركت — تحديد اتجاهات الإيرادات حسب فئة المنتج، وأنماط المبيعات الشهرية، وتوزيع طرق الدفع. يشمل رسومًا للمبيعات حسب المنتج، والإيرادات الشهرية، وتوزيع المدفوعات.",
+          "highlight": ""
+        },
+        {
+          "title": "مختبرات Java الجامعية",
+          "description": "خمسة تمارين Java متدرّجة تغطّي المفاهيم الأساسية: الصياغة الأساسية (الشروط، الحلقات، المصفوفات)، واصطلاحات الكود مع تسجيل log4j2، والبرمجة الكائنية مع الوراثة والمنشئات، والتعبيرات النمطية لاستخراج IPv4/IPv6، وعمليات MySQL عبر JDBC مع تحليل XML (SAX/DOM) لكتالوج أدوية.",
+          "highlight": ""
+        }
+      ]
+    },
+    "journey": {
+      "title": "مسيرتي",
+      "subtitle": "أين كنت وماذا تعلّمت.",
+      "items": [
+        {
+          "period": "2025 — حتى الآن",
+          "role": "مطوّر متعلّم ذاتيًا",
+          "place": "",
+          "text": "بناء ونشر تطبيقات ويب full-stack وتطبيقات سطح مكتب ومشاريع تحليل بيانات. كل الكود على GitHub."
+        },
+        {
+          "period": "2023 — 2027",
+          "role": "بكالوريوس نظم وتقنيات المعلومات",
+          "place": "جامعة BSTU باسم ف. غ. شوخوف، بيلغورود، روسيا",
+          "text": "أبرز الدرجات: تقنيات الويب — 5، إدارة مشاريع تقنية المعلومات — 5."
+        },
+        {
+          "period": "2023",
+          "role": "الكلية التحضيرية",
+          "place": "جامعة الجنوب الغربي الحكومية (SWSU)، كورسك، روسيا",
+          "text": "سنة تأسيسية للتحضير للدراسة الجامعية باللغة الروسية."
+        },
+        {
+          "period": "2022 — 2023",
+          "role": "شهادة في اللغة الروسية",
+          "place": "RCSC + جامعة الاستقلال، بيت لحم، فلسطين",
+          "text": "دورة في اللغة الروسية مدّتها 250 ساعة."
+        },
+        {
+          "period": "2021 — 2023",
+          "role": "بائع على eBay / رائد أعمال",
+          "place": "",
+          "text": "بنيت وأدرت متجرًا إلكترونيًا من الصفر — المخزون، التسعير، اللوجستيات، دعم العملاء بالروسية والإنجليزية. 100% تقييمات إيجابية."
+        }
+      ]
+    },
+    "contact": {
+      "title": "تواصل معي",
+      "subtitle": "لديك مشروع أو فرصة؟ لنتحدّث.",
+      "email_label": "البريد",
+      "github_label": "GitHub",
+      "linkedin_label": "LinkedIn",
+      "telegram_label": "Telegram",
+      "phone_label": "الهاتف"
+    },
+    "footer": {
+      "rights": "© 2026 محمد شكارنه",
+      "built": "مبني بـ HTML و CSS و JavaScript خالصة."
+    }
+  }
+}

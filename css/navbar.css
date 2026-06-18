@@ -1,0 +1,205 @@
+/* ============================================================
+   navbar.css — fixed navbar, controls, mobile menu.
+   ============================================================ */
+.navbar {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  transition: background-color var(--transition), border-color var(--transition),
+    box-shadow var(--transition);
+  border-bottom: 1px solid transparent;
+}
+
+/* Solid-ish glass state once scrolled */
+.navbar.scrolled {
+  background: color-mix(in srgb, var(--bg-primary) 75%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom-color: var(--hairline);
+  box-shadow: 0 4px 24px var(--card-shadow);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* ---- Logo ---- */
+.nav-logo-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: -0.04em;
+  color: #fff;
+  background: var(--gradient);
+  box-shadow: 0 6px 18px var(--accent-glow);
+  transition: transform 0.3s var(--ease);
+}
+
+.nav-logo:hover .nav-logo-mark {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+/* ---- Links ---- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: 0.9rem;
+  bottom: 0.3rem;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gradient);
+  transition: width 0.3s var(--ease);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: calc(100% - 1.8rem);
+}
+
+/* ---- Controls cluster ---- */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ---- Language switch ---- */
+.lang-switch {
+  display: flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+
+.lang-btn {
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.25s var(--ease), background-color 0.25s var(--ease);
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+}
+
+.lang-btn.active {
+  color: #fff;
+  background: var(--accent);
+}
+
+/* ---- Theme toggle ---- */
+.theme-toggle {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--text-secondary);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  transition: color 0.3s var(--ease), transform 0.5s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.theme-toggle:hover {
+  color: var(--accent-light);
+  border-color: var(--accent);
+  transform: rotate(35deg) scale(1.05);
+}
+
+.theme-toggle i {
+  position: absolute;
+  transition: opacity 0.3s var(--ease), transform 0.4s var(--ease);
+}
+
+/* Show sun in dark mode (click → go light), moon in light mode */
+.icon-sun {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+.icon-moon {
+  opacity: 0;
+  transform: scale(0.4) rotate(-90deg);
+}
+
+.light .icon-sun {
+  opacity: 0;
+  transform: scale(0.4) rotate(90deg);
+}
+
+.light .icon-moon {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+/* ---- Mobile menu button (hidden on desktop) ---- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 0 11px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--text-primary);
+  transition: transform 0.35s var(--ease), opacity 0.25s var(--ease);
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}

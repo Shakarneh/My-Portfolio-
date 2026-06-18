@@ -1,0 +1,118 @@
+/* ============================================================
+   responsive.css — all media queries + RTL adjustments.
+   Mobile-first base lives in the other files; here we adapt
+   for tablet / desktop and small screens.
+   ============================================================ */
+
+/* ---- Tablet and below ---- */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .project-card.featured {
+    grid-column: auto;
+  }
+}
+
+/* ---- Mobile nav ---- */
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset-block-start: var(--nav-height);
+    inset-inline-end: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    width: min(78vw, 320px);
+    height: calc(100vh - var(--nav-height));
+    padding: 1.5rem;
+    background: color-mix(in srgb, var(--bg-secondary) 92%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-inline-start: 1px solid var(--hairline);
+    transform: translateX(100%);
+    transition: transform 0.4s var(--ease);
+  }
+
+  html[dir="rtl"] .nav-links {
+    transform: translateX(-100%);
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.85rem 0.5rem;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+}
+
+/* ---- Small phones ---- */
+@media (max-width: 520px) {
+  :root {
+    --space-xl: 4.5rem;
+    --gutter: 1.15rem;
+  }
+
+  .lang-btn {
+    padding: 0.3rem 0.45rem;
+    font-size: 0.72rem;
+  }
+
+  .tech-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta {
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    flex: 1;
+  }
+
+  .project-actions .btn {
+    flex: 1;
+  }
+}
+
+/* ============================================================
+   RTL adjustments (when <html dir="rtl">)
+   ============================================================ */
+html[dir="rtl"] .section-kicker {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .skill-fill::after {
+  animation-direction: reverse;
+}
+
+/* keep latin-script values (emails, phone, code) readable in RTL */
+html[dir="rtl"] .project-year,
+html[dir="rtl"] .timeline-period,
+html[dir="rtl"] .skill-pct {
+  direction: ltr;
+  unicode-bidi: embed;
+}

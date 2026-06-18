@@ -1,0 +1,75 @@
+/* ============================================================
+   skills.css — animated skill bars + tools tags.
+   ============================================================ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  margin-bottom: var(--space-lg);
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.95rem;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.skill-pct {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-light);
+}
+
+.skill-track {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.skill-fill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 0;
+  border-radius: 999px;
+  background: var(--gradient);
+  transition: width 1.2s var(--ease);
+}
+
+/* subtle moving sheen */
+.skill-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: sheen 2.5s var(--ease) infinite;
+}
+
+.skills-tools {
+  text-align: center;
+}
+
+.skills-tools .tag-row {
+  justify-content: center;
+}

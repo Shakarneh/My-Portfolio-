@@ -1,0 +1,51 @@
+/* ============================================================
+   footer.css — footer bar.
+   ============================================================ */
+.footer {
+  padding-block: 3rem;
+  border-top: 1px solid var(--hairline);
+  background: var(--bg-primary);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-copy {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.3s var(--ease), color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.footer-social a:hover {
+  transform: translateY(-4px);
+  color: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.footer-built {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
