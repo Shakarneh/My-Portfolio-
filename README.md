@@ -1,5 +1,7 @@
 # Mohammed Shakarneh — Portfolio
 
+🔗 **Live:** [my-portfolio.mohammedshak055.workers.dev)
+
 A modern, trilingual (English / Russian / Arabic) single-page developer portfolio.
 Vanilla HTML, CSS & JavaScript — no frameworks, no build step.
 
@@ -12,13 +14,17 @@ Vanilla HTML, CSS & JavaScript — no frameworks, no build step.
 - 🔍 SEO meta tags + Open Graph
 
 ## Project structure
-```
+
 index.html            ← markup with data-i18n hooks
+
 css/styles.css        ← @imports all the modular CSS files
+
 js/main.js            ← ES-module entry point (imports every module)
+
 data/content.json     ← all text in 3 languages
+
 assets/favicon.svg    ← "MS" favicon
-```
+
 
 ## Local preview
 The site uses ES modules + `fetch()`, so it must be served over **HTTP**
@@ -32,10 +38,8 @@ npx serve
 ```
 Then open <http://localhost:8000>.
 
-## Deploy to GitHub Pages
-1. Push these files to a repository (e.g. `Shakarneh.github.io` or any repo).
-2. In **Settings → Pages**, set the source to the `main` branch, root folder.
-3. The site goes live at your GitHub Pages URL. All paths are relative, so no extra config is needed.
+## Deployment
+Hosted on **Cloudflare Workers** — auto-deploys on every push to `main`.
 
 ## Editing content
 All visible text lives in `data/content.json` under `en` / `ru` / `ar`.
