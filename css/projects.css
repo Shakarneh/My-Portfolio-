@@ -25,9 +25,10 @@
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.02);
   border-color: var(--accent);
-  box-shadow: 0 20px 44px var(--card-shadow);
+  box-shadow: 0 20px 44px var(--card-shadow), 0 0 0 1px var(--accent-glow),
+    0 12px 40px var(--accent-glow);
 }
 
 /* glow accent on hover */

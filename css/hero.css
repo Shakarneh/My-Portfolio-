@@ -58,7 +58,7 @@ html[dir="rtl"] .hero-roles {
   display: inline-block;
   color: var(--accent);
   font-weight: 400;
-  animation: blink 1s steps(2) infinite;
+  animation: caretPulse 1.1s var(--ease) infinite;
 }
 
 .hero-tagline {
@@ -112,8 +112,8 @@ html[dir="rtl"] .hero-roles {
   height: 300px;
   top: 40%;
   inset-inline-start: 45%;
-  background: radial-gradient(circle, #c084fc 0%, transparent 70%);
-  opacity: 0.32;
+  background: radial-gradient(circle, var(--accent-2) 0%, transparent 70%);
+  opacity: 0.3;
 }
 
 /* ---- Scroll hint ---- */

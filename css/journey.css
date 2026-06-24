@@ -28,6 +28,26 @@
   padding-bottom: 2.5rem;
 }
 
+/* Alternating entrance: odd items slide in from the left, even from
+   the right. Scoped to :not(.visible) so the revealed state (transform:
+   none) still wins once the item is on screen. */
+.timeline-item.reveal:not(.visible):nth-child(odd) {
+  transform: translate(-32px, 24px);
+}
+
+.timeline-item.reveal:not(.visible):nth-child(even) {
+  transform: translate(32px, 24px);
+}
+
+/* mirror the horizontal direction for RTL */
+html[dir="rtl"] .timeline-item.reveal:not(.visible):nth-child(odd) {
+  transform: translate(32px, 24px);
+}
+
+html[dir="rtl"] .timeline-item.reveal:not(.visible):nth-child(even) {
+  transform: translate(-32px, 24px);
+}
+
 .timeline-item:last-child {
   padding-bottom: 0;
 }

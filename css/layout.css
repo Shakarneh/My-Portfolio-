@@ -37,7 +37,14 @@
 .section-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 900;
+  letter-spacing: -0.02em;
   position: relative;
+  /* gradient text: accent → text colour (white in dark, ink in light) */
+  background: linear-gradient(120deg, var(--accent-light) 0%, var(--text-primary) 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
 }
 
 .section-title::after {

@@ -69,13 +69,19 @@
 .nav-link::after {
   content: "";
   position: absolute;
-  inset-inline-end: 0.9rem;
+  inset-inline: 0.9rem;
   bottom: 0.3rem;
-  width: 0;
   height: 2px;
   border-radius: 2px;
   background: var(--gradient);
-  transition: width 0.3s var(--ease);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s var(--ease);
+}
+
+/* slide in from the trailing edge in RTL */
+html[dir="rtl"] .nav-link::after {
+  transform-origin: right center;
 }
 
 .nav-link:hover,
@@ -85,7 +91,7 @@
 
 .nav-link:hover::after,
 .nav-link.active::after {
-  width: calc(100% - 1.8rem);
+  transform: scaleX(1);
 }
 
 /* ---- Controls cluster ---- */
@@ -119,11 +125,13 @@
 
 .lang-btn.active {
   color: #fff;
-  background: var(--accent);
+  background: var(--gradient);
+  box-shadow: 0 2px 12px var(--accent-glow);
 }
 
 /* ---- Theme toggle ---- */
 .theme-toggle {
+  --rot: 0deg;
   position: relative;
   width: 42px;
   height: 42px;
@@ -133,14 +141,20 @@
   color: var(--text-secondary);
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
+  transform: rotate(var(--rot));
   transition: color 0.3s var(--ease), transform 0.5s var(--ease),
     border-color 0.3s var(--ease);
+}
+
+/* full 180° spin when switching into light mode */
+.light .theme-toggle {
+  --rot: 180deg;
 }
 
 .theme-toggle:hover {
   color: var(--accent-light);
   border-color: var(--accent);
-  transform: rotate(35deg) scale(1.05);
+  transform: rotate(var(--rot)) scale(1.08);
 }
 
 .theme-toggle i {
@@ -166,7 +180,8 @@
 
 .light .icon-moon {
   opacity: 1;
-  transform: scale(1) rotate(0);
+  /* counter the parent's 180° spin so the crescent stays upright */
+  transform: scale(1) rotate(180deg);
 }
 
 /* ---- Mobile menu button (hidden on desktop) ---- */

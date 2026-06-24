@@ -1,56 +1,79 @@
 /* ============================================================
-   cursor.css — magnetic-dot cursor.
-   A clean filled dot that morphs into a soft ring and "sticks"
-   to interactive elements on hover. The ring element from the
-   markup is unused in this style and stays hidden.
-   Disabled on touch devices.
+   cursor.css — two-part cursor.
+   A precise accent DOT tracks the pointer exactly; a hollow
+   RING trails behind with an ease-out lerp and scales up over
+   interactive elements. Hidden on touch / reduced-motion.
    ============================================================ */
-.cursor-dot {
+.cursor-dot,
+.cursor-ring {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid transparent;
   pointer-events: none;
+  border-radius: 50%;
   opacity: 0;
-  transition: width 0.28s var(--ease), height 0.28s var(--ease),
-    background-color 0.28s var(--ease), border-color 0.28s var(--ease),
+  will-change: transform; /* JS drives position via transform */
+}
+
+/* 8px filled dot — follows exactly, no delay */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  transition: opacity 0.3s var(--ease);
+}
+
+/* 36px hollow ring — accent border at 50% opacity, trails behind */
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 2px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  transition: width 0.25s var(--ease), height 0.25s var(--ease),
+    border-color 0.25s var(--ease), box-shadow 0.25s var(--ease),
     opacity 0.3s var(--ease);
 }
 
-/* unused in this cursor style */
-.cursor-ring {
-  display: none;
-}
-
-/* show only when a real pointer is present */
-.has-cursor .cursor-dot {
+/* visible only once a fine pointer is confirmed (class added by JS) */
+.has-cursor .cursor-dot,
+.has-cursor .cursor-ring {
   opacity: 1;
 }
 
-/* morph into a soft ring over interactive targets */
-.has-cursor.cursor-hover .cursor-dot {
-  width: 52px;
-  height: 52px;
-  background: var(--accent-glow);
-  border-color: var(--accent-light);
+/* over interactive targets: ring grows, border at 80%, soft glow */
+.has-cursor.cursor-hover .cursor-ring {
+  width: 56px;
+  height: 56px;
+  border-color: color-mix(in srgb, var(--accent) 80%, transparent);
+  box-shadow: 0 0 18px var(--accent-glow), inset 0 0 12px var(--accent-glow);
 }
 
-/* hide the native cursor while ours is active */
+/* hide the native cursor on non-touch devices only */
 .has-cursor,
 .has-cursor a,
 .has-cursor button,
-.has-cursor .tag,
+.has-cursor input,
+.has-cursor [role="button"],
+.has-cursor .card,
 .has-cursor .project-card,
-.has-cursor .contact-card {
+.has-cursor .contact-card,
+.has-cursor .skill-card,
+.has-cursor .tag,
+.has-cursor .lang-btn,
+.has-cursor .theme-toggle {
   cursor: none;
 }
 
+/* touch devices — no custom cursor */
 @media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
   .cursor-dot,
   .cursor-ring {
     display: none;

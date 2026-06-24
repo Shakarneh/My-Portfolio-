@@ -25,7 +25,8 @@
 .contact-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent);
-  box-shadow: 0 18px 40px var(--card-shadow);
+  box-shadow: 0 18px 40px var(--card-shadow), 0 0 0 1px var(--accent-glow),
+    0 0 24px var(--accent-glow);
 }
 
 .contact-card i {

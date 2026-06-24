@@ -21,9 +21,27 @@ function ensureObserver() {
   return observer;
 }
 
+const STAGGER = 0.1; // seconds between consecutive siblings
+const MAX_STEPS = 8; // cap so long grids don't lag far behind
+
 function observeAll() {
   const obs = ensureObserver();
   document.querySelectorAll(".reveal:not(.visible)").forEach((node) => {
+    // Stagger: delay each element by its position among reveal siblings,
+    // so cards/items in a grid cascade in 0.1s apart.
+    if (!node.dataset.staggered) {
+      const parent = node.parentElement;
+      if (parent) {
+        const sibs = Array.from(parent.children).filter((c) =>
+          c.classList.contains("reveal")
+        );
+        const idx = sibs.indexOf(node);
+        if (sibs.length > 1 && idx > 0) {
+          node.style.transitionDelay = Math.min(idx, MAX_STEPS) * STAGGER + "s";
+        }
+      }
+      node.dataset.staggered = "1";
+    }
     obs.observe(node);
   });
 }
