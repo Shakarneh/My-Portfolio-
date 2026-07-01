@@ -11,7 +11,7 @@ function apply(theme) {
   root.classList.toggle("light", theme === "light");
   // keep the browser UI colour in sync
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.setAttribute("content", theme === "dark" ? "#0d1117" : "#f5f7fa");
+  if (meta) meta.setAttribute("content", theme === "dark" ? "#0b1020" : "#f4f7fb");
 }
 
 function current() {

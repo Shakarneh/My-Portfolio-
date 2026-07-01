@@ -1,19 +1,27 @@
 /* ============================================================
-   cursor.css — two-part cursor.
-   A precise accent DOT tracks the pointer exactly; a hollow
-   RING trails behind with an ease-out lerp and scales up over
-   interactive elements. Hidden on touch / reduced-motion.
+   cursor.css — drafting-table crosshair cursor.
+   Full-viewport hairlines intersect at the pointer, a crisp
+   accent DOT marks the exact position, a hollow RING trails
+   behind with an ease-out lerp, and a mono coordinate readout
+   floats beside the pointer like a CAD status line.
+   Hidden on touch devices and under reduced motion.
    ============================================================ */
 .cursor-dot,
-.cursor-ring {
+.cursor-ring,
+.cursor-line,
+.cursor-coords {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
   pointer-events: none;
-  border-radius: 50%;
   opacity: 0;
   will-change: transform; /* JS drives position via transform */
+}
+
+.cursor-dot,
+.cursor-ring {
+  z-index: 9999;
+  border-radius: 50%;
 }
 
 /* 8px filled dot — follows exactly, no delay */
@@ -30,22 +38,62 @@
   height: 36px;
   border: 2px solid color-mix(in srgb, var(--accent) 50%, transparent);
   transition: width 0.25s var(--ease), height 0.25s var(--ease),
-    border-color 0.25s var(--ease), box-shadow 0.25s var(--ease),
-    opacity 0.3s var(--ease);
+    border-color 0.25s var(--ease), border-radius 0.25s var(--ease),
+    box-shadow 0.25s var(--ease), opacity 0.3s var(--ease);
+}
+
+/* ---- Crosshair hairlines ---- */
+.cursor-line {
+  z-index: 9998;
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+  transition: opacity 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+
+.cursor-line-x {
+  width: 100vw;
+  height: 1px;
+}
+
+.cursor-line-y {
+  width: 1px;
+  height: 100vh;
+}
+
+/* ---- Coordinate readout ---- */
+.cursor-coords {
+  z-index: 9999;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--accent) 80%, transparent);
+  white-space: nowrap;
+  direction: ltr; /* numeric readout stays LTR in Arabic mode */
+  transition: opacity 0.3s var(--ease);
 }
 
 /* visible only once a fine pointer is confirmed (class added by JS) */
 .has-cursor .cursor-dot,
-.has-cursor .cursor-ring {
+.has-cursor .cursor-ring,
+.has-cursor .cursor-coords {
   opacity: 1;
 }
 
-/* over interactive targets: ring grows, border at 80%, soft glow */
+.has-cursor .cursor-line {
+  opacity: 0.55;
+}
+
+/* over interactive targets: ring grows into a target box, lines sharpen */
 .has-cursor.cursor-hover .cursor-ring {
   width: 56px;
   height: 56px;
   border-color: color-mix(in srgb, var(--accent) 80%, transparent);
+  border-radius: var(--radius-sm); /* circle snaps to a selection box */
   box-shadow: 0 0 18px var(--accent-glow), inset 0 0 12px var(--accent-glow);
+}
+
+.has-cursor.cursor-hover .cursor-line {
+  opacity: 0.9;
 }
 
 /* hide the native cursor on non-touch devices only */
@@ -67,7 +115,9 @@
 /* touch devices — no custom cursor */
 @media (hover: none), (pointer: coarse) {
   .cursor-dot,
-  .cursor-ring {
+  .cursor-ring,
+  .cursor-line,
+  .cursor-coords {
     display: none;
   }
 }
@@ -75,7 +125,9 @@
 /* respect reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .cursor-dot,
-  .cursor-ring {
+  .cursor-ring,
+  .cursor-line,
+  .cursor-coords {
     display: none;
   }
 }

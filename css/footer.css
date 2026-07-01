@@ -1,10 +1,11 @@
 /* ============================================================
-   footer.css — footer bar.
+   footer.css — the drawing's bottom edge.
+   Dashed cut-line on top, mono copyright, boxy social plates.
    ============================================================ */
 .footer {
   padding-block: 3rem;
-  border-top: 1px solid var(--hairline);
-  background: var(--bg-primary);
+  border-top: 1px dashed var(--hairline-strong);
+  background: transparent;
 }
 
 .footer-inner {
@@ -16,8 +17,10 @@
 }
 
 .footer-copy {
-  font-weight: 600;
-  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
 }
 
 .footer-social {
@@ -30,19 +33,20 @@
   place-items: center;
   width: 44px;
   height: 44px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   font-size: 1.1rem;
   color: var(--text-secondary);
   background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  transition: transform 0.3s var(--ease), color 0.3s var(--ease),
-    border-color 0.3s var(--ease);
+  border: 1px solid var(--hairline-strong);
+  transition: transform 0.25s var(--ease), color 0.25s var(--ease),
+    border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
 .footer-social a:hover {
-  transform: translateY(-4px);
-  color: var(--accent-light);
+  transform: translate(-2px, -2px);
+  color: var(--accent);
   border-color: var(--accent);
+  box-shadow: 3px 3px 0 var(--accent-glow);
 }
 
 .footer-built {

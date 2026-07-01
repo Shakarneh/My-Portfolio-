@@ -1,7 +1,9 @@
 /* ============================================================
-   variables.css — design tokens (colors, fonts, spacing, etc.)
-   Dark is the default theme (set on <html class="dark">).
-   The .light class overrides the palette for light mode.
+   variables.css — design tokens for THE BLUEPRINT.
+   Portfolio as an engineering schematic: blueprint cyan is the
+   drafting ink, amber is the inspection-stamp signal colour.
+   Dark is the default theme (night blueprint); .light flips to
+   patent-drawing paper.
    ============================================================ */
 :root {
   /* ---- Fonts ---- */
@@ -9,13 +11,14 @@
   --font-arabic: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
-  /* ---- Accent — Electric Blue (committed), Cyan as gradient partner ---- */
-  --accent: #3b82f6;
-  --accent-light: #60a5fa;
-  --accent-2: #06b6d4;
-  --accent-glow: rgba(59, 130, 246, 0.22);
-  --accent-glow-strong: rgba(59, 130, 246, 0.4);
-  --gradient: linear-gradient(120deg, var(--accent), var(--accent-2));
+  /* ---- Ink: blueprint cyan + amber stamp ---- */
+  --accent: #38bdf8;
+  --accent-light: #7dd3fc;
+  --accent-2: #fbbf24;
+  --accent-glow: rgba(56, 189, 248, 0.2);
+  --accent-glow-strong: rgba(56, 189, 248, 0.38);
+  --gradient: linear-gradient(120deg, var(--accent), var(--accent-light));
+  --ink-on-accent: #061120;
 
   /* ---- Spacing scale ---- */
   --space-xs: 0.5rem;
@@ -24,12 +27,12 @@
   --space-lg: 4rem;
   --space-xl: 7rem;
 
-  /* ---- Layout ---- */
+  /* ---- Layout — drafting-sharp corners ---- */
   --max-width: 1100px;
   --gutter: 1.5rem;
-  --radius-sm: 10px;
-  --radius: 18px;
-  --radius-lg: 28px;
+  --radius-sm: 3px;
+  --radius: 6px;
+  --radius-lg: 10px;
 
   /* ---- Misc ---- */
   --nav-height: 72px;
@@ -37,35 +40,46 @@
   --transition: 0.4s var(--ease);
 }
 
-/* ---- Dark theme (default) — deep navy/charcoal ---- */
+/* ---- Dark theme (default) — night blueprint ---- */
 :root,
 .dark {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --text-primary: #e6edf3;
-  --text-secondary: #9aa7b4;
-  --text-muted: #6b7685;
-  --glass-bg: rgba(255, 255, 255, 0.04);
-  --glass-border: rgba(255, 255, 255, 0.09);
-  --card-shadow: rgba(0, 0, 0, 0.45);
-  --hairline: rgba(255, 255, 255, 0.07);
+  --bg-primary: #0b1020;
+  --bg-secondary: #0f1730;
+  --panel: #0e162b;
+  --text-primary: #dbe6f7;
+  --text-secondary: #93a5c4;
+  --text-muted: #5f7092;
+  --glass-bg: rgba(56, 189, 248, 0.05);
+  --glass-border: rgba(125, 211, 252, 0.14);
+  --hairline: rgba(125, 211, 252, 0.1);
+  --hairline-strong: rgba(125, 211, 252, 0.22);
+  --card-shadow: rgba(2, 6, 18, 0.5);
+  --shadow-hard: rgba(56, 189, 248, 0.28);
+  --grid-line: rgba(56, 189, 248, 0.05);
+  --grid-major: rgba(56, 189, 248, 0.1);
 }
 
-/* ---- Light theme — accent darkens for contrast on light bg ---- */
+/* ---- Light theme — patent-drawing paper (ink darkens) ---- */
 .light {
-  --accent: #2563eb;
-  --accent-light: #2563eb;
-  --accent-2: #0891b2;
-  --accent-glow: rgba(37, 99, 235, 0.16);
-  --accent-glow-strong: rgba(37, 99, 235, 0.28);
+  --accent: #0284c7;
+  --accent-light: #0369a1;
+  --accent-2: #b45309;
+  --accent-glow: rgba(2, 132, 199, 0.14);
+  --accent-glow-strong: rgba(2, 132, 199, 0.3);
+  --ink-on-accent: #ffffff;
 
-  --bg-primary: #f5f7fa;
+  --bg-primary: #f4f7fb;
   --bg-secondary: #ffffff;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  --glass-bg: rgba(255, 255, 255, 0.6);
-  --glass-border: rgba(15, 23, 42, 0.08);
-  --card-shadow: rgba(15, 23, 42, 0.08);
-  --hairline: rgba(15, 23, 42, 0.08);
+  --panel: #ffffff;
+  --text-primary: #10203a;
+  --text-secondary: #43587a;
+  --text-muted: #7e90ad;
+  --glass-bg: rgba(2, 132, 199, 0.05);
+  --glass-border: rgba(16, 32, 58, 0.12);
+  --hairline: rgba(16, 32, 58, 0.1);
+  --hairline-strong: rgba(16, 32, 58, 0.2);
+  --card-shadow: rgba(16, 32, 58, 0.08);
+  --shadow-hard: rgba(2, 132, 199, 0.25);
+  --grid-line: rgba(2, 132, 199, 0.06);
+  --grid-major: rgba(2, 132, 199, 0.12);
 }

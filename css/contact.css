@@ -1,5 +1,7 @@
 /* ============================================================
-   contact.css — contact link cards.
+   contact.css — connection terminals.
+   Contact cards read like labelled terminal blocks: mono
+   values, boxed icons, corner brackets, hard-shadow lift.
    ============================================================ */
 .contact-grid {
   display: grid;
@@ -8,49 +10,96 @@
 }
 
 .contact-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   padding: 1.5rem;
-  border-radius: var(--radius);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  border: 1px solid var(--hairline-strong);
   box-shadow: 0 8px 24px var(--card-shadow);
-  transition: transform var(--transition), border-color var(--transition),
-    box-shadow var(--transition);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease),
+    box-shadow 0.25s var(--ease);
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
+  transform: translate(-3px, -3px);
   border-color: var(--accent);
-  box-shadow: 0 18px 40px var(--card-shadow), 0 0 0 1px var(--accent-glow),
-    0 0 24px var(--accent-glow);
+  box-shadow: 5px 5px 0 var(--shadow-hard), 0 12px 28px var(--card-shadow);
 }
 
+/* ---- Corner brackets ---- */
+.contact-card::before,
+.contact-card::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 0 solid var(--hairline-strong);
+  transition: border-color 0.25s var(--ease);
+  pointer-events: none;
+}
+
+.contact-card::before {
+  top: 6px;
+  inset-inline-start: 6px;
+  border-top-width: 2px;
+  border-inline-start-width: 2px;
+}
+
+.contact-card::after {
+  bottom: 6px;
+  inset-inline-end: 6px;
+  border-bottom-width: 2px;
+  border-inline-end-width: 2px;
+}
+
+.contact-card:hover::before,
+.contact-card:hover::after {
+  border-color: var(--accent);
+}
+
+/* boxed terminal icon */
 .contact-card i {
-  font-size: 1.6rem;
-  color: var(--accent-light);
-  margin-bottom: 0.4rem;
-  transition: transform var(--transition);
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  font-size: 1.35rem;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  transition: transform var(--transition), color var(--transition);
 }
 
 .contact-card:hover i {
-  transform: scale(1.15) translateY(-2px);
+  transform: scale(1.08) translateY(-2px);
+  color: var(--accent-2);
 }
 
 .contact-label {
-  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
 
 .contact-value {
-  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--text-primary);
   word-break: break-word;
+  /* addresses / handles / numbers are Latin — keep LTR in Arabic mode */
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+html[dir="rtl"] .contact-value {
+  text-align: end;
 }

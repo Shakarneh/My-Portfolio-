@@ -19,6 +19,12 @@
   .project-card.featured {
     grid-column: auto;
   }
+
+  /* ghost sheet numbers shrink so they never crowd content */
+  .section::before {
+    font-size: clamp(3rem, 10vw, 5rem);
+    top: 1.25rem;
+  }
 }
 
 /* ---- Mobile nav ---- */
@@ -37,10 +43,10 @@
     width: min(78vw, 320px);
     height: calc(100vh - var(--nav-height));
     padding: 1.5rem;
-    background: color-mix(in srgb, var(--bg-secondary) 92%, transparent);
+    background: color-mix(in srgb, var(--bg-secondary) 94%, transparent);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-inline-start: 1px solid var(--hairline);
+    border-inline-start: 1px dashed var(--hairline-strong);
     transform: translateX(100%);
     transition: transform 0.4s var(--ease);
   }
@@ -56,12 +62,17 @@
   .nav-link {
     display: block;
     padding: 0.85rem 0.5rem;
-    font-size: 1.05rem;
-    border-bottom: 1px solid var(--hairline);
+    font-size: 0.95rem;
+    border-bottom: 1px dashed var(--hairline);
   }
 
   .nav-link::after {
     display: none;
+  }
+
+  /* lighter hero frame on small screens */
+  .hero-inner {
+    padding: 1.5rem;
   }
 }
 
@@ -74,7 +85,7 @@
 
   .lang-btn {
     padding: 0.3rem 0.45rem;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
   }
 
   .tech-row {
@@ -96,6 +107,20 @@
   .project-actions .btn {
     flex: 1;
   }
+
+  .hero-inner {
+    padding: 1.15rem;
+  }
+
+  /* registration marks get cramped on tiny screens */
+  .hero-inner::before,
+  .hero-inner::after {
+    display: none;
+  }
+
+  .section::before {
+    opacity: 0.6;
+  }
 }
 
 /* ============================================================
@@ -105,11 +130,22 @@ html[dir="rtl"] .section-kicker {
   letter-spacing: 0;
 }
 
-html[dir="rtl"] .skill-fill::after {
-  animation-direction: reverse;
+/* JetBrains Mono has no Arabic glyphs — translated text that is
+   styled mono falls back to the Arabic stack in RTL mode */
+html[dir="rtl"] .btn,
+html[dir="rtl"] .nav-link,
+html[dir="rtl"] .section-kicker,
+html[dir="rtl"] .hero-greeting,
+html[dir="rtl"] .hero-roles,
+html[dir="rtl"] .badge,
+html[dir="rtl"] .contact-label,
+html[dir="rtl"] .about-tech-label,
+html[dir="rtl"] .footer-copy {
+  font-family: var(--font-arabic);
+  letter-spacing: 0;
 }
 
-/* keep latin-script values (emails, phone, code) readable in RTL */
+/* keep latin-script values (dates, code, numbers) readable in RTL */
 html[dir="rtl"] .project-year,
 html[dir="rtl"] .timeline-period,
 html[dir="rtl"] .skill-pct {

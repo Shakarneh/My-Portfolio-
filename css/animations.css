@@ -1,24 +1,31 @@
 /* ============================================================
    animations.css — keyframes + reveal-on-scroll classes +
-   scroll progress bar + reduced-motion handling.
+   measuring-tape progress bar + reduced-motion handling.
    ============================================================ */
 
-/* ---- Scroll progress bar ---- */
+/* ---- Scroll progress: a measuring tape across the top ---- */
 .scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1500;
-  height: 3px;
+  height: 4px;
   width: 0;
-  background: linear-gradient(
-    90deg,
-    var(--accent) 0%,
-    var(--accent-2) 50%,
-    var(--accent-light) 100%
-  );
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
   box-shadow: 0 0 14px var(--accent-glow-strong);
   transition: width 0.1s linear;
+}
+
+/* ruler serrations cut into the tape */
+.scroll-progress::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 15px,
+    var(--bg-primary) 15px 16px
+  );
 }
 
 /* ---- Reveal on scroll: fade + slide up, smooth ease-out ---- */
@@ -71,19 +78,21 @@
   100% { box-shadow: 0 0 0 0 transparent; }
 }
 
-@keyframes sheen {
-  0% { transform: translateX(-100%); }
-  60%, 100% { transform: translateX(100%); }
+/* uses the independent `rotate` property so it composes with the
+   translate3d the parallax JS writes to `transform` */
+@keyframes spinSlow {
+  to { rotate: 360deg; }
 }
 
-@keyframes floatBlob {
+/* uses the independent `translate` property for the same reason */
+@keyframes drift {
   0%, 100% { translate: 0 0; }
-  50% { translate: 20px -30px; }
+  50% { translate: 24px -18px; }
 }
 
-.blob-1 { animation: floatBlob 14s ease-in-out infinite; }
-.blob-2 { animation: floatBlob 18s ease-in-out infinite reverse; }
-.blob-3 { animation: floatBlob 22s ease-in-out infinite; }
+.blob-1 { animation: spinSlow 90s linear infinite; }
+.blob-2 { animation: drift 18s ease-in-out infinite; }
+.blob-3 { animation: spinSlow 140s linear infinite reverse; }
 
 /* ---- Reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {

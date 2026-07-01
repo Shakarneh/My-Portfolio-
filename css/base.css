@@ -1,5 +1,7 @@
 /* ============================================================
-   base.css — typography, body, selection, scrollbar.
+   base.css — grid-paper body, typography, selection, scrollbar.
+   The whole site sits on drafting grid paper: a fine 24px grid
+   with a stronger major line every 120px, drawn in accent ink.
    ============================================================ */
 body {
   font-family: var(--font-sans);
@@ -8,8 +10,16 @@ body {
   line-height: 1.7;
   color: var(--text-primary);
   background-color: var(--bg-primary);
+  /* blueprint grid: major lines first (on top), fine grid beneath */
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
   transition: background-color var(--transition), color var(--transition);
   overflow-x: hidden;
+  counter-reset: sec;
 }
 
 /* Arabic mode swaps the body font + direction (set by i18n.js) */
@@ -38,7 +48,7 @@ code,
 /* ---- Selection ---- */
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: var(--ink-on-accent);
 }
 
 /* ---- Scrollbar ---- */
@@ -73,8 +83,10 @@ html {
   transform: translateX(-50%);
   z-index: 2000;
   padding: 0.6rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
   background: var(--accent);
-  color: #fff;
+  color: var(--ink-on-accent);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   transition: top 0.3s var(--ease);
 }

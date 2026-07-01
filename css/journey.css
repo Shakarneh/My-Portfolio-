@@ -1,5 +1,7 @@
 /* ============================================================
-   journey.css — vertical timeline.
+   journey.css — circuit-trace timeline.
+   A dashed vertical trace with diamond solder-point nodes;
+   periods sit in boxed mono chips like PCB reference labels.
    ============================================================ */
 .timeline {
   position: relative;
@@ -8,18 +10,17 @@
   padding-inline-start: 2.5rem;
 }
 
-/* the vertical line */
+/* the dashed vertical trace */
 .timeline::before {
   content: "";
   position: absolute;
   inset-block: 0.5rem;
   inset-inline-start: 7px;
-  width: 2px;
-  background: linear-gradient(
+  width: 1px;
+  background: repeating-linear-gradient(
     to bottom,
-    var(--accent),
-    var(--glass-border) 85%,
-    transparent
+    var(--hairline-strong) 0 6px,
+    transparent 6px 12px
   );
 }
 
@@ -52,37 +53,39 @@ html[dir="rtl"] .timeline-item.reveal:not(.visible):nth-child(even) {
   padding-bottom: 0;
 }
 
-/* the dot */
+/* diamond solder-point node */
 .timeline-item::before {
   content: "";
   position: absolute;
-  inset-inline-start: calc(-2.5rem + 1px);
-  top: 6px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 3px solid var(--bg-primary);
+  inset-inline-start: calc(-2.5rem + 2px);
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  rotate: 45deg;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
   box-shadow: 0 0 0 0 var(--accent-glow);
   animation: pulseDot 2.5s var(--ease) infinite;
 }
 
-.section:nth-of-type(even) .timeline-item::before {
-  border-color: var(--bg-secondary);
-}
-
+/* boxed PCB-style period label */
 .timeline-period {
+  display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 500;
-  color: var(--accent-light);
-  letter-spacing: 0.02em;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 2px;
+  background: var(--glass-bg);
 }
 
 .timeline-role {
   font-size: 1.15rem;
   font-weight: 700;
-  margin-top: 0.25rem;
+  margin-top: 0.45rem;
 }
 
 .timeline-place {

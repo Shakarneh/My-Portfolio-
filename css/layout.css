@@ -1,5 +1,9 @@
 /* ============================================================
-   layout.css — containers, sections, grid helpers.
+   layout.css — containers, sections as numbered "sheets".
+   Sections are transparent so the grid paper runs continuously;
+   each one is separated by a dashed cut-line, numbered by a CSS
+   counter, and watermarked with a giant ghost index (01, 02…)
+   like sheet numbers on technical drawings.
    ============================================================ */
 .container {
   width: 100%;
@@ -11,11 +15,43 @@
 .section {
   position: relative;
   padding-block: var(--space-xl);
+  counter-increment: sec;
 }
 
-/* Alternating subtle background for rhythm */
-.section:nth-of-type(even) {
-  background: var(--bg-secondary);
+/* dashed cut-line between sheets */
+main .section {
+  border-top: 1px dashed var(--hairline-strong);
+}
+
+/* keep content above the watermark */
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Ghost sheet number (01, 02, …) ---- */
+.section::before {
+  content: counter(sec, decimal-leading-zero);
+  position: absolute;
+  top: var(--space-md);
+  inset-inline-end: max(var(--gutter), calc((100% - var(--max-width)) / 2 + var(--gutter)));
+  z-index: 0;
+  font-family: var(--font-mono);
+  font-size: clamp(4.5rem, 13vw, 9rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: color-mix(in srgb, var(--text-primary) 6%, transparent);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* outlined variant where text-stroke is supported */
+@supports (-webkit-text-stroke: 1px black) {
+  .section::before {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--hairline-strong);
+  }
 }
 
 /* ---- Section heading block ---- */
@@ -26,12 +62,19 @@
 
 .section-kicker {
   display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent-light);
+  color: var(--accent);
   margin-bottom: 0.75rem;
+}
+
+/* sheet index in front of the kicker: "01 · " */
+.section-kicker::before {
+  content: counter(sec, decimal-leading-zero) " · ";
+  color: var(--accent-2);
 }
 
 .section-title {
@@ -39,20 +82,20 @@
   font-weight: 900;
   letter-spacing: -0.02em;
   position: relative;
-  /* gradient text: accent → text colour (white in dark, ink in light) */
-  background: linear-gradient(120deg, var(--accent-light) 0%, var(--text-primary) 65%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text-primary);
   width: fit-content;
 }
 
+/* hatched drafting underline instead of a solid bar */
 .section-title::after {
   content: "";
   display: block;
-  width: 56px;
-  height: 4px;
+  width: 84px;
+  height: 6px;
   margin-top: 1rem;
-  border-radius: 4px;
-  background: var(--gradient);
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--accent) 0 4px,
+    transparent 4px 8px
+  );
 }

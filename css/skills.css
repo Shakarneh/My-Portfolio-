@@ -1,5 +1,8 @@
 /* ============================================================
-   skills.css — animated skill bars + tools tags.
+   skills.css — engineering gauges.
+   Each skill is a measuring instrument: a ruled track with
+   tick marks every 20px, filled by a diagonal-hatch ink bar,
+   and a boxed mono % readout.
    ============================================================ */
 .skills-grid {
   display: grid;
@@ -16,7 +19,7 @@
 }
 
 .skill:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .skill:hover .skill-track {
@@ -36,45 +39,45 @@
   color: var(--text-primary);
 }
 
+/* boxed instrument readout */
 .skill-pct {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--accent-light);
+  font-size: 0.76rem;
+  color: var(--accent);
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 2px;
+  background: var(--glass-bg);
 }
 
+/* ruled track with tick marks */
 .skill-track {
   position: relative;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  height: 12px;
+  border-radius: 2px;
+  background-color: var(--glass-bg);
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 19px,
+    var(--hairline) 19px 20px
+  );
+  border: 1px solid var(--hairline-strong);
   overflow: hidden;
   transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 
+/* diagonal-hatch ink fill */
 .skill-fill {
   position: absolute;
   inset-block: 0;
   inset-inline-start: 0;
   width: 0;
-  border-radius: 999px;
-  background: var(--gradient);
-  transition: width 1.2s var(--ease);
-}
-
-/* subtle moving sheen */
-.skill-fill::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.35),
-    transparent
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--accent) 0 5px,
+    color-mix(in srgb, var(--accent) 45%, transparent) 5px 10px
   );
-  transform: translateX(-100%);
-  animation: sheen 2.5s var(--ease) infinite;
+  transition: width 1.2s var(--ease);
 }
 
 .skills-tools {

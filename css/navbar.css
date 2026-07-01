@@ -1,5 +1,7 @@
 /* ============================================================
-   navbar.css — fixed navbar, controls, mobile menu.
+   navbar.css — drafting toolbar.
+   Mono uppercase links with tiny sheet indices (01–05), a
+   stamped square logo, and boxy instrument controls.
    ============================================================ */
 .navbar {
   position: fixed;
@@ -11,15 +13,15 @@
   align-items: center;
   transition: background-color var(--transition), border-color var(--transition),
     box-shadow var(--transition);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px dashed transparent;
 }
 
-/* Solid-ish glass state once scrolled */
+/* Solid sheet once scrolled */
 .navbar.scrolled {
-  background: color-mix(in srgb, var(--bg-primary) 75%, transparent);
+  background: color-mix(in srgb, var(--bg-primary) 82%, transparent);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom-color: var(--hairline);
+  border-bottom-color: var(--hairline-strong);
   box-shadow: 0 4px 24px var(--card-shadow);
 }
 
@@ -31,39 +33,64 @@
   width: 100%;
 }
 
-/* ---- Logo ---- */
+/* ---- Logo — stamped plate ---- */
 .nav-logo-mark {
   display: inline-grid;
   place-items: center;
   width: 42px;
   height: 42px;
-  border-radius: 12px;
-  font-weight: 900;
-  font-size: 1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.95rem;
   letter-spacing: -0.04em;
-  color: #fff;
-  background: var(--gradient);
-  box-shadow: 0 6px 18px var(--accent-glow);
-  transition: transform 0.3s var(--ease);
+  color: var(--accent);
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  box-shadow: 3px 3px 0 var(--accent-glow);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease),
+    background-color 0.25s var(--ease), color 0.25s var(--ease);
 }
 
 .nav-logo:hover .nav-logo-mark {
-  transform: rotate(-8deg) scale(1.05);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--accent-glow);
+  background: var(--accent);
+  color: var(--ink-on-accent);
 }
 
-/* ---- Links ---- */
+/* ---- Links — indexed like drawing sheets ---- */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  counter-reset: navi;
+}
+
+.nav-links > li {
+  counter-increment: navi;
 }
 
 .nav-link {
   position: relative;
   padding: 0.5rem 0.9rem;
-  font-size: 0.92rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text-secondary);
+}
+
+/* tiny sheet index: 01 About, 02 Skills… */
+.nav-link::before {
+  content: counter(navi, decimal-leading-zero);
+  font-size: 0.58rem;
+  color: var(--accent);
+  opacity: 0.75;
+  margin-inline-end: 0.4rem;
+  vertical-align: 0.45em;
+  letter-spacing: 0;
 }
 
 .nav-link::after {
@@ -72,8 +99,7 @@
   inset-inline: 0.9rem;
   bottom: 0.3rem;
   height: 2px;
-  border-radius: 2px;
-  background: var(--gradient);
+  background: var(--accent);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.3s var(--ease);
@@ -105,18 +131,20 @@ html[dir="rtl"] .nav-link::after {
 .lang-switch {
   display: flex;
   padding: 3px;
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
   background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--hairline-strong);
 }
 
 .lang-btn {
   padding: 0.3rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--text-muted);
-  transition: color 0.25s var(--ease), background-color 0.25s var(--ease);
+  transition: color 0.25s var(--ease), background-color 0.25s var(--ease),
+    box-shadow 0.25s var(--ease);
 }
 
 .lang-btn:hover {
@@ -124,9 +152,9 @@ html[dir="rtl"] .nav-link::after {
 }
 
 .lang-btn.active {
-  color: #fff;
-  background: var(--gradient);
-  box-shadow: 0 2px 12px var(--accent-glow);
+  color: var(--ink-on-accent);
+  background: var(--accent);
+  box-shadow: 2px 2px 0 var(--accent-glow);
 }
 
 /* ---- Theme toggle ---- */
@@ -135,12 +163,12 @@ html[dir="rtl"] .nav-link::after {
   position: relative;
   width: 42px;
   height: 42px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   display: grid;
   place-items: center;
   color: var(--text-secondary);
   background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--hairline-strong);
   transform: rotate(var(--rot));
   transition: color 0.3s var(--ease), transform 0.5s var(--ease),
     border-color 0.3s var(--ease);
@@ -152,7 +180,7 @@ html[dir="rtl"] .nav-link::after {
 }
 
 .theme-toggle:hover {
-  color: var(--accent-light);
+  color: var(--accent);
   border-color: var(--accent);
   transform: rotate(var(--rot)) scale(1.08);
 }
@@ -192,9 +220,9 @@ html[dir="rtl"] .nav-link::after {
   gap: 5px;
   width: 42px;
   height: 42px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--hairline-strong);
   padding: 0 11px;
 }
 
