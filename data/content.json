@@ -1,410 +1,388 @@
 {
   "en": {
-    "meta": {
-      "title": "Mohammed Shakarneh — Web Developer",
-      "description": "Mohammed Shakarneh — Web & PHP Backend Developer. Full-stack PHP/MySQL apps, Python desktop software, and data analysis. 3rd-year IT student in Russia, from Palestine."
-    },
+    "meta": { "title": "Mohammed Shakarneh — Software Development Engineer" },
     "nav": {
-      "about": "About",
-      "skills": "Skills",
-      "projects": "Projects",
+      "available": "Available for work",
+      "work": "Work",
+      "arch": "Architecture",
       "journey": "Journey",
-      "contact": "Contact",
-      "skip": "Skip to content"
+      "talk": "Let's talk →",
+      "language": "Language",
+      "menu": "Menu"
     },
     "hero": {
-      "greeting": "Hello, I'm",
-      "name": "Mohammed Shakarneh",
-      "roles": ["Web Developer", "PHP Backend Developer", "Data Enthusiast"],
-      "tagline": "I build clean, functional web applications — from database to interface. Currently a 3rd-year IT student in Russia, originally from Palestine.",
-      "cta_work": "View Projects",
-      "cta_contact": "Contact Me"
+      "idx": "Belgorod, Russia · 2026",
+      "first": "Mohammed",
+      "last": "Shakarneh",
+      "role": "Software Development Engineer",
+      "sub": "Python · FastAPI · Back-end architecture"
     },
-    "about": {
-      "title": "About Me",
-      "subtitle": "Building with purpose.",
-      "text": "I'm Mohammed Shakarneh, a 3rd-year Information Systems & Technologies student at BSTU (Belgorod, Russia), originally from Palestine. I taught myself web development alongside my university studies — building real projects, not just following tutorials. I've created full-stack PHP/MySQL websites with authentication systems, a Python desktop app with auto-updates, data analysis projects processing hundreds of thousands of rows, and Java applications covering OOP, XML, and database integration. Before university, I ran my own eBay store for two years — handling everything from product sourcing to customer support in Russian and English. I'm looking for opportunities to grow as a developer and contribute to real projects.",
-      "tech_label": "Core technologies"
+    "bento": {
+      "eyebrow": "Who I am",
+      "who": "the person behind the commits",
+      "say": "I build the part nobody sees — the <em>data model</em>, the <em>API</em>, the logic that has to be <em>right every time</em>.",
+      "sig": "Mohammed Shakarneh · back-end engineer",
+      "faceCap": "Belgorod, Russia",
+      "listTitle": "What I actually do",
+      "do1": "Design APIs and data models",
+      "do1t": "Back-end",
+      "do2": "Ship full-stack products",
+      "do2t": "React · TS",
+      "do3": "Turn messy data into answers",
+      "do3t": "Python · SQL",
+      "do4": "Learn in public, every week",
+      "do4t": "Ongoing",
+      "bio1": "Born in Palestine, studying in Russia. Before university I ran my own eBay store for two years — sourcing, pricing, logistics and customer support in two languages, with 100% positive reviews.",
+      "bio2": "That taught me the thing I still care about most: software is only finished when a real person can use it without you standing next to them.",
+      "native": "native",
+      "fluent": "fluent",
+      "cta": "Let's<br>talk"
     },
-    "skills": {
-      "title": "Skills",
-      "subtitle": "Tools I work with every day.",
-      "tools_label": "Tools & environments",
-      "items": [
-        { "name": "HTML / CSS", "level": 85 },
-        { "name": "PHP / MySQL", "level": 75 },
-        { "name": "JavaScript", "level": 70 },
-        { "name": "Python", "level": 65 },
-        { "name": "Java", "level": 60 },
-        { "name": "SQL / Databases", "level": 75 },
-        { "name": "Git / GitHub", "level": 70 },
-        { "name": "Docker (basic)", "level": 35 }
-      ]
+    "stats": {
+      "s1": "systems in production",
+      "s2": "products served live",
+      "s3": "public repositories",
+      "s4": "languages I ship in"
     },
-    "projects": {
-      "title": "Projects",
-      "subtitle": "Real things I've designed, built, and shipped.",
-      "featured_badge": "Featured",
-      "btn_code": "Code",
-      "btn_demo": "Live Demo",
-      "items": [
-        {
-          "title": "My-Notes Desktop App",
-          "description": "A desktop notes app for Windows with Arabic RTL support, rich text editor (bold, italic, underline, lists), automatic dark/light theme, 3-language interface (Arabic/English/Russian), trash bin, pin notes, search, spell check, and image support. Built with Python backend and web-based UI. 4 versions released with installer.",
-          "highlight": "4 releases published (latest v1.3.0) — real product with installer"
-        },
-        {
-          "title": "AI Website — Artificial Intelligence",
-          "description": "Full-stack website about Artificial Intelligence built with PHP, MySQL, and JavaScript. Features user registration and login with sessions, admin panel with CRUD operations for users, pages, messages, and reviews. Deployed on real hosting.",
-          "highlight": ""
-        },
-        {
-          "title": "Berezka Restaurant",
-          "description": "Restaurant website with booking system, contact page, dynamic menu, and responsive design. Features PHP backend for booking handler.",
-          "highlight": "14 commits — actively maintained"
-        },
-        {
-          "title": "COVID-19 Data Analysis",
-          "description": "Analysis of real-world COVID-19 data from Our World in Data (Kaggle). Processed 350,085 rows across 255 locations (2020–2023). Includes visualizations: top 10 countries by cases, deaths by continent, and global trend charts.",
-          "highlight": ""
-        },
-        {
-          "title": "Online Store Analytics Dashboard",
-          "description": "SQL-based analytics dashboard for an online store database. Complex queries for best-selling products, top customers by revenue, and monthly revenue trends. Database includes users, products, and orders tables.",
-          "highlight": ""
-        },
-        {
-          "title": "Supermarket Sales Analysis",
-          "description": "Business analysis of supermarket sales data — identifying revenue trends by product category, monthly sales patterns, and payment method distribution. Includes visual charts for sales by product, monthly revenue, and payment distribution.",
-          "highlight": ""
-        },
-        {
-          "title": "Java University Labs",
-          "description": "Five progressive Java lab assignments covering core concepts: basic syntax (conditions, loops, arrays), code conventions with log4j2 logging, OOP with inheritance and constructors, regular expressions for IPv4/IPv6 extraction, and MySQL database operations with JDBC and XML parsing (SAX/DOM) for a medicine catalog.",
-          "highlight": ""
-        }
-      ]
+    "arch": {
+      "eyebrow": "How I think",
+      "title": "Request<br>lifecycle",
+      "lede": "Every system I build has the same spine. A request either gets rejected early with a clear reason, or it gets answered — never a crash.",
+      "n1": "Client", "d1": "HTTP + Bearer token",
+      "n2": "Authentication & Roles", "d2": "JWT · bcrypt · 401 / 403",
+      "n3": "Validation", "d3": "Pydantic schemas · 422",
+      "n4": "Business Logic", "d4": "rules · conflict detection",
+      "n5": "Database", "d5": "PostgreSQL · transactions",
+      "n6": "Response", "d6": "200 OK · typed JSON"
+    },
+    "work": {
+      "eyebrow": "Selected work",
+      "title": "Built &<br>shipped",
+      "lede": "Real products, real users, real constraints. Not tutorials.",
+      "role": "Role", "scale": "Scale", "status": "Status", "access": "Access",
+      "auth": "Auth", "admin": "Admin", "platform": "Platform", "langs": "Languages",
+      "releases": "Releases", "labs": "Labs", "focus": "Focus", "logging": "Logging",
+      "rows": "Rows", "span": "Span", "output": "Output",
+      "source": "Source", "visit": "Visit site →", "download": "Download →"
+    },
+    "p1": {
+      "tag": "Live in production",
+      "title": "Lolo <b>Cosmetics</b>",
+      "lede": "A real beauty brand was selling through WhatsApp screenshots — no catalogue, no stock control, no way to scale. I built the whole thing, front to back.",
+      "v1": "Solo — front to back", "v2": "267 products · 91 commits", "v3": "Serving customers",
+      "note": "<b>The hard part.</b> Row-Level Security. When the data is someone's actual business, a leak isn't a bug report — it's their livelihood.",
+      "cta": "Visit store →"
+    },
+    "p2": {
+      "tag": "Internship · Expert Choice CIS",
+      "title": "Attendance <b>System</b>",
+      "lede": "Attendance lived on paper and in Excel. One administrator spent 3–5 hours merging it by hand — every single time. I built the back-end everything else sits on.",
+      "v1": "Back-end admin API", "v2": "3 roles · JWT · bcrypt", "v3": "Merged & documented",
+      "note": "<b>The hard part.</b> Schedule conflict detection — interval-overlap checks so a teacher or group can never be double-booked. It took more thought than every CRUD endpoint combined."
+    },
+    "p3": {
+      "tag": "Live · deployed",
+      "title": "AI <b>Knowledge</b>",
+      "lede": "A full-stack site about artificial intelligence — written from scratch in PHP, with no framework anywhere in it.",
+      "v1": "PHP sessions, by hand", "v2": "CRUD · 4 entities", "v3": "Live on hosting",
+      "note": "<b>What it taught me.</b> Writing authentication by hand shows you exactly what a framework does for you — and why it exists. You appreciate the abstraction only after building it once."
+    },
+    "p4": {
+      "tag": "Shipped · with a real installer",
+      "title": "My <b>Notes</b>",
+      "lede": "A Windows desktop app written in Python — not a web app in a wrapper. You download it, install it, and it runs.",
+      "v1": "Windows · standalone", "v2": "AR · EN · RU + RTL", "v3": "4 published",
+      "note": "<b>The hard part.</b> Shipping it. PyInstaller, an Inno Setup installer, and making it run clean on a machine with no Python. Software isn't finished when the code works — it's finished when a stranger can install it."
+    },
+    "p5": {
+      "tag": "Foundations · a second language",
+      "title": "Java <b>Labs</b>",
+      "lede": "Five progressive labs: OOP, log4j2 logging, regex, XML parsing with SAX/DOM, and MySQL over JDBC.",
+      "v1": "5 · progressive", "v2": "OOP & class design", "v3": "log4j2, not print",
+      "note": "<b>Why bother.</b> Java forces you to be explicit — types declared, interfaces as contracts, class design up front. Writing the same ideas in a statically typed language made me a more deliberate Python developer."
+    },
+    "p6": {
+      "tag": "Python · SQL",
+      "title": "Data <b>Analysis</b>",
+      "lede": "Three projects on real datasets, not tutorial ones — COVID-19 global trends, supermarket revenue, and SQL store analytics.",
+      "v1": "350,085 · 255 locations", "v2": "2020 – 2023", "v3": "Charts & insights",
+      "note": "<b>What stayed with me.</b> Real data is messy. The analysis is the easy half — making the data trustworthy is the work. Validate early: that habit went straight into my back-end."
     },
     "journey": {
-      "title": "My Journey",
-      "subtitle": "Where I've been and what I've learned.",
-      "items": [
-        {
-          "period": "2025 — Present",
-          "role": "Self-taught Developer",
-          "place": "",
-          "text": "Building and deploying full-stack web applications, desktop apps, and data analysis projects. All code on GitHub."
-        },
-        {
-          "period": "2023 — 2027",
-          "role": "B.Sc. Information Systems & Technologies",
-          "place": "BSTU named after V.G. Shukhov, Belgorod, Russia",
-          "text": "Key grades: Web Technologies — 5, IT Project Management — 5."
-        },
-        {
-          "period": "2023",
-          "role": "Preparatory Faculty",
-          "place": "Southwestern State University (SWSU), Kursk, Russia",
-          "text": "Foundation year preparing for university studies in Russian."
-        },
-        {
-          "period": "2022 — 2023",
-          "role": "Russian Language Certificate",
-          "place": "RCSC + Al-Istiqlal University, Bethlehem, Palestine",
-          "text": "250-hour Russian language course."
-        },
-        {
-          "period": "2021 — 2023",
-          "role": "eBay Seller / Entrepreneur",
-          "place": "",
-          "text": "Built and managed an online store from scratch — inventory, pricing, logistics, customer support in Russian and English. 100% positive reviews."
-        }
-      ]
+      "eyebrow": "The road",
+      "title": "Where I<br>started",
+      "t1": "Two laptops on a wooden board",
+      "j1": "Before university I ran my own eBay store for two years — sourcing, pricing, logistics, customer support in Russian and English, 100% positive reviews. The setup was never what mattered.",
+      "t2": "Russian, from zero",
+      "j2": "A 250-hour language course in Bethlehem, then a preparatory year at SWSU in Kursk — studying in a language I was still learning.",
+      "t3": "BSTU named after V.G. Shukhov",
+      "j3": "B.Sc. Information Systems & Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5.",
+      "t4": "First real back-end, then production",
+      "j4": "Built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day. Same person — better tools, and a desk."
     },
-    "contact": {
-      "title": "Get in Touch",
-      "subtitle": "Have a project or opportunity? Let's talk.",
-      "email_label": "Email",
-      "github_label": "GitHub",
-      "linkedin_label": "LinkedIn",
-      "telegram_label": "Telegram",
-      "phone_label": "Phone"
-    },
-    "footer": {
-      "rights": "© 2026 Mohammed Shakarneh",
-      "built": "Built with vanilla HTML, CSS & JavaScript."
+    "end": {
+      "title": "Let's build<br>something<br><em>that lasts</em>",
+      "email": "Email", "github": "GitHub", "linkedin": "LinkedIn", "telegram": "Telegram",
+      "copy": "© 2026 Mohammed Shakarneh",
+      "loc": "Belgorod, Russia · open to work"
     }
   },
+
   "ru": {
-    "meta": {
-      "title": "Мохаммед Шакарнех — Веб-разработчик",
-      "description": "Мохаммед Шакарнех — Веб- и PHP Backend-разработчик. Full-stack приложения на PHP/MySQL, десктопное ПО на Python и анализ данных. Студент 3-го курса ИТ в России, родом из Палестины."
-    },
+    "meta": { "title": "Шакарнех Мохаммед — инженер-программист" },
     "nav": {
-      "about": "Обо мне",
-      "skills": "Навыки",
-      "projects": "Проекты",
+      "available": "Открыт к предложениям",
+      "work": "Проекты",
+      "arch": "Архитектура",
       "journey": "Путь",
-      "contact": "Контакты",
-      "skip": "Перейти к содержанию"
+      "talk": "Связаться →",
+      "language": "Язык",
+      "menu": "Меню"
     },
     "hero": {
-      "greeting": "Привет, я",
-      "name": "Мохаммед Шакарнех",
-      "roles": ["Веб-разработчик", "PHP Backend-разработчик", "Энтузиаст данных"],
-      "tagline": "Создаю чистые, функциональные веб-приложения — от базы данных до интерфейса. Студент 3-го курса ИТ-направления в России, родом из Палестины.",
-      "cta_work": "Смотреть проекты",
-      "cta_contact": "Связаться"
+      "idx": "Белгород, Россия · 2026",
+      "first": "Шакарнех",
+      "last": "Мохаммед",
+      "role": "Инженер-программист",
+      "sub": "Python · FastAPI · backend-архитектура"
     },
-    "about": {
-      "title": "Обо мне",
-      "subtitle": "Создаю осознанно.",
-      "text": "Я Мохаммед Шакарнех, студент 3-го курса направления «Информационные системы и технологии» в БГТУ (Белгород, Россия), родом из Палестины. Я самостоятельно изучил веб-разработку параллельно с учёбой в университете — создавая реальные проекты, а не просто следуя урокам. Я разработал full-stack сайты на PHP/MySQL с системами аутентификации, десктопное приложение на Python с автообновлениями, проекты анализа данных, обрабатывающие сотни тысяч строк, и приложения на Java, охватывающие ООП, XML и работу с базами данных. До университета я два года вёл собственный магазин на eBay — занимаясь всем: от поиска товаров до поддержки клиентов на русском и английском. Я ищу возможности расти как разработчик и участвовать в реальных проектах.",
-      "tech_label": "Основные технологии"
+    "bento": {
+      "eyebrow": "Кто я",
+      "who": "человек за коммитами",
+      "say": "Я строю то, чего никто не видит — <em>модель данных</em>, <em>API</em>, логику, которая обязана работать <em>правильно каждый раз</em>.",
+      "sig": "Шакарнех Мохаммед · backend-инженер",
+      "faceCap": "Белгород, Россия",
+      "listTitle": "Чем я занимаюсь",
+      "do1": "Проектирую API и модели данных",
+      "do1t": "Backend",
+      "do2": "Выпускаю full-stack продукты",
+      "do2t": "React · TS",
+      "do3": "Превращаю сырые данные в ответы",
+      "do3t": "Python · SQL",
+      "do4": "Учусь публично, каждую неделю",
+      "do4t": "Постоянно",
+      "bio1": "Родился в Палестине, учусь в России. До университета два года вёл собственный магазин на eBay — закупки, ценообразование, логистика и поддержка клиентов на двух языках, 100% положительных отзывов.",
+      "bio2": "Это научило меня главному: программа готова только тогда, когда живой человек может ею пользоваться без вас рядом.",
+      "native": "родной",
+      "fluent": "свободно",
+      "cta": "Давайте<br>обсудим"
     },
-    "skills": {
-      "title": "Навыки",
-      "subtitle": "Инструменты, с которыми работаю каждый день.",
-      "tools_label": "Инструменты и среды",
-      "items": [
-        { "name": "HTML / CSS", "level": 85 },
-        { "name": "PHP / MySQL", "level": 75 },
-        { "name": "JavaScript", "level": 70 },
-        { "name": "Python", "level": 65 },
-        { "name": "Java", "level": 60 },
-        { "name": "SQL / Базы данных", "level": 75 },
-        { "name": "Git / GitHub", "level": 70 },
-        { "name": "Docker (базовый)", "level": 35 }
-      ]
+    "stats": {
+      "s1": "системы в продакшене",
+      "s2": "товара обслуживается",
+      "s3": "публичных репозитория",
+      "s4": "языка в работе"
     },
-    "projects": {
-      "title": "Проекты",
-      "subtitle": "Реальные вещи, которые я спроектировал, построил и выпустил.",
-      "featured_badge": "Избранное",
-      "btn_code": "Код",
-      "btn_demo": "Демо",
-      "items": [
-        {
-          "title": "Десктоп-приложение My-Notes",
-          "description": "Десктопное приложение для заметок под Windows с поддержкой арабского RTL, форматированным редактором (жирный, курсив, подчёркивание, списки), автоматической тёмной/светлой темой, интерфейсом на 3 языках (арабский/английский/русский), корзиной, закреплением заметок, поиском, проверкой орфографии и поддержкой изображений. Создано на Python с веб-интерфейсом. Выпущено 4 версии с установщиком.",
-          "highlight": "Опубликовано 4 релиза (последний v1.3.0) — реальный продукт с установщиком"
-        },
-        {
-          "title": "AI Website — Искусственный интеллект",
-          "description": "Full-stack сайт об искусственном интеллекте на PHP, MySQL и JavaScript. Регистрация и вход пользователей с сессиями, админ-панель с CRUD-операциями для пользователей, страниц, сообщений и отзывов. Развёрнут на реальном хостинге.",
-          "highlight": ""
-        },
-        {
-          "title": "Ресторан «Берёзка»",
-          "description": "Сайт ресторана с системой бронирования, страницей контактов, динамическим меню и адаптивным дизайном. PHP-бэкенд для обработки бронирований.",
-          "highlight": "14 коммитов — активно поддерживается"
-        },
-        {
-          "title": "Анализ данных COVID-19",
-          "description": "Анализ реальных данных COVID-19 из Our World in Data (Kaggle). Обработано 350 085 строк по 255 локациям (2020–2023). Включает визуализации: топ-10 стран по случаям, смерти по континентам и графики мировых трендов.",
-          "highlight": ""
-        },
-        {
-          "title": "Аналитическая панель интернет-магазина",
-          "description": "Аналитическая панель на SQL для базы данных интернет-магазина. Сложные запросы для самых продаваемых товаров, топ-клиентов по выручке и месячных трендов выручки. База содержит таблицы пользователей, товаров и заказов.",
-          "highlight": ""
-        },
-        {
-          "title": "Анализ продаж супермаркета",
-          "description": "Бизнес-анализ данных о продажах супермаркета — выявление трендов выручки по категориям товаров, месячных паттернов продаж и распределения способов оплаты. Включает графики продаж по товарам, месячной выручки и распределения платежей.",
-          "highlight": ""
-        },
-        {
-          "title": "Университетские лабы по Java",
-          "description": "Пять последовательных лабораторных по Java, охватывающих основы: базовый синтаксис (условия, циклы, массивы), соглашения о коде с логированием log4j2, ООП с наследованием и конструкторами, регулярные выражения для извлечения IPv4/IPv6 и операции с MySQL через JDBC с разбором XML (SAX/DOM) для каталога лекарств.",
-          "highlight": ""
-        }
-      ]
+    "arch": {
+      "eyebrow": "Как я мыслю",
+      "title": "Жизненный цикл<br>запроса",
+      "lede": "У каждой моей системы один и тот же костяк. Запрос либо отклоняется сразу с понятной причиной, либо получает ответ — но никогда не падает.",
+      "n1": "Клиент", "d1": "HTTP + Bearer-токен",
+      "n2": "Аутентификация и роли", "d2": "JWT · bcrypt · 401 / 403",
+      "n3": "Валидация", "d3": "схемы Pydantic · 422",
+      "n4": "Бизнес-логика", "d4": "правила · поиск конфликтов",
+      "n5": "База данных", "d5": "PostgreSQL · транзакции",
+      "n6": "Ответ", "d6": "200 OK · типизированный JSON"
+    },
+    "work": {
+      "eyebrow": "Избранные работы",
+      "title": "Создано и<br>выпущено",
+      "lede": "Настоящие продукты, настоящие пользователи, настоящие ограничения. Не учебные примеры.",
+      "role": "Роль", "scale": "Масштаб", "status": "Статус", "access": "Доступ",
+      "auth": "Авторизация", "admin": "Админка", "platform": "Платформа", "langs": "Языки",
+      "releases": "Релизы", "labs": "Работы", "focus": "Фокус", "logging": "Логирование",
+      "rows": "Строк", "span": "Период", "output": "Результат",
+      "source": "Код", "visit": "Открыть сайт →", "download": "Скачать →"
+    },
+    "p1": {
+      "tag": "В продакшене",
+      "title": "Lolo <b>Cosmetics</b>",
+      "lede": "Настоящий бьюти-бренд продавал через скриншоты в WhatsApp — без каталога, без учёта остатков, без возможности расти. Я собрал всё целиком, от базы до интерфейса.",
+      "v1": "Соло — от базы до UI", "v2": "267 товаров · 91 коммит", "v3": "Обслуживает клиентов",
+      "note": "<b>Самое сложное.</b> Row-Level Security. Когда данные — это чей-то реальный бизнес, утечка это не баг-репорт, а его средства к существованию.",
+      "cta": "Открыть магазин →"
+    },
+    "p2": {
+      "tag": "Практика · Эксперт Чойс СиАйЭс",
+      "title": "Система <b>посещаемости</b>",
+      "lede": "Посещаемость жила на бумаге и в Excel. Один администратор тратил 3–5 часов, сводя всё вручную — каждый раз. Я построил backend, на котором держится остальное.",
+      "v1": "Backend admin API", "v2": "3 роли · JWT · bcrypt", "v3": "Смержено, с документацией",
+      "note": "<b>Самое сложное.</b> Поиск конфликтов расписания — проверка пересечения интервалов, чтобы преподаватель или группа никогда не оказались заняты дважды. Это потребовало больше размышлений, чем все CRUD-эндпоинты вместе взятые."
+    },
+    "p3": {
+      "tag": "Развёрнут · доступен",
+      "title": "AI <b>Knowledge</b>",
+      "lede": "Full-stack сайт об искусственном интеллекте — написан с нуля на PHP, без единого фреймворка.",
+      "v1": "PHP-сессии, вручную", "v2": "CRUD · 4 сущности", "v3": "Работает на хостинге",
+      "note": "<b>Чему научило.</b> Когда пишешь аутентификацию руками, понимаешь, что именно делает за тебя фреймворк — и зачем он вообще нужен. Абстракцию ценишь только после того, как построил её сам."
+    },
+    "p4": {
+      "tag": "Выпущено · с установщиком",
+      "title": "My <b>Notes</b>",
+      "lede": "Десктопное приложение для Windows на Python — не веб-страница в обёртке. Скачиваешь, устанавливаешь, запускаешь.",
+      "v1": "Windows · автономно", "v2": "AR · EN · RU + RTL", "v3": "4 опубликовано",
+      "note": "<b>Самое сложное.</b> Выпустить его. PyInstaller, установщик Inno Setup и чистый запуск на машине без Python. Программа не готова, когда код работает — она готова, когда её может установить незнакомый человек."
+    },
+    "p5": {
+      "tag": "Основы · второй язык",
+      "title": "Java <b>Labs</b>",
+      "lede": "Пять лабораторных: ООП, логирование log4j2, регулярные выражения, разбор XML через SAX/DOM и работа с MySQL по JDBC.",
+      "v1": "5 · по нарастающей", "v2": "ООП и дизайн классов", "v3": "log4j2, а не print",
+      "note": "<b>Зачем это нужно.</b> Java заставляет быть точным — типы объявлены, интерфейсы это контракты, дизайн классов продумывается заранее. Те же идеи в статически типизированном языке сделали меня более осознанным Python-разработчиком."
+    },
+    "p6": {
+      "tag": "Python · SQL",
+      "title": "Анализ <b>данных</b>",
+      "lede": "Три проекта на реальных данных, а не на учебных — мировая статистика COVID-19, выручка супермаркета и SQL-аналитика магазина.",
+      "v1": "350 085 · 255 локаций", "v2": "2020 – 2023", "v3": "Графики и выводы",
+      "note": "<b>Что осталось со мной.</b> Реальные данные грязные. Анализ — лёгкая половина, работа в том, чтобы данным можно было доверять. Проверяй рано: эта привычка перешла прямо в мой backend."
     },
     "journey": {
-      "title": "Мой путь",
-      "subtitle": "Где я был и чему научился.",
-      "items": [
-        {
-          "period": "2025 — наст. время",
-          "role": "Самоучка-разработчик",
-          "place": "",
-          "text": "Разработка и развёртывание full-stack веб-приложений, десктопных приложений и проектов анализа данных. Весь код на GitHub."
-        },
-        {
-          "period": "2023 — 2027",
-          "role": "Бакалавр «Информационные системы и технологии»",
-          "place": "БГТУ им. В.Г. Шухова, Белгород, Россия",
-          "text": "Ключевые оценки: Веб-технологии — 5, Управление ИТ-проектами — 5."
-        },
-        {
-          "period": "2023",
-          "role": "Подготовительный факультет",
-          "place": "Юго-Западный государственный университет (ЮЗГУ), Курск, Россия",
-          "text": "Подготовительный год к обучению в университете на русском языке."
-        },
-        {
-          "period": "2022 — 2023",
-          "role": "Сертификат по русскому языку",
-          "place": "РЦНК + Университет Аль-Истикляль, Вифлеем, Палестина",
-          "text": "250-часовой курс русского языка."
-        },
-        {
-          "period": "2021 — 2023",
-          "role": "Продавец на eBay / Предприниматель",
-          "place": "",
-          "text": "Построил и вёл интернет-магазин с нуля — склад, ценообразование, логистика, поддержка клиентов на русском и английском. 100% положительных отзывов."
-        }
-      ]
+      "eyebrow": "Дорога",
+      "title": "С чего<br>я начал",
+      "t1": "Два ноутбука на деревянной доске",
+      "j1": "До университета я два года вёл собственный магазин на eBay — закупки, цены, логистика, поддержка клиентов на русском и английском, 100% положительных отзывов. Рабочее место никогда не было главным.",
+      "t2": "Русский с нуля",
+      "j2": "250-часовой языковой курс в Вифлееме, затем подготовительный год в ЮЗГУ в Курске — учёба на языке, который я ещё только осваивал.",
+      "t3": "БГТУ им. В.Г. Шухова",
+      "j3": "Бакалавриат «Информационные системы и технологии», Белгород. Веб-технологии — 5, управление ИТ-проектами — 5.",
+      "t4": "Первый настоящий backend, затем продакшен",
+      "j4": "Собрал admin API в «Эксперт Чойс СиАйЭс», затем выпустил магазин, который каждый день обслуживает реальных клиентов. Тот же человек — лучше инструменты и наконец-то стол."
     },
-    "contact": {
-      "title": "Связаться",
-      "subtitle": "Есть проект или возможность? Давайте поговорим.",
-      "email_label": "Эл. почта",
-      "github_label": "GitHub",
-      "linkedin_label": "LinkedIn",
-      "telegram_label": "Telegram",
-      "phone_label": "Телефон"
-    },
-    "footer": {
-      "rights": "© 2026 Мохаммед Шакарнех",
-      "built": "Создано на чистых HTML, CSS и JavaScript."
+    "end": {
+      "title": "Давайте создадим<br>то, что<br><em>останется</em>",
+      "email": "Почта", "github": "GitHub", "linkedin": "LinkedIn", "telegram": "Telegram",
+      "copy": "© 2026 Шакарнех Мохаммед",
+      "loc": "Белгород, Россия · открыт к предложениям"
     }
   },
+
   "ar": {
-    "meta": {
-      "title": "محمد شكارنه — مطوّر ويب",
-      "description": "محمد شقارنة — مطوّر ويب و PHP Backend. تطبيقات full-stack بـ PHP/MySQL، برامج سطح مكتب بلغة Python، وتحليل بيانات. طالب سنة ثالثة تقنية معلومات في روسيا، من فلسطين."
-    },
+    "meta": { "title": "محمد شكارنه — مهندس تطوير برمجيات" },
     "nav": {
-      "about": "عنّي",
-      "skills": "المهارات",
-      "projects": "المشاريع",
-      "journey": "مسيرتي",
-      "contact": "تواصل",
-      "skip": "تخطَّ إلى المحتوى"
+      "available": "متاح للعمل",
+      "work": "الأعمال",
+      "arch": "البنية",
+      "journey": "المسيرة",
+      "talk": "لنتحدث ←",
+      "language": "اللغة",
+      "menu": "القائمة"
     },
     "hero": {
-      "greeting": "مرحبًا، أنا",
-      "name": "محمد شكارنه",
-      "roles": ["مطوّر ويب", "مطوّر PHP Backend", "مهتم بالبيانات"],
-      "tagline": "أبني تطبيقات ويب نظيفة وعملية — من قاعدة البيانات إلى الواجهة. طالب سنة ثالثة تقنية معلومات في روسيا، من فلسطين.",
-      "cta_work": "عرض المشاريع",
-      "cta_contact": "تواصل معي"
+      "idx": "بيلغورود، روسيا · 2026",
+      "first": "محمد",
+      "last": "شكارنه",
+      "role": "مهندس تطوير برمجيات",
+      "sub": "Python · FastAPI · بنية الواجهة الخلفية"
     },
-    "about": {
-      "title": "عنّي",
-      "subtitle": "أبني بهدف.",
-      "text": "أنا محمد شقارنة، طالب سنة ثالثة في تخصص نظم وتقنيات المعلومات في جامعة BSTU (بيلغورود، روسيا)، أصلي من فلسطين. تعلّمت تطوير الويب ذاتيًا بالتوازي مع دراستي الجامعية — أبني مشاريع حقيقية، لا مجرد متابعة دروس. أنشأت مواقع full-stack بـ PHP/MySQL مع أنظمة مصادقة، وتطبيق سطح مكتب بلغة Python مع تحديثات تلقائية، ومشاريع تحليل بيانات تعالج مئات الآلاف من الصفوف، وتطبيقات Java تغطي البرمجة الكائنية و XML والتكامل مع قواعد البيانات. قبل الجامعة، أدرت متجري الخاص على eBay لمدة عامين — من توفير المنتجات إلى دعم العملاء بالروسية والإنجليزية. أبحث عن فرص لأتطوّر كمطوّر وأساهم في مشاريع حقيقية.",
-      "tech_label": "التقنيات الأساسية"
+    "bento": {
+      "eyebrow": "من أنا",
+      "who": "الشخص خلف الأكواد",
+      "say": "أبني الجزء الذي لا يراه أحد — <em>نموذج البيانات</em>، و<em>الواجهة البرمجية</em>، والمنطق الذي يجب أن يعمل <em>بشكل صحيح في كل مرة</em>.",
+      "sig": "محمد شكارنه · مهندس واجهة خلفية",
+      "faceCap": "بيلغورود، روسيا",
+      "listTitle": "ما أقوم به فعلياً",
+      "do1": "تصميم واجهات برمجية ونماذج بيانات",
+      "do1t": "الخلفية",
+      "do2": "إطلاق منتجات متكاملة",
+      "do2t": "React · TS",
+      "do3": "تحويل البيانات الفوضوية إلى إجابات",
+      "do3t": "Python · SQL",
+      "do4": "أتعلّم علناً، كل أسبوع",
+      "do4t": "مستمر",
+      "bio1": "وُلدت في فلسطين، وأدرس في روسيا. قبل الجامعة أدرت متجري الخاص على eBay لمدة عامين — التوريد والتسعير والشحن ودعم العملاء بلغتين، بتقييم إيجابي 100%.",
+      "bio2": "علّمني ذلك ما أهتم به حتى اليوم: البرنامج لا يكتمل إلا حين يستطيع شخص حقيقي استخدامه دون أن تقف بجانبه.",
+      "native": "اللغة الأم",
+      "fluent": "بطلاقة",
+      "cta": "لنتحدث"
     },
-    "skills": {
-      "title": "المهارات",
-      "subtitle": "الأدوات التي أعمل بها كل يوم.",
-      "tools_label": "الأدوات وبيئات العمل",
-      "items": [
-        { "name": "HTML / CSS", "level": 85 },
-        { "name": "PHP / MySQL", "level": 75 },
-        { "name": "JavaScript", "level": 70 },
-        { "name": "Python", "level": 65 },
-        { "name": "Java", "level": 60 },
-        { "name": "SQL / قواعد البيانات", "level": 75 },
-        { "name": "Git / GitHub", "level": 70 },
-        { "name": "Docker (أساسي)", "level": 35 }
-      ]
+    "stats": {
+      "s1": "نظامان قيد التشغيل",
+      "s2": "منتجاً تُخدَم مباشرة",
+      "s3": "مستودعاً عاماً",
+      "s4": "لغات أعمل بها"
     },
-    "projects": {
-      "title": "المشاريع",
-      "subtitle": "أشياء حقيقية صمّمتها وبنيتها وأطلقتها.",
-      "featured_badge": "مميّز",
-      "btn_code": "الكود",
-      "btn_demo": "عرض مباشر",
-      "items": [
-        {
-          "title": "تطبيق My-Notes لسطح المكتب",
-          "description": "تطبيق ملاحظات لسطح المكتب على ويندوز مع دعم العربية RTL، ومحرّر نصوص منسّق (عريض، مائل، تسطير، قوائم)، وثيم داكن/فاتح تلقائي، وواجهة بثلاث لغات (عربي/إنجليزي/روسي)، وسلة محذوفات، وتثبيت الملاحظات، وبحث، وتدقيق إملائي، ودعم الصور. مبني بـ Python وواجهة ويب. تم إصدار 4 نسخ مع مثبّت.",
-          "highlight": "4 إصدارات منشورة (الأحدث v1.3.0) — منتج حقيقي مع مثبّت"
-        },
-        {
-          "title": "موقع AI — الذكاء الاصطناعي",
-          "description": "موقع full-stack عن الذكاء الاصطناعي مبني بـ PHP و MySQL و JavaScript. يتضمّن تسجيل ودخول المستخدمين بالجلسات، ولوحة تحكّم بعمليات CRUD للمستخدمين والصفحات والرسائل والتقييمات. منشور على استضافة حقيقية.",
-          "highlight": ""
-        },
-        {
-          "title": "مطعم بيريوزكا",
-          "description": "موقع مطعم بنظام حجز، وصفحة تواصل، وقائمة طعام ديناميكية، وتصميم متجاوب. يتضمّن خلفية PHP لمعالجة الحجوزات.",
-          "highlight": "14 commit — تتم صيانته باستمرار"
-        },
-        {
-          "title": "تحليل بيانات COVID-19",
-          "description": "تحليل بيانات حقيقية لكوفيد-19 من Our World in Data (Kaggle). معالجة 350,085 صفًا عبر 255 موقعًا (2020–2023). يشمل رسومًا بيانية: أعلى 10 دول بالحالات، والوفيات حسب القارة، ومخططات الاتجاهات العالمية.",
-          "highlight": ""
-        },
-        {
-          "title": "لوحة تحليلات متجر إلكتروني",
-          "description": "لوحة تحليلات مبنية على SQL لقاعدة بيانات متجر إلكتروني. استعلامات معقّدة لأكثر المنتجات مبيعًا، وأفضل العملاء بالإيرادات، واتجاهات الإيرادات الشهرية. تتضمّن القاعدة جداول المستخدمين والمنتجات والطلبات.",
-          "highlight": ""
-        },
-        {
-          "title": "تحليل مبيعات سوبرماركت",
-          "description": "تحليل أعمال لبيانات مبيعات سوبرماركت — تحديد اتجاهات الإيرادات حسب فئة المنتج، وأنماط المبيعات الشهرية، وتوزيع طرق الدفع. يشمل رسومًا للمبيعات حسب المنتج، والإيرادات الشهرية، وتوزيع المدفوعات.",
-          "highlight": ""
-        },
-        {
-          "title": "مختبرات Java الجامعية",
-          "description": "خمسة تمارين Java متدرّجة تغطّي المفاهيم الأساسية: الصياغة الأساسية (الشروط، الحلقات، المصفوفات)، واصطلاحات الكود مع تسجيل log4j2، والبرمجة الكائنية مع الوراثة والمنشئات، والتعبيرات النمطية لاستخراج IPv4/IPv6، وعمليات MySQL عبر JDBC مع تحليل XML (SAX/DOM) لكتالوج أدوية.",
-          "highlight": ""
-        }
-      ]
+    "arch": {
+      "eyebrow": "كيف أفكر",
+      "title": "دورة حياة<br>الطلب",
+      "lede": "كل نظام أبنيه له العمود الفقري نفسه. الطلب إمّا يُرفض مبكراً بسبب واضح، أو يحصل على إجابة — ولا ينهار أبداً.",
+      "n1": "العميل", "d1": "HTTP + رمز Bearer",
+      "n2": "المصادقة والصلاحيات", "d2": "JWT · bcrypt · 401 / 403",
+      "n3": "التحقق من المدخلات", "d3": "مخططات Pydantic · 422",
+      "n4": "منطق العمل", "d4": "القواعد · كشف التعارض",
+      "n5": "قاعدة البيانات", "d5": "PostgreSQL · المعاملات",
+      "n6": "الاستجابة", "d6": "200 OK · JSON منظم"
+    },
+    "work": {
+      "eyebrow": "أعمال مختارة",
+      "title": "بُنيت<br>وأُطلقت",
+      "lede": "منتجات حقيقية، ومستخدمون حقيقيون، وقيود حقيقية. ليست تمارين تعليمية.",
+      "role": "الدور", "scale": "الحجم", "status": "الحالة", "access": "الصلاحيات",
+      "auth": "المصادقة", "admin": "لوحة التحكم", "platform": "المنصة", "langs": "اللغات",
+      "releases": "الإصدارات", "labs": "المختبرات", "focus": "التركيز", "logging": "السجلات",
+      "rows": "الصفوف", "span": "الفترة", "output": "المخرجات",
+      "source": "الكود", "visit": "زيارة الموقع ←", "download": "تحميل ←"
+    },
+    "p1": {
+      "tag": "قيد التشغيل الفعلي",
+      "title": "لولو <b>كوزمتكس</b>",
+      "lede": "علامة تجميل حقيقية كانت تبيع عبر لقطات شاشة في واتساب — بلا كتالوج، وبلا إدارة مخزون، وبلا قدرة على التوسع. بنيت المشروع كاملاً من الخلفية إلى الواجهة.",
+      "v1": "منفرداً — من الألف إلى الياء", "v2": "267 منتجاً · 91 إضافة", "v3": "يخدم العملاء",
+      "note": "<b>الجزء الأصعب.</b> أمان الصفوف Row-Level Security. حين تكون البيانات تجارة شخص حقيقي، فالتسريب ليس تقرير خطأ — بل مصدر رزقه.",
+      "cta": "زيارة المتجر ←"
+    },
+    "p2": {
+      "tag": "تدريب · Expert Choice CIS",
+      "title": "نظام <b>الحضور</b>",
+      "lede": "كان الحضور يُسجَّل على الورق وفي Excel، ويقضي موظف واحد من 3 إلى 5 ساعات في تجميعه يدوياً — في كل مرة. بنيت الواجهة الخلفية التي يقوم عليها كل شيء.",
+      "v1": "واجهة إدارة خلفية", "v2": "3 أدوار · JWT · bcrypt", "v3": "مدمج وموثّق",
+      "note": "<b>الجزء الأصعب.</b> كشف تعارض الجداول — التحقق من تداخل الفترات الزمنية حتى لا يُحجز مدرّس أو مجموعة مرتين. استغرق تفكيراً أكثر من كل نقاط النهاية الأخرى مجتمعة."
+    },
+    "p3": {
+      "tag": "منشور ويعمل",
+      "title": "موقع <b>الذكاء الاصطناعي</b>",
+      "lede": "موقع متكامل عن الذكاء الاصطناعي — مكتوب من الصفر بلغة PHP، دون أي إطار عمل.",
+      "v1": "جلسات PHP يدوياً", "v2": "CRUD · 4 كيانات", "v3": "يعمل على الاستضافة",
+      "note": "<b>ما تعلّمته.</b> كتابة المصادقة يدوياً تُريك بالضبط ما تفعله أطر العمل نيابةً عنك، ولماذا وُجدت أصلاً. لا تُقدّر التجريد حق قدره إلا بعد أن تبنيه بنفسك مرة واحدة."
+    },
+    "p4": {
+      "tag": "صدر · مع مثبّت حقيقي",
+      "title": "تطبيق <b>الملاحظات</b>",
+      "lede": "تطبيق سطح مكتب لويندوز مكتوب بلغة Python — وليس موقعاً داخل غلاف. تُنزّله وتُثبّته فيعمل.",
+      "v1": "ويندوز · مستقل", "v2": "عربي · إنجليزي · روسي", "v3": "4 إصدارات",
+      "note": "<b>الجزء الأصعب.</b> إطلاقه فعلياً: PyInstaller، ومثبّت Inno Setup، وجعله يعمل بنظافة على جهاز لا يحتوي Python. البرنامج لا يكتمل حين يعمل الكود — بل حين يستطيع شخص غريب تثبيته."
+    },
+    "p5": {
+      "tag": "الأساسيات · لغة ثانية",
+      "title": "مختبرات <b>جافا</b>",
+      "lede": "خمسة مختبرات متدرجة: البرمجة كائنية التوجه، والسجلات عبر log4j2، والتعابير النمطية، وتحليل XML بـ SAX/DOM، والتعامل مع MySQL عبر JDBC.",
+      "v1": "5 · متدرجة", "v2": "OOP وتصميم الأصناف", "v3": "log4j2 بدل الطباعة",
+      "note": "<b>لماذا الأمر يستحق.</b> جافا تُجبرك على الوضوح — الأنواع مُعلنة، والواجهات عقود، وتصميم الأصناف يُحسم مسبقاً. كتابة الأفكار نفسها بلغة ذات أنواع ثابتة جعلتني مطوّر Python أكثر وعياً."
+    },
+    "p6": {
+      "tag": "Python · SQL",
+      "title": "تحليل <b>البيانات</b>",
+      "lede": "ثلاثة مشاريع على بيانات حقيقية لا تعليمية — الاتجاهات العالمية لكوفيد-19، وإيرادات سوبرماركت، وتحليلات متجر بـ SQL.",
+      "v1": "350,085 · 255 موقعاً", "v2": "2020 – 2023", "v3": "رسوم ونتائج",
+      "note": "<b>ما بقي معي.</b> البيانات الحقيقية فوضوية. التحليل هو النصف السهل — العمل الحقيقي أن تجعل البيانات جديرة بالثقة. تحقّق مبكراً: هذه العادة انتقلت مباشرة إلى عملي في الواجهة الخلفية."
     },
     "journey": {
-      "title": "مسيرتي",
-      "subtitle": "أين كنت وماذا تعلّمت.",
-      "items": [
-        {
-          "period": "2025 — حتى الآن",
-          "role": "مطوّر متعلّم ذاتيًا",
-          "place": "",
-          "text": "بناء ونشر تطبيقات ويب full-stack وتطبيقات سطح مكتب ومشاريع تحليل بيانات. كل الكود على GitHub."
-        },
-        {
-          "period": "2023 — 2027",
-          "role": "بكالوريوس نظم وتقنيات المعلومات",
-          "place": "جامعة BSTU باسم ف. غ. شوخوف، بيلغورود، روسيا",
-          "text": "أبرز الدرجات: تقنيات الويب — 5، إدارة مشاريع تقنية المعلومات — 5."
-        },
-        {
-          "period": "2023",
-          "role": "الكلية التحضيرية",
-          "place": "جامعة الجنوب الغربي الحكومية (SWSU)، كورسك، روسيا",
-          "text": "سنة تأسيسية للتحضير للدراسة الجامعية باللغة الروسية."
-        },
-        {
-          "period": "2022 — 2023",
-          "role": "شهادة في اللغة الروسية",
-          "place": "RCSC + جامعة الاستقلال، بيت لحم، فلسطين",
-          "text": "دورة في اللغة الروسية مدّتها 250 ساعة."
-        },
-        {
-          "period": "2021 — 2023",
-          "role": "بائع على eBay / رائد أعمال",
-          "place": "",
-          "text": "بنيت وأدرت متجرًا إلكترونيًا من الصفر — المخزون، التسعير، اللوجستيات، دعم العملاء بالروسية والإنجليزية. 100% تقييمات إيجابية."
-        }
-      ]
+      "eyebrow": "الطريق",
+      "title": "من أين<br>بدأت",
+      "t1": "حاسوبان على لوح خشبي",
+      "j1": "قبل الجامعة أدرت متجري على eBay لعامين — التوريد والتسعير والشحن ودعم العملاء بالروسية والإنجليزية، بتقييم إيجابي 100%. لم تكن المعدات يوماً هي المهمة.",
+      "t2": "الروسية من الصفر",
+      "j2": "دورة لغة مدتها 250 ساعة في بيت لحم، ثم سنة تحضيرية في جامعة الجنوب الغربي بكورسك — دراسة بلغة كنت ما أزال أتعلّمها.",
+      "t3": "جامعة بيلغورود التقنية شوخوف",
+      "j3": "بكالوريوس نظم وتقنيات المعلومات، بيلغورود. تقنيات الويب — 5، إدارة مشاريع تقنية المعلومات — 5.",
+      "t4": "أول واجهة خلفية حقيقية، ثم الإنتاج",
+      "j4": "بنيت واجهة الإدارة في Expert Choice CIS، ثم أطلقت متجراً يخدم عملاء حقيقيين كل يوم. الشخص نفسه — أدوات أفضل، ومكتب أخيراً."
     },
-    "contact": {
-      "title": "تواصل معي",
-      "subtitle": "لديك مشروع أو فرصة؟ لنتحدّث.",
-      "email_label": "البريد",
-      "github_label": "GitHub",
-      "linkedin_label": "LinkedIn",
-      "telegram_label": "Telegram",
-      "phone_label": "الهاتف"
-    },
-    "footer": {
-      "rights": "© 2026 محمد شكارنه",
-      "built": "مبني بـ HTML و CSS و JavaScript خالصة."
+    "end": {
+      "title": "لنبنِ شيئاً<br><em>يبقى</em>",
+      "email": "البريد", "github": "غيت هب", "linkedin": "لينكدإن", "telegram": "تيليغرام",
+      "copy": "© 2026 محمد شكارنه",
+      "loc": "بيلغورود، روسيا · متاح للعمل"
     }
   }
 }
