@@ -110,7 +110,8 @@ nav.stuck{border-color:var(--line)}
 }
 .hero-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;position:relative;z-index:3;margin-top:12px;flex-wrap:wrap}
 .hero-role{font-size:clamp(1rem,2.2vw,1.35rem);font-weight:600;max-width:22ch;line-height:1.3}
-.hero-role span{color:var(--ink-3);font-weight:400;display:block;font-size:.86rem;margin-top:8px;font-family:var(--mono)}
+.hero-role>span{display:block}
+.hero-role .sub{color:var(--ink-3);font-weight:400;font-size:.86rem;margin-top:8px;font-family:var(--mono)}
 .hero-links{display:flex;gap:10px}
 .hero-links a{
   width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);
@@ -159,9 +160,12 @@ nav.stuck{border-color:var(--line)}
   padding:13px 0;border-bottom:1px solid #2e2b22;font-size:.98rem;transition:.25s;
 }
 .b-list a:last-child{border-bottom:0}
-.b-list a span{margin-left:auto;font-family:var(--mono);font-size:.72rem;color:#6d6552;transition:.25s}
-.b-list a:hover{color:#c8a86b;padding-left:8px}
-.b-list a:hover span{color:#c8a86b}
+.b-list a span:last-child{
+  margin-inline-start:auto;font-family:var(--mono);font-size:.72rem;color:#6d6552;
+  transition:.25s;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;
+}
+.b-list a:hover{color:#c8a86b;padding-inline-start:8px}
+.b-list a:hover span:last-child{color:#c8a86b}
 
 .b-bio{grid-column:span 5;grid-row:span 2}
 .b-bio p{font-size:.94rem;line-height:1.7;color:#171610;opacity:.85}
@@ -355,25 +359,25 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
 
 <nav id="nav">
   <div class="nav-in">
-    <div class="avail"><span class="pulse"></span> AVAILABLE FOR WORK</div>
+    <div class="avail"><span class="pulse"></span> <span data-i18n="nav.available">Available for work</span></div>
     <div class="nav-mid">
-      <a href="#work">Work<sup>8</sup></a>
-      <a href="#architecture">Architecture</a>
-      <a href="#journey">Journey</a>
+      <a href="#work"><span data-i18n="nav.work">Work</span><sup>6</sup></a>
+      <a href="#architecture" data-i18n="nav.arch">Architecture</a>
+      <a href="#journey" data-i18n="nav.journey">Journey</a>
     </div>
-    <a class="talk" href="#contact">Let's talk →</a>
+    <a class="talk" href="#contact" data-i18n="nav.talk">Let's talk →</a>
   </div>
 </nav>
 
 <!-- ══ HERO ══ -->
 <header class="hero shell">
   <div class="hero-portrait"><img src="assets/photos/portrait-glasses.jpg" alt="Mohammed Shakarneh"></div>
-  <div class="hero-idx">Belgorod, Russia · 2026</div>
-  <h1 class="hero-name"><span class="l1">Mohammed</span><span class="l2">Shakarneh</span></h1>
+  <div class="hero-idx" data-i18n="hero.idx">Belgorod, Russia · 2026</div>
+  <h1 class="hero-name"><span class="l1" data-i18n="hero.first">Mohammed</span><span class="l2" data-i18n="hero.last">Shakarneh</span></h1>
   <div class="hero-meta">
     <div class="hero-role">
-      Software Development Engineer
-      <span>Python · FastAPI · Back-end architecture</span>
+      <span data-i18n="hero.role">Software Development Engineer</span>
+      <span class="sub" data-i18n="hero.sub">Python · FastAPI · Back-end architecture</span>
     </div>
     <div class="hero-links">
       <a href="https://github.com/Shakarneh" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><use href="#i-github"/></svg></a>
@@ -388,42 +392,42 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
 <div class="bento-wrap">
   <div class="shell">
     <div class="bento-head rv">
-      <div class="eyebrow">Who I am</div>
-      <div class="who">the person behind the commits</div>
+      <div class="eyebrow" data-i18n="bento.eyebrow">Who I am</div>
+      <div class="who" data-i18n="bento.who">the person behind the commits</div>
     </div>
 
     <div class="bento">
       <article class="b cream b-say rv">
-        <h2>I build the part nobody sees — the <em>data model</em>, the <em>API</em>, the logic that has to be <em>right every time</em>.</h2>
-        <div class="sig">Mohammed Shakarneh · back-end engineer</div>
+        <h2 data-i18n-html="bento.say">I build the part nobody sees — the <em>data model</em>, the <em>API</em>, the logic that has to be <em>right every time</em>.</h2>
+        <div class="sig" data-i18n="bento.sig">Mohammed Shakarneh · back-end engineer</div>
       </article>
 
       <figure class="b b-face rv">
         <img src="assets/photos/portrait-studio.jpg" alt="Mohammed Shakarneh">
-        <figcaption>Belgorod, Russia</figcaption>
+        <figcaption data-i18n="bento.faceCap">Belgorod, Russia</figcaption>
       </figure>
 
       <article class="b dark b-list rv">
-        <h3>What I actually do</h3>
-        <a href="#architecture">Design APIs and data models <span>BACK-END</span></a>
-        <a href="#work">Ship full-stack products <span>REACT · TS</span></a>
-        <a href="#work">Turn messy data into answers <span>PYTHON · SQL</span></a>
-        <a href="#journey">Learn in public, every week <span>ONGOING</span></a>
+        <h3 data-i18n="bento.listTitle">What I actually do</h3>
+        <a href="#architecture"><span data-i18n="bento.do1">Design APIs and data models</span> <span data-i18n="bento.do1t">Back-end</span></a>
+        <a href="#work"><span data-i18n="bento.do2">Ship full-stack products</span> <span data-i18n="bento.do2t">React · TS</span></a>
+        <a href="#work"><span data-i18n="bento.do3">Turn messy data into answers</span> <span data-i18n="bento.do3t">Python · SQL</span></a>
+        <a href="#journey"><span data-i18n="bento.do4">Learn in public, every week</span> <span data-i18n="bento.do4t">Ongoing</span></a>
       </article>
 
       <article class="b cream b-bio rv">
-        <p>Born in Palestine, studying in Russia. Before university I ran my own eBay store for two years — sourcing, pricing, logistics and customer support in two languages, with 100% positive reviews.</p>
-        <p>That taught me the thing I still care about most: software is only finished when a real person can use it without you standing next to them.</p>
+        <p data-i18n="bento.bio1">Born in Palestine, studying in Russia. Before university I ran my own eBay store for two years — sourcing, pricing, logistics and customer support in two languages, with 100% positive reviews.</p>
+        <p data-i18n="bento.bio2">That taught me the thing I still care about most: software is only finished when a real person can use it without you standing next to them.</p>
       </article>
 
       <article class="b dark b-lang rv">
-        <div><b>العربية</b><small>native</small></div>
-        <div><b>English</b><small>fluent</small></div>
-        <div><b>Русский</b><small>fluent</small></div>
+        <div><b>العربية</b><small data-i18n="bento.native">native</small></div>
+        <div><b>English</b><small data-i18n="bento.fluent">fluent</small></div>
+        <div><b>Русский</b><small data-i18n="bento.fluent">fluent</small></div>
       </article>
 
       <a class="b b-cta rv" href="#contact">
-        <div class="t">Let's<br>talk</div>
+        <div class="t" data-i18n-html="bento.cta">Let's<br>talk</div>
         <div class="arw">↗</div>
       </a>
     </div>
@@ -433,36 +437,36 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
 <!-- ══ STATS ══ -->
 <section class="shell rv">
   <div class="stats">
-    <div class="stat"><b>2</b><small>systems in production</small></div>
-    <div class="stat"><b>267</b><small>products served live</small></div>
-    <div class="stat"><b>12</b><small>public repositories</small></div>
-    <div class="stat"><b>4</b><small>languages I ship in</small></div>
+    <div class="stat"><b>2</b><small data-i18n="stats.s1">systems in production</small></div>
+    <div class="stat"><b>267</b><small data-i18n="stats.s2">products served live</small></div>
+    <div class="stat"><b>12</b><small data-i18n="stats.s3">public repositories</small></div>
+    <div class="stat"><b>4</b><small data-i18n="stats.s4">languages I ship in</small></div>
   </div>
 </section>
 
 <!-- ══ ARCHITECTURE ══ -->
 <section id="architecture" class="shell">
   <div class="head rv">
-    <div class="eyebrow">How I think</div>
-    <h2>Request<br>lifecycle</h2>
-    <p>Every system I build has the same spine. A request either gets rejected early with a clear reason, or it gets answered — never a crash.</p>
+    <div class="eyebrow" data-i18n="arch.eyebrow">How I think</div>
+    <h2 data-i18n-html="arch.title">Request<br>lifecycle</h2>
+    <p data-i18n="arch.lede">Every system I build has the same spine. A request either gets rejected early with a clear reason, or it gets answered — never a crash.</p>
   </div>
   <div class="arch">
-    <div class="layer rv"><span class="n">01</span><span class="t">Client</span><span class="d">HTTP + Bearer token</span></div>
-    <div class="layer rv"><span class="n">02</span><span class="t">Authentication &amp; Roles</span><span class="d">JWT · bcrypt · 401 / 403</span></div>
-    <div class="layer rv"><span class="n">03</span><span class="t">Validation</span><span class="d">Pydantic schemas · 422</span></div>
-    <div class="layer rv"><span class="n">04</span><span class="t">Business Logic</span><span class="d">rules · conflict detection</span></div>
-    <div class="layer rv"><span class="n">05</span><span class="t">Database</span><span class="d">PostgreSQL · transactions</span></div>
-    <div class="layer rv"><span class="n">06</span><span class="t">Response</span><span class="d">200 OK · typed JSON</span></div>
+    <div class="layer rv"><span class="n">01</span><span class="t" data-i18n="arch.n1">Client</span><span class="d" data-i18n="arch.d1">HTTP + Bearer token</span></div>
+    <div class="layer rv"><span class="n">02</span><span class="t" data-i18n="arch.n2">Authentication &amp; Roles</span><span class="d" data-i18n="arch.d2">JWT · bcrypt · 401 / 403</span></div>
+    <div class="layer rv"><span class="n">03</span><span class="t" data-i18n="arch.n3">Validation</span><span class="d" data-i18n="arch.d3">Pydantic schemas · 422</span></div>
+    <div class="layer rv"><span class="n">04</span><span class="t" data-i18n="arch.n4">Business Logic</span><span class="d" data-i18n="arch.d4">rules · conflict detection</span></div>
+    <div class="layer rv"><span class="n">05</span><span class="t" data-i18n="arch.n5">Database</span><span class="d" data-i18n="arch.d5">PostgreSQL · transactions</span></div>
+    <div class="layer rv"><span class="n">06</span><span class="t" data-i18n="arch.n6">Response</span><span class="d" data-i18n="arch.d6">200 OK · typed JSON</span></div>
   </div>
 </section>
 
 <!-- ══ WORK ══ -->
 <div id="work" class="shell">
   <div class="head rv">
-    <div class="eyebrow">Selected work</div>
-    <h2>Built &amp;<br>shipped</h2>
-    <p>Real products, real users, real constraints. Not tutorials.</p>
+    <div class="eyebrow" data-i18n="work.eyebrow">Selected work</div>
+    <h2 data-i18n-html="work.title">Built &amp;<br>shipped</h2>
+    <p data-i18n="work.lede">Real products, real users, real constraints. Not tutorials.</p>
   </div>
 </div>
 
@@ -470,22 +474,22 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
   <div class="proj-grid">
     <div class="proj-txt">
       <div class="idx">01</div>
-      <div class="tag"><i></i> Live in production</div>
-      <h3>Lolo <b>Cosmetics</b></h3>
-      <p class="lede">A real beauty brand was selling through WhatsApp screenshots — no catalogue, no stock control, no way to scale. I built the whole thing, front to back.</p>
+      <div class="tag"><i></i> <span data-i18n="p1.tag">Live in production</span></div>
+      <h3 data-i18n-html="p1.title">Lolo <b>Cosmetics</b></h3>
+      <p class="lede" data-i18n="p1.lede">A real beauty brand was selling through WhatsApp screenshots — no catalogue, no stock control, no way to scale. I built the whole thing, front to back.</p>
       <dl class="spec">
-        <div><dt>Role</dt><dd>Solo — front to back</dd></div>
-        <div><dt>Scale</dt><dd>267 products · 91 commits</dd></div>
-        <div><dt>Status</dt><dd>Serving customers</dd></div>
+        <div><dt data-i18n="work.role">Role</dt><dd data-i18n="p1.v1">Solo — front to back</dd></div>
+        <div><dt data-i18n="work.scale">Scale</dt><dd data-i18n="p1.v2">267 products · 91 commits</dd></div>
+        <div><dt data-i18n="work.status">Status</dt><dd data-i18n="p1.v3">Serving customers</dd></div>
       </dl>
-      <p class="note-h"><b>The hard part.</b> Row-Level Security. When the data is someone's actual business, a leak isn't a bug report — it's their livelihood.</p>
+      <p class="note-h" data-i18n-html="p1.note"><b>The hard part.</b> Row-Level Security. When the data is someone's actual business, a leak isn't a bug report — it's their livelihood.</p>
       <div class="chips">
         <span class="chip">React 18</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Tailwind RTL</span>
         <span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">RLS</span><span class="chip">Edge Functions</span><span class="chip">Cloudflare</span>
       </div>
       <div class="acts">
-        <a class="act solid" href="https://lolocosmetics.shop">Visit store →</a>
-        <a class="act" href="https://github.com/Shakarneh/lolo-cosmetics">Source</a>
+        <a class="act solid" href="https://lolocosmetics.shop" data-i18n="p1.cta">Visit store →</a>
+        <a class="act" href="https://github.com/Shakarneh/lolo-cosmetics" data-i18n="work.source">Source</a>
       </div>
     </div>
     <div class="vis" data-tilt>
@@ -509,20 +513,20 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
     </div>
     <div class="proj-txt">
       <div class="idx">02</div>
-      <div class="tag"><i></i> Internship · Expert Choice CIS</div>
-      <h3>Attendance <b>System</b></h3>
-      <p class="lede">Attendance lived on paper and in Excel. One administrator spent 3–5 hours merging it by hand — every single time. I built the back-end everything else sits on.</p>
+      <div class="tag"><i></i> <span data-i18n="p2.tag">Internship · Expert Choice CIS</span></div>
+      <h3 data-i18n-html="p2.title">Attendance <b>System</b></h3>
+      <p class="lede" data-i18n="p2.lede">Attendance lived on paper and in Excel. One administrator spent 3–5 hours merging it by hand — every single time. I built the back-end everything else sits on.</p>
       <dl class="spec">
-        <div><dt>Role</dt><dd>Back-end admin API</dd></div>
-        <div><dt>Access</dt><dd>3 roles · JWT · bcrypt</dd></div>
-        <div><dt>Status</dt><dd>Merged &amp; documented</dd></div>
+        <div><dt data-i18n="work.role">Role</dt><dd data-i18n="p2.v1">Back-end admin API</dd></div>
+        <div><dt data-i18n="work.access">Access</dt><dd data-i18n="p2.v2">3 roles · JWT · bcrypt</dd></div>
+        <div><dt data-i18n="work.status">Status</dt><dd data-i18n="p2.v3">Merged &amp; documented</dd></div>
       </dl>
-      <p class="note-h"><b>The hard part.</b> Schedule conflict detection — interval-overlap checks so a teacher or group can never be double-booked. It took more thought than every CRUD endpoint combined.</p>
+      <p class="note-h" data-i18n-html="p2.note"><b>The hard part.</b> Schedule conflict detection — interval-overlap checks so a teacher or group can never be double-booked. It took more thought than every CRUD endpoint combined.</p>
       <div class="chips">
         <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQLAlchemy</span><span class="chip">Pydantic</span>
         <span class="chip">JWT</span><span class="chip">bcrypt</span><span class="chip">SQLite</span><span class="chip">Swagger</span>
       </div>
-      <div class="acts"><a class="act solid" href="https://github.com/Shakarneh/attendance-tracking-system">Source →</a></div>
+      <div class="acts"><a class="act solid" href="https://github.com/Shakarneh/attendance-tracking-system" data-i18n="work.source">Source</a></div>
     </div>
   </div>
 </section>
@@ -531,19 +535,19 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
   <div class="proj-grid">
     <div class="proj-txt">
       <div class="idx">03</div>
-      <div class="tag"><i></i> Live · deployed</div>
-      <h3>AI <b>Knowledge</b></h3>
-      <p class="lede">A full-stack site about artificial intelligence — written from scratch in PHP, with no framework anywhere in it.</p>
+      <div class="tag"><i></i> <span data-i18n="p3.tag">Live · deployed</span></div>
+      <h3 data-i18n-html="p3.title">AI <b>Knowledge</b></h3>
+      <p class="lede" data-i18n="p3.lede">A full-stack site about artificial intelligence — written from scratch in PHP, with no framework anywhere in it.</p>
       <dl class="spec">
-        <div><dt>Auth</dt><dd>PHP sessions, by hand</dd></div>
-        <div><dt>Admin</dt><dd>CRUD · 4 entities</dd></div>
-        <div><dt>Status</dt><dd>Live on hosting</dd></div>
+        <div><dt data-i18n="work.auth">Auth</dt><dd data-i18n="p3.v1">PHP sessions, by hand</dd></div>
+        <div><dt data-i18n="work.admin">Admin</dt><dd data-i18n="p3.v2">CRUD · 4 entities</dd></div>
+        <div><dt data-i18n="work.status">Status</dt><dd data-i18n="p3.v3">Live on hosting</dd></div>
       </dl>
-      <p class="note-h"><b>What it taught me.</b> Writing authentication by hand shows you exactly what a framework does for you — and why it exists. You appreciate the abstraction only after building it once.</p>
+      <p class="note-h" data-i18n-html="p3.note"><b>What it taught me.</b> Writing authentication by hand shows you exactly what a framework does for you — and why it exists. You appreciate the abstraction only after building it once.</p>
       <div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">JavaScript</span><span class="chip">Sessions</span></div>
       <div class="acts">
-        <a class="act solid" href="https://shak-artificial-intelligence.infinityfreeapp.com/">Visit site →</a>
-        <a class="act" href="https://github.com/Shakarneh/AI-Website---Artificial-Intelligence">Source</a>
+        <a class="act solid" href="https://shak-artificial-intelligence.infinityfreeapp.com/" data-i18n="work.visit">Visit site →</a>
+        <a class="act" href="https://github.com/Shakarneh/AI-Website---Artificial-Intelligence" data-i18n="work.source">Source</a>
       </div>
     </div>
     <div class="vis" data-tilt>
@@ -567,17 +571,17 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
     </div>
     <div class="proj-txt">
       <div class="idx">04</div>
-      <div class="tag"><i></i> Shipped · with a real installer</div>
-      <h3>My <b>Notes</b></h3>
-      <p class="lede">A Windows desktop app written in Python — not a web app in a wrapper. You download it, install it, and it runs.</p>
+      <div class="tag"><i></i> <span data-i18n="p4.tag">Shipped · with a real installer</span></div>
+      <h3 data-i18n-html="p4.title">My <b>Notes</b></h3>
+      <p class="lede" data-i18n="p4.lede">A Windows desktop app written in Python — not a web app in a wrapper. You download it, install it, and it runs.</p>
       <dl class="spec">
-        <div><dt>Platform</dt><dd>Windows · standalone</dd></div>
-        <div><dt>Languages</dt><dd>AR · EN · RU + RTL</dd></div>
-        <div><dt>Releases</dt><dd>4 published</dd></div>
+        <div><dt data-i18n="work.platform">Platform</dt><dd data-i18n="p4.v1">Windows · standalone</dd></div>
+        <div><dt data-i18n="work.langs">Languages</dt><dd data-i18n="p4.v2">AR · EN · RU + RTL</dd></div>
+        <div><dt data-i18n="work.releases">Releases</dt><dd data-i18n="p4.v3">4 published</dd></div>
       </dl>
-      <p class="note-h"><b>The hard part.</b> Shipping it. PyInstaller, an Inno Setup installer, and making it run clean on a machine with no Python. Software isn't finished when the code works — it's finished when a stranger can install it.</p>
+      <p class="note-h" data-i18n-html="p4.note"><b>The hard part.</b> Shipping it. PyInstaller, an Inno Setup installer, and making it run clean on a machine with no Python. Software isn't finished when the code works — it's finished when a stranger can install it.</p>
       <div class="chips"><span class="chip">Python</span><span class="chip">PyWebView</span><span class="chip">SQLite</span><span class="chip">PyInstaller</span><span class="chip">Inno Setup</span></div>
-      <div class="acts"><a class="act solid" href="https://github.com/Shakarneh/My-Notes">Download →</a></div>
+      <div class="acts"><a class="act solid" href="https://github.com/Shakarneh/My-Notes" data-i18n="work.download">Download →</a></div>
     </div>
   </div>
 </section>
@@ -586,17 +590,17 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
   <div class="proj-grid">
     <div class="proj-txt">
       <div class="idx">05</div>
-      <div class="tag"><i></i> Foundations · a second language</div>
-      <h3>Java <b>Labs</b></h3>
-      <p class="lede">Five progressive labs: OOP, log4j2 logging, regex, XML parsing with SAX/DOM, and MySQL over JDBC.</p>
+      <div class="tag"><i></i> <span data-i18n="p5.tag">Foundations · a second language</span></div>
+      <h3 data-i18n-html="p5.title">Java <b>Labs</b></h3>
+      <p class="lede" data-i18n="p5.lede">Five progressive labs: OOP, log4j2 logging, regex, XML parsing with SAX/DOM, and MySQL over JDBC.</p>
       <dl class="spec">
-        <div><dt>Labs</dt><dd>5 · progressive</dd></div>
-        <div><dt>Focus</dt><dd>OOP &amp; class design</dd></div>
-        <div><dt>Logging</dt><dd>log4j2, not print</dd></div>
+        <div><dt data-i18n="work.labs">Labs</dt><dd data-i18n="p5.v1">5 · progressive</dd></div>
+        <div><dt data-i18n="work.focus">Focus</dt><dd data-i18n="p5.v2">OOP &amp; class design</dd></div>
+        <div><dt data-i18n="work.logging">Logging</dt><dd data-i18n="p5.v3">log4j2, not print</dd></div>
       </dl>
-      <p class="note-h"><b>Why bother.</b> Java forces you to be explicit — types declared, interfaces as contracts, class design up front. Writing the same ideas in a statically typed language made me a more deliberate Python developer.</p>
+      <p class="note-h" data-i18n-html="p5.note"><b>Why bother.</b> Java forces you to be explicit — types declared, interfaces as contracts, class design up front. Writing the same ideas in a statically typed language made me a more deliberate Python developer.</p>
       <div class="chips"><span class="chip">Java</span><span class="chip">log4j2</span><span class="chip">JDBC</span><span class="chip">SAX/DOM</span><span class="chip">RegEx</span><span class="chip">MySQL</span></div>
-      <div class="acts"><a class="act solid" href="https://github.com/Shakarneh/java-university-labs">Source →</a></div>
+      <div class="acts"><a class="act solid" href="https://github.com/Shakarneh/java-university-labs" data-i18n="work.source">Source</a></div>
     </div>
     <div class="vis" data-tilt>
       <figure class="shot"><img data-par src="assets/projects/java-labs/intellij.jpg" alt="Java labs in IntelliJ"></figure>
@@ -614,15 +618,15 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
     </div>
     <div class="proj-txt">
       <div class="idx">06</div>
-      <div class="tag"><i></i> Python · SQL</div>
-      <h3>Data <b>Analysis</b></h3>
-      <p class="lede">Three projects on real datasets, not tutorial ones — COVID-19 global trends, supermarket revenue, and SQL store analytics.</p>
+      <div class="tag"><i></i> <span data-i18n="p6.tag">Python · SQL</span></div>
+      <h3 data-i18n-html="p6.title">Data <b>Analysis</b></h3>
+      <p class="lede" data-i18n="p6.lede">Three projects on real datasets, not tutorial ones — COVID-19 global trends, supermarket revenue, and SQL store analytics.</p>
       <dl class="spec">
-        <div><dt>Rows</dt><dd>350,085 · 255 locations</dd></div>
-        <div><dt>Span</dt><dd>2020 – 2023</dd></div>
-        <div><dt>Output</dt><dd>Charts &amp; insights</dd></div>
+        <div><dt data-i18n="work.rows">Rows</dt><dd data-i18n="p6.v1">350,085 · 255 locations</dd></div>
+        <div><dt data-i18n="work.span">Span</dt><dd data-i18n="p6.v2">2020 – 2023</dd></div>
+        <div><dt data-i18n="work.output">Output</dt><dd data-i18n="p6.v3">Charts &amp; insights</dd></div>
       </dl>
-      <p class="note-h"><b>What stayed with me.</b> Real data is messy. The analysis is the easy half — making the data trustworthy is the work. Validate early: that habit went straight into my back-end.</p>
+      <p class="note-h" data-i18n-html="p6.note"><b>What stayed with me.</b> Real data is messy. The analysis is the easy half — making the data trustworthy is the work. Validate early: that habit went straight into my back-end.</p>
       <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Jupyter</span><span class="chip">SQL</span></div>
       <div class="acts">
         <a class="act solid" href="https://github.com/Shakarneh/covid-analysis">COVID-19 →</a>
@@ -636,28 +640,28 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
 <!-- ══ JOURNEY ══ -->
 <section id="journey" class="shell">
   <div class="head rv">
-    <div class="eyebrow">The road</div>
-    <h2>Where I<br>started</h2>
+    <div class="eyebrow" data-i18n="journey.eyebrow">The road</div>
+    <h2 data-i18n-html="journey.title">Where I<br>started</h2>
   </div>
   <div class="tl">
     <div class="step rv">
       <div class="yr">2021 — 2023</div>
-      <div><h4>Two laptops on a wooden board</h4><p>Before university I ran my own eBay store for two years — sourcing, pricing, logistics, customer support in Russian and English, 100% positive reviews. The setup was never what mattered.</p></div>
+      <div><h4 data-i18n="journey.t1">Two laptops on a wooden board</h4><p data-i18n="journey.j1">Before university I ran my own eBay store for two years — sourcing, pricing, logistics, customer support in Russian and English, 100% positive reviews. The setup was never what mattered.</p></div>
       <figure><img src="assets/photos/desk-old-laptops.jpg" alt="Early setup"></figure>
     </div>
     <div class="step rv">
       <div class="yr">2023</div>
-      <div><h4>Russian, from zero</h4><p>A 250-hour language course in Bethlehem, then a preparatory year at SWSU in Kursk — studying in a language I was still learning.</p></div>
+      <div><h4 data-i18n="journey.t2">Russian, from zero</h4><p data-i18n="journey.j2">A 250-hour language course in Bethlehem, then a preparatory year at SWSU in Kursk — studying in a language I was still learning.</p></div>
       <figure><video src="assets/media/study-library.mp4" autoplay muted loop playsinline></video></figure>
     </div>
     <div class="step rv">
       <div class="yr">2023 — 2027</div>
-      <div><h4>BSTU named after V.G. Shukhov</h4><p>B.Sc. Information Systems &amp; Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5.</p></div>
+      <div><h4 data-i18n="journey.t3">BSTU named after V.G. Shukhov</h4><p data-i18n="journey.j3">B.Sc. Information Systems &amp; Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5.</p></div>
       <figure><img src="assets/photos/award-bstu.jpg" alt="Award ceremony at BSTU"></figure>
     </div>
     <div class="step rv">
       <div class="yr">2026</div>
-      <div><h4>First real back-end, then production</h4><p>Built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day. Same person — better tools, and a desk.</p></div>
+      <div><h4 data-i18n="journey.t4">First real back-end, then production</h4><p data-i18n="journey.j4">Built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day. Same person — better tools, and a desk.</p></div>
       <figure><img src="assets/photos/desk-new-wide.jpg" alt="Current workspace"></figure>
     </div>
   </div>
@@ -665,19 +669,24 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
 
 <!-- ══ END ══ -->
 <section id="contact" class="end shell rv">
-  <h2>Let's build<br>something<br><em>that lasts</em></h2>
+  <h2 data-i18n-html="end.title">Let's build<br>something<br><em>that lasts</em></h2>
   <div class="row">
-    <a href="mailto:itshakarnehmohammed@gmail.com"><svg viewBox="0 0 24 24"><use href="#i-mail"/></svg> Email</a>
-    <a href="https://github.com/Shakarneh"><svg viewBox="0 0 24 24"><use href="#i-github"/></svg> GitHub</a>
-    <a href="https://www.linkedin.com/in/mohammed-shakarneh"><svg viewBox="0 0 24 24"><use href="#i-linkedin"/></svg> LinkedIn</a>
-    <a href="https://t.me/MR_shakarneh"><svg viewBox="0 0 24 24"><use href="#i-telegram"/></svg> Telegram</a>
+    <a href="mailto:itshakarnehmohammed@gmail.com"><svg viewBox="0 0 24 24"><use href="#i-mail"/></svg> <span data-i18n="end.email">Email</span></a>
+    <a href="https://github.com/Shakarneh"><svg viewBox="0 0 24 24"><use href="#i-github"/></svg> <span data-i18n="end.github">GitHub</span></a>
+    <a href="https://www.linkedin.com/in/mohammed-shakarneh"><svg viewBox="0 0 24 24"><use href="#i-linkedin"/></svg> <span data-i18n="end.linkedin">LinkedIn</span></a>
+    <a href="https://t.me/MR_shakarneh"><svg viewBox="0 0 24 24"><use href="#i-telegram"/></svg> <span data-i18n="end.telegram">Telegram</span></a>
   </div>
 </section>
 
 <footer class="shell">
-  <span>© 2026 Mohammed Shakarneh</span>
-  <span>Belgorod, Russia · open to work</span>
+  <span data-i18n="end.copy">© 2026 Mohammed Shakarneh</span>
+  <span data-i18n="end.loc">Belgorod, Russia · open to work</span>
 </footer>
+
+<script type="module">
+import { initI18n } from './js/i18n.js';
+initI18n().catch(err => console.warn('i18n unavailable, staying in English:', err));
+</script>
 
 <script>
 const io = new IntersectionObserver((es) => {
