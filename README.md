@@ -1,7 +1,7 @@
 
 # Mohammed Shakarneh — Portfolio
 
-🔗 **Live:** [my-portfolio.mohammedshak055.workers.dev)
+🔗 **Live:** https://mohammedshakarneh.com
 
 A modern, trilingual (English / Russian / Arabic) single-page developer portfolio.
 Vanilla HTML, CSS & JavaScript — no frameworks, no build step.
