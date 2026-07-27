@@ -60,7 +60,9 @@ nav.stuck{border-color:var(--line)}
 .nav-mid sup{font-family:var(--mono);font-size:.62rem;color:var(--ink-3)}
 .talk{margin-inline-start:26px;background:var(--ink);color:var(--paper);text-decoration:none;font-size:.82rem;font-weight:600;padding:9px 18px;border-radius:100px;transition:.25s}
 .talk:hover{background:var(--accent);transform:translateY(-1px)}
-@media(max-width:860px){.nav-mid{display:none}.talk{margin-left:auto}}
+@media(max-width:860px){.nav-mid{display:none}.talk{margin-inline-start:auto}}
+/* on small screens the burger carries navigation and contact, so the pill goes */
+@media(max-width:520px){.talk{display:none}.burger{margin-inline-start:auto}}
 
 /* ── hero ──────────────────────────────────────── */
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(20px,3.4vh,42px);position:relative}
@@ -348,6 +350,88 @@ nav.stuck{border-color:var(--line)}
 .end .row svg{width:16px;height:16px;fill:currentColor}
 footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;font-family:var(--mono);font-size:.7rem;color:var(--ink-3);flex-wrap:wrap;border-top:1px solid var(--line)}
 
+/* ── menu ──────────────────────────────────────── */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+.burger{
+  margin-inline-start:14px;width:42px;height:42px;border-radius:50%;flex:none;
+  border:1px solid var(--line);background:var(--card);cursor:pointer;
+  display:grid;place-content:center;gap:5px;transition:.25s;z-index:120;position:relative;
+}
+.burger:hover{border-color:var(--ink)}
+.burger span{display:block;width:17px;height:1.5px;background:var(--ink);transition:.4s cubic-bezier(.16,1,.3,1)}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(.2)}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.menu{
+  position:fixed;inset:0;z-index:110;background:var(--paper);
+  display:flex;align-items:center;
+  clip-path:circle(0% at calc(100% - 44px) 38px);
+  transition:clip-path .72s cubic-bezier(.76,0,.24,1);
+  overflow-y:auto;
+}
+[dir="rtl"] .menu{clip-path:circle(0% at 44px 38px)}
+.menu.open{clip-path:circle(150% at calc(100% - 44px) 38px)}
+[dir="rtl"] .menu.open{clip-path:circle(150% at 44px 38px)}
+.menu[inert]{pointer-events:none}
+.menu-in{width:100%;padding-block:clamp(90px,12vh,120px)}
+
+.menu-links{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.menu-links a{
+  display:flex;align-items:baseline;gap:clamp(14px,3vw,34px);text-decoration:none;
+  padding:clamp(14px,2.6vh,24px) 0;border-bottom:1px solid var(--line);
+  font-size:clamp(1.7rem,6.4vw,4rem);font-weight:900;letter-spacing:-.04em;
+  text-transform:uppercase;line-height:1;position:relative;
+  opacity:0;transform:translateY(24px);
+  transition:color .3s,padding-inline-start .4s cubic-bezier(.16,1,.3,1);
+}
+.menu.open .menu-links a{animation:menuIn .6s cubic-bezier(.16,1,.3,1) forwards}
+.menu.open .menu-links a:nth-child(1){animation-delay:.18s}
+.menu.open .menu-links a:nth-child(2){animation-delay:.25s}
+.menu.open .menu-links a:nth-child(3){animation-delay:.32s}
+.menu.open .menu-links a:nth-child(4){animation-delay:.39s}
+@keyframes menuIn{to{opacity:1;transform:none}}
+.menu-links a i{
+  font-style:normal;font-family:var(--mono);font-size:.7rem;font-weight:400;
+  color:var(--ink-3);letter-spacing:.1em;flex:none;
+}
+.menu-links a:nth-child(1):hover{color:var(--rust)}
+.menu-links a:nth-child(2):hover{color:var(--forest)}
+.menu-links a:nth-child(3):hover{color:var(--navy)}
+.menu-links a:nth-child(4):hover{color:var(--plum)}
+.menu-links a:hover{padding-inline-start:clamp(10px,2vw,26px)}
+
+.menu-foot{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:26px;flex-wrap:wrap;
+  margin-top:clamp(28px,5vh,54px);
+}
+.lang-label{
+  display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;
+}
+.lang-set{display:flex;gap:8px;flex-wrap:wrap}
+.lang-set button{
+  font-family:inherit;font-size:.84rem;font-weight:600;cursor:pointer;
+  padding:10px 20px;border-radius:100px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink-2);transition:.25s;
+}
+.lang-set button:hover{border-color:var(--ink);color:var(--ink)}
+.lang-set button[aria-current="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.menu-social{display:flex;gap:10px}
+.menu-social a{
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);
+  display:grid;place-items:center;color:var(--ink-2);transition:.25s;
+}
+.menu-social a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);transform:translateY(-3px)}
+.menu-social svg{width:17px;height:17px;fill:currentColor}
+body.locked{overflow:hidden}
+
+@media(prefers-reduced-motion:reduce){
+  .menu{transition:none}
+  .menu-links a{opacity:1;transform:none;animation:none!important}
+}
+
 /* ════════════════════════════════════════════════════
    ARABIC · RTL
    Layout mirrors via dir=rtl and logical properties; only
@@ -427,8 +511,44 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
       <a href="#journey" data-i18n="nav.journey">Journey</a>
     </div>
     <a class="talk" href="#contact" data-i18n="nav.talk">Let's talk →</a>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu"
+            data-i18n="nav.menu" data-i18n-attr="aria-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- ══ MENU OVERLAY ══ -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" inert>
+  <div class="menu-in shell">
+    <h2 class="sr-only" id="menuTitle" data-i18n="nav.menu">Menu</h2>
+
+    <nav class="menu-links">
+      <a href="#work"><i>01</i><span data-i18n="nav.work">Work</span></a>
+      <a href="#architecture"><i>02</i><span data-i18n="nav.arch">Architecture</span></a>
+      <a href="#journey"><i>03</i><span data-i18n="nav.journey">Journey</span></a>
+      <a href="#contact"><i>04</i><span data-i18n="end.email">Contact</span></a>
+    </nav>
+
+    <div class="menu-foot">
+      <div class="lang">
+        <span class="lang-label" data-i18n="nav.language">Language</span>
+        <div class="lang-set">
+          <button type="button" data-lang="en" lang="en">English</button>
+          <button type="button" data-lang="ru" lang="ru">Русский</button>
+          <button type="button" data-lang="ar" lang="ar">العربية</button>
+        </div>
+      </div>
+      <div class="menu-social">
+        <a href="https://github.com/Shakarneh" aria-label="GitHub"><svg viewBox="0 0 24 24"><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/mohammed-shakarneh" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><use href="#i-linkedin"/></svg></a>
+        <a href="https://t.me/MR_shakarneh" aria-label="Telegram"><svg viewBox="0 0 24 24"><use href="#i-telegram"/></svg></a>
+        <a href="mailto:itshakarnehmohammed@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><use href="#i-mail"/></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ══ HERO ══ -->
 <header class="hero shell">
@@ -757,6 +877,61 @@ document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
 const nav = document.getElementById('nav');
 addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 40), { passive: true });
+
+/* ── menu overlay ─────────────────────────────────────────── */
+{
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+  let lastFocus = null;
+
+  const focusables = () =>
+    [...menu.querySelectorAll('a[href],button:not([disabled])')]
+      .filter(el => el.offsetParent !== null);
+
+  function open() {
+    lastFocus = document.activeElement;
+    menu.removeAttribute('inert');
+    menu.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('locked');
+    focusables()[0]?.focus({ preventScroll: true });
+  }
+
+  function close({ restore = true } = {}) {
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('locked');
+    menu.setAttribute('inert', '');
+    if (restore) (lastFocus ?? burger).focus({ preventScroll: true });
+  }
+
+  const isOpen = () => menu.classList.contains('open');
+
+  burger.addEventListener('click', () => (isOpen() ? close() : open()));
+
+  // section links: let the jump happen, then close without stealing focus back
+  menu.querySelectorAll('.menu-links a').forEach(a =>
+    a.addEventListener('click', () => close({ restore: false }))
+  );
+
+  // language buttons are handled by i18n.js; just keep the menu open so the
+  // user can see the page change behind it — but re-sync direction-aware clip
+  document.addEventListener('languagechange', () => { if (isOpen()) menu.classList.add('open'); });
+
+  addEventListener('keydown', e => {
+    if (!isOpen()) return;
+    if (e.key === 'Escape') { close(); return; }
+    if (e.key !== 'Tab') return;
+    const items = focusables();
+    if (!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  // a resize past the desktop breakpoint shouldn't strand an open overlay
+  matchMedia('(min-width:861px)').addEventListener('change', () => { if (isOpen()) close(); });
+}
 
 const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
 const calm = matchMedia('(prefers-reduced-motion:reduce)').matches;
