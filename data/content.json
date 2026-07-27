@@ -1,6 +1,8 @@
 {
   "en": {
-    "meta": { "title": "Mohammed Shakarneh — Software Development Engineer" },
+    "meta": {
+      "title": "Mohammed Shakarneh — Software Development Engineer"
+    },
     "nav": {
       "available": "Available for work",
       "work": "Work",
@@ -8,7 +10,8 @@
       "journey": "Journey",
       "talk": "Let's talk →",
       "language": "Language",
-      "menu": "Menu"
+      "menu": "Menu",
+      "close": "Close"
     },
     "hero": {
       "idx": "Belgorod, Russia · 2026",
@@ -48,28 +51,49 @@
       "eyebrow": "How I think",
       "title": "Request<br>lifecycle",
       "lede": "Every system I build has the same spine. A request either gets rejected early with a clear reason, or it gets answered — never a crash.",
-      "n1": "Client", "d1": "HTTP + Bearer token",
-      "n2": "Authentication & Roles", "d2": "JWT · bcrypt · 401 / 403",
-      "n3": "Validation", "d3": "Pydantic schemas · 422",
-      "n4": "Business Logic", "d4": "rules · conflict detection",
-      "n5": "Database", "d5": "PostgreSQL · transactions",
-      "n6": "Response", "d6": "200 OK · typed JSON"
+      "n1": "Client",
+      "d1": "HTTP + Bearer token",
+      "n2": "Authentication & Roles",
+      "d2": "JWT · bcrypt · 401 / 403",
+      "n3": "Validation",
+      "d3": "Pydantic schemas · 422",
+      "n4": "Business Logic",
+      "d4": "rules · conflict detection",
+      "n5": "Database",
+      "d5": "PostgreSQL · transactions",
+      "n6": "Response",
+      "d6": "200 OK · typed JSON"
     },
     "work": {
       "eyebrow": "Selected work",
       "title": "Built &<br>shipped",
       "lede": "Real products, real users, real constraints. Not tutorials.",
-      "role": "Role", "scale": "Scale", "status": "Status", "access": "Access",
-      "auth": "Auth", "admin": "Admin", "platform": "Platform", "langs": "Languages",
-      "releases": "Releases", "labs": "Labs", "focus": "Focus", "logging": "Logging",
-      "rows": "Rows", "span": "Span", "output": "Output",
-      "source": "Source", "visit": "Visit site →", "download": "Download →"
+      "role": "Role",
+      "scale": "Scale",
+      "status": "Status",
+      "access": "Access",
+      "auth": "Auth",
+      "admin": "Admin",
+      "platform": "Platform",
+      "langs": "Languages",
+      "releases": "Releases",
+      "labs": "Labs",
+      "focus": "Focus",
+      "logging": "Logging",
+      "rows": "Rows",
+      "span": "Span",
+      "output": "Output",
+      "source": "Source",
+      "visit": "Visit site →",
+      "download": "Download →"
     },
     "p1": {
       "tag": "Live in production",
       "title": "Lolo <b>Cosmetics</b>",
       "lede": "A real beauty brand was selling through WhatsApp screenshots — no catalogue, no stock control, no way to scale. I built the whole thing, front to back.",
-      "v1": "Solo — front to back", "v2": "267 products · 91 commits", "v3": "Serving customers",
+      "v1": "Solo — front to back",
+      "v2": "267 products · 91 commits",
+      "v3": "Serving customers",
       "note": "<b>The hard part.</b> Row-Level Security. When the data is someone's actual business, a leak isn't a bug report — it's their livelihood.",
       "cta": "Visit store →"
     },
@@ -77,35 +101,45 @@
       "tag": "Internship · Expert Choice CIS",
       "title": "Attendance <b>System</b>",
       "lede": "Attendance lived on paper and in Excel. One administrator spent 3–5 hours merging it by hand — every single time. I built the back-end everything else sits on.",
-      "v1": "Back-end admin API", "v2": "3 roles · JWT · bcrypt", "v3": "Merged & documented",
+      "v1": "Back-end admin API",
+      "v2": "3 roles · JWT · bcrypt",
+      "v3": "Merged & documented",
       "note": "<b>The hard part.</b> Schedule conflict detection — interval-overlap checks so a teacher or group can never be double-booked. It took more thought than every CRUD endpoint combined."
     },
     "p3": {
       "tag": "Live · deployed",
       "title": "AI <b>Knowledge</b>",
       "lede": "A full-stack site about artificial intelligence — written from scratch in PHP, with no framework anywhere in it.",
-      "v1": "PHP sessions, by hand", "v2": "CRUD · 4 entities", "v3": "Live on hosting",
+      "v1": "PHP sessions, by hand",
+      "v2": "CRUD · 4 entities",
+      "v3": "Live on hosting",
       "note": "<b>What it taught me.</b> Writing authentication by hand shows you exactly what a framework does for you — and why it exists. You appreciate the abstraction only after building it once."
     },
     "p4": {
       "tag": "Shipped · with a real installer",
       "title": "My <b>Notes</b>",
       "lede": "A Windows desktop app written in Python — not a web app in a wrapper. You download it, install it, and it runs.",
-      "v1": "Windows · standalone", "v2": "AR · EN · RU + RTL", "v3": "4 published",
+      "v1": "Windows · standalone",
+      "v2": "AR · EN · RU + RTL",
+      "v3": "4 published",
       "note": "<b>The hard part.</b> Shipping it. PyInstaller, an Inno Setup installer, and making it run clean on a machine with no Python. Software isn't finished when the code works — it's finished when a stranger can install it."
     },
     "p5": {
       "tag": "Foundations · a second language",
       "title": "Java <b>Labs</b>",
       "lede": "Five progressive labs: OOP, log4j2 logging, regex, XML parsing with SAX/DOM, and MySQL over JDBC.",
-      "v1": "5 · progressive", "v2": "OOP & class design", "v3": "log4j2, not print",
+      "v1": "5 · progressive",
+      "v2": "OOP & class design",
+      "v3": "log4j2, not print",
       "note": "<b>Why bother.</b> Java forces you to be explicit — types declared, interfaces as contracts, class design up front. Writing the same ideas in a statically typed language made me a more deliberate Python developer."
     },
     "p6": {
       "tag": "Python · SQL",
       "title": "Data <b>Analysis</b>",
       "lede": "Three projects on real datasets, not tutorial ones — COVID-19 global trends, supermarket revenue, and SQL store analytics.",
-      "v1": "350,085 · 255 locations", "v2": "2020 – 2023", "v3": "Charts & insights",
+      "v1": "350,085 · 255 locations",
+      "v2": "2020 – 2023",
+      "v3": "Charts & insights",
       "note": "<b>What stayed with me.</b> Real data is messy. The analysis is the easy half — making the data trustworthy is the work. Validate early: that habit went straight into my back-end."
     },
     "journey": {
@@ -122,14 +156,19 @@
     },
     "end": {
       "title": "Let's build<br>something<br><em>that lasts</em>",
-      "email": "Email", "github": "GitHub", "linkedin": "LinkedIn", "telegram": "Telegram",
-      "copy": "© 2026 Mohammed Shakarneh",
-      "loc": "Belgorod, Russia · open to work"
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "telegram": "Telegram",
+      "copy": "© 2026 Mohammed M.Y. Shakarneh",
+      "loc": "Belgorod, Russia · open to work",
+      "instagram": "Instagram"
     }
   },
-
   "ru": {
-    "meta": { "title": "Шакарнех Мохаммед — инженер-программист" },
+    "meta": {
+      "title": "Шакарнех Мохаммед — инженер-программист"
+    },
     "nav": {
       "available": "Открыт к предложениям",
       "work": "Проекты",
@@ -137,7 +176,8 @@
       "journey": "Путь",
       "talk": "Связаться →",
       "language": "Язык",
-      "menu": "Меню"
+      "menu": "Меню",
+      "close": "Закрыть"
     },
     "hero": {
       "idx": "Белгород, Россия · 2026",
@@ -177,28 +217,49 @@
       "eyebrow": "Как я мыслю",
       "title": "Жизненный цикл<br>запроса",
       "lede": "У каждой моей системы один и тот же костяк. Запрос либо отклоняется сразу с понятной причиной, либо получает ответ — но никогда не падает.",
-      "n1": "Клиент", "d1": "HTTP + Bearer-токен",
-      "n2": "Аутентификация и роли", "d2": "JWT · bcrypt · 401 / 403",
-      "n3": "Валидация", "d3": "схемы Pydantic · 422",
-      "n4": "Бизнес-логика", "d4": "правила · поиск конфликтов",
-      "n5": "База данных", "d5": "PostgreSQL · транзакции",
-      "n6": "Ответ", "d6": "200 OK · типизированный JSON"
+      "n1": "Клиент",
+      "d1": "HTTP + Bearer-токен",
+      "n2": "Аутентификация и роли",
+      "d2": "JWT · bcrypt · 401 / 403",
+      "n3": "Валидация",
+      "d3": "схемы Pydantic · 422",
+      "n4": "Бизнес-логика",
+      "d4": "правила · поиск конфликтов",
+      "n5": "База данных",
+      "d5": "PostgreSQL · транзакции",
+      "n6": "Ответ",
+      "d6": "200 OK · типизированный JSON"
     },
     "work": {
       "eyebrow": "Избранные работы",
       "title": "Создано и<br>выпущено",
       "lede": "Настоящие продукты, настоящие пользователи, настоящие ограничения. Не учебные примеры.",
-      "role": "Роль", "scale": "Масштаб", "status": "Статус", "access": "Доступ",
-      "auth": "Авторизация", "admin": "Админка", "platform": "Платформа", "langs": "Языки",
-      "releases": "Релизы", "labs": "Работы", "focus": "Фокус", "logging": "Логирование",
-      "rows": "Строк", "span": "Период", "output": "Результат",
-      "source": "Код", "visit": "Открыть сайт →", "download": "Скачать →"
+      "role": "Роль",
+      "scale": "Масштаб",
+      "status": "Статус",
+      "access": "Доступ",
+      "auth": "Авторизация",
+      "admin": "Админка",
+      "platform": "Платформа",
+      "langs": "Языки",
+      "releases": "Релизы",
+      "labs": "Работы",
+      "focus": "Фокус",
+      "logging": "Логирование",
+      "rows": "Строк",
+      "span": "Период",
+      "output": "Результат",
+      "source": "Код",
+      "visit": "Открыть сайт →",
+      "download": "Скачать →"
     },
     "p1": {
       "tag": "В продакшене",
       "title": "Lolo <b>Cosmetics</b>",
       "lede": "Настоящий бьюти-бренд продавал через скриншоты в WhatsApp — без каталога, без учёта остатков, без возможности расти. Я собрал всё целиком, от базы до интерфейса.",
-      "v1": "Соло — от базы до UI", "v2": "267 товаров · 91 коммит", "v3": "Обслуживает клиентов",
+      "v1": "Соло — от базы до UI",
+      "v2": "267 товаров · 91 коммит",
+      "v3": "Обслуживает клиентов",
       "note": "<b>Самое сложное.</b> Row-Level Security. Когда данные — это чей-то реальный бизнес, утечка это не баг-репорт, а его средства к существованию.",
       "cta": "Открыть магазин →"
     },
@@ -206,35 +267,45 @@
       "tag": "Практика · Эксперт Чойс СиАйЭс",
       "title": "Система <b>посещаемости</b>",
       "lede": "Посещаемость жила на бумаге и в Excel. Один администратор тратил 3–5 часов, сводя всё вручную — каждый раз. Я построил backend, на котором держится остальное.",
-      "v1": "Backend admin API", "v2": "3 роли · JWT · bcrypt", "v3": "Смержено, с документацией",
+      "v1": "Backend admin API",
+      "v2": "3 роли · JWT · bcrypt",
+      "v3": "Смержено, с документацией",
       "note": "<b>Самое сложное.</b> Поиск конфликтов расписания — проверка пересечения интервалов, чтобы преподаватель или группа никогда не оказались заняты дважды. Это потребовало больше размышлений, чем все CRUD-эндпоинты вместе взятые."
     },
     "p3": {
       "tag": "Развёрнут · доступен",
       "title": "AI <b>Knowledge</b>",
       "lede": "Full-stack сайт об искусственном интеллекте — написан с нуля на PHP, без единого фреймворка.",
-      "v1": "PHP-сессии, вручную", "v2": "CRUD · 4 сущности", "v3": "Работает на хостинге",
+      "v1": "PHP-сессии, вручную",
+      "v2": "CRUD · 4 сущности",
+      "v3": "Работает на хостинге",
       "note": "<b>Чему научило.</b> Когда пишешь аутентификацию руками, понимаешь, что именно делает за тебя фреймворк — и зачем он вообще нужен. Абстракцию ценишь только после того, как построил её сам."
     },
     "p4": {
       "tag": "Выпущено · с установщиком",
       "title": "My <b>Notes</b>",
       "lede": "Десктопное приложение для Windows на Python — не веб-страница в обёртке. Скачиваешь, устанавливаешь, запускаешь.",
-      "v1": "Windows · автономно", "v2": "AR · EN · RU + RTL", "v3": "4 опубликовано",
+      "v1": "Windows · автономно",
+      "v2": "AR · EN · RU + RTL",
+      "v3": "4 опубликовано",
       "note": "<b>Самое сложное.</b> Выпустить его. PyInstaller, установщик Inno Setup и чистый запуск на машине без Python. Программа не готова, когда код работает — она готова, когда её может установить незнакомый человек."
     },
     "p5": {
       "tag": "Основы · второй язык",
       "title": "Java <b>Labs</b>",
       "lede": "Пять лабораторных: ООП, логирование log4j2, регулярные выражения, разбор XML через SAX/DOM и работа с MySQL по JDBC.",
-      "v1": "5 · по нарастающей", "v2": "ООП и дизайн классов", "v3": "log4j2, а не print",
+      "v1": "5 · по нарастающей",
+      "v2": "ООП и дизайн классов",
+      "v3": "log4j2, а не print",
       "note": "<b>Зачем это нужно.</b> Java заставляет быть точным — типы объявлены, интерфейсы это контракты, дизайн классов продумывается заранее. Те же идеи в статически типизированном языке сделали меня более осознанным Python-разработчиком."
     },
     "p6": {
       "tag": "Python · SQL",
       "title": "Анализ <b>данных</b>",
       "lede": "Три проекта на реальных данных, а не на учебных — мировая статистика COVID-19, выручка супермаркета и SQL-аналитика магазина.",
-      "v1": "350 085 · 255 локаций", "v2": "2020 – 2023", "v3": "Графики и выводы",
+      "v1": "350 085 · 255 локаций",
+      "v2": "2020 – 2023",
+      "v3": "Графики и выводы",
       "note": "<b>Что осталось со мной.</b> Реальные данные грязные. Анализ — лёгкая половина, работа в том, чтобы данным можно было доверять. Проверяй рано: эта привычка перешла прямо в мой backend."
     },
     "journey": {
@@ -251,14 +322,19 @@
     },
     "end": {
       "title": "Давайте создадим<br>то, что<br><em>останется</em>",
-      "email": "Почта", "github": "GitHub", "linkedin": "LinkedIn", "telegram": "Telegram",
-      "copy": "© 2026 Шакарнех Мохаммед",
-      "loc": "Белгород, Россия · открыт к предложениям"
+      "email": "Почта",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "telegram": "Telegram",
+      "copy": "© 2026 Mohammed M.Y. Shakarneh",
+      "loc": "Белгород, Россия · открыт к предложениям",
+      "instagram": "Instagram"
     }
   },
-
   "ar": {
-    "meta": { "title": "محمد شكارنه — مهندس تطوير برمجيات" },
+    "meta": {
+      "title": "محمد شكارنه — مهندس تطوير برمجيات"
+    },
     "nav": {
       "available": "متاح للعمل",
       "work": "الأعمال",
@@ -266,7 +342,8 @@
       "journey": "المسيرة",
       "talk": "لنتحدث ←",
       "language": "اللغة",
-      "menu": "القائمة"
+      "menu": "القائمة",
+      "close": "إغلاق"
     },
     "hero": {
       "idx": "بيلغورود، روسيا · 2026",
@@ -306,28 +383,49 @@
       "eyebrow": "كيف أفكر",
       "title": "دورة حياة<br>الطلب",
       "lede": "كل نظام أبنيه له العمود الفقري نفسه. الطلب إمّا يُرفض مبكراً بسبب واضح، أو يحصل على إجابة — ولا ينهار أبداً.",
-      "n1": "العميل", "d1": "HTTP + رمز Bearer",
-      "n2": "المصادقة والصلاحيات", "d2": "JWT · bcrypt · 401 / 403",
-      "n3": "التحقق من المدخلات", "d3": "مخططات Pydantic · 422",
-      "n4": "منطق العمل", "d4": "القواعد · كشف التعارض",
-      "n5": "قاعدة البيانات", "d5": "PostgreSQL · المعاملات",
-      "n6": "الاستجابة", "d6": "200 OK · JSON منظم"
+      "n1": "العميل",
+      "d1": "HTTP + رمز Bearer",
+      "n2": "المصادقة والصلاحيات",
+      "d2": "JWT · bcrypt · 401 / 403",
+      "n3": "التحقق من المدخلات",
+      "d3": "مخططات Pydantic · 422",
+      "n4": "منطق العمل",
+      "d4": "القواعد · كشف التعارض",
+      "n5": "قاعدة البيانات",
+      "d5": "PostgreSQL · المعاملات",
+      "n6": "الاستجابة",
+      "d6": "200 OK · JSON منظم"
     },
     "work": {
       "eyebrow": "أعمال مختارة",
       "title": "بُنيت<br>وأُطلقت",
       "lede": "منتجات حقيقية، ومستخدمون حقيقيون، وقيود حقيقية. ليست تمارين تعليمية.",
-      "role": "الدور", "scale": "الحجم", "status": "الحالة", "access": "الصلاحيات",
-      "auth": "المصادقة", "admin": "لوحة التحكم", "platform": "المنصة", "langs": "اللغات",
-      "releases": "الإصدارات", "labs": "المختبرات", "focus": "التركيز", "logging": "السجلات",
-      "rows": "الصفوف", "span": "الفترة", "output": "المخرجات",
-      "source": "الكود", "visit": "زيارة الموقع ←", "download": "تحميل ←"
+      "role": "الدور",
+      "scale": "الحجم",
+      "status": "الحالة",
+      "access": "الصلاحيات",
+      "auth": "المصادقة",
+      "admin": "لوحة التحكم",
+      "platform": "المنصة",
+      "langs": "اللغات",
+      "releases": "الإصدارات",
+      "labs": "المختبرات",
+      "focus": "التركيز",
+      "logging": "السجلات",
+      "rows": "الصفوف",
+      "span": "الفترة",
+      "output": "المخرجات",
+      "source": "الكود",
+      "visit": "زيارة الموقع ←",
+      "download": "تحميل ←"
     },
     "p1": {
       "tag": "قيد التشغيل الفعلي",
       "title": "لولو <b>كوزمتكس</b>",
       "lede": "علامة تجميل حقيقية كانت تبيع عبر لقطات شاشة في واتساب — بلا كتالوج، وبلا إدارة مخزون، وبلا قدرة على التوسع. بنيت المشروع كاملاً من الخلفية إلى الواجهة.",
-      "v1": "منفرداً — من الألف إلى الياء", "v2": "267 منتجاً · 91 إضافة", "v3": "يخدم العملاء",
+      "v1": "منفرداً — من الألف إلى الياء",
+      "v2": "267 منتجاً · 91 إضافة",
+      "v3": "يخدم العملاء",
       "note": "<b>الجزء الأصعب.</b> أمان الصفوف Row-Level Security. حين تكون البيانات تجارة شخص حقيقي، فالتسريب ليس تقرير خطأ — بل مصدر رزقه.",
       "cta": "زيارة المتجر ←"
     },
@@ -335,35 +433,45 @@
       "tag": "تدريب · Expert Choice CIS",
       "title": "نظام <b>الحضور</b>",
       "lede": "كان الحضور يُسجَّل على الورق وفي Excel، ويقضي موظف واحد من 3 إلى 5 ساعات في تجميعه يدوياً — في كل مرة. بنيت الواجهة الخلفية التي يقوم عليها كل شيء.",
-      "v1": "واجهة إدارة خلفية", "v2": "3 أدوار · JWT · bcrypt", "v3": "مدمج وموثّق",
+      "v1": "واجهة إدارة خلفية",
+      "v2": "3 أدوار · JWT · bcrypt",
+      "v3": "مدمج وموثّق",
       "note": "<b>الجزء الأصعب.</b> كشف تعارض الجداول — التحقق من تداخل الفترات الزمنية حتى لا يُحجز مدرّس أو مجموعة مرتين. استغرق تفكيراً أكثر من كل نقاط النهاية الأخرى مجتمعة."
     },
     "p3": {
       "tag": "منشور ويعمل",
       "title": "موقع <b>الذكاء الاصطناعي</b>",
       "lede": "موقع متكامل عن الذكاء الاصطناعي — مكتوب من الصفر بلغة PHP، دون أي إطار عمل.",
-      "v1": "جلسات PHP يدوياً", "v2": "CRUD · 4 كيانات", "v3": "يعمل على الاستضافة",
+      "v1": "جلسات PHP يدوياً",
+      "v2": "CRUD · 4 كيانات",
+      "v3": "يعمل على الاستضافة",
       "note": "<b>ما تعلّمته.</b> كتابة المصادقة يدوياً تُريك بالضبط ما تفعله أطر العمل نيابةً عنك، ولماذا وُجدت أصلاً. لا تُقدّر التجريد حق قدره إلا بعد أن تبنيه بنفسك مرة واحدة."
     },
     "p4": {
       "tag": "صدر · مع مثبّت حقيقي",
       "title": "تطبيق <b>الملاحظات</b>",
       "lede": "تطبيق سطح مكتب لويندوز مكتوب بلغة Python — وليس موقعاً داخل غلاف. تُنزّله وتُثبّته فيعمل.",
-      "v1": "ويندوز · مستقل", "v2": "عربي · إنجليزي · روسي", "v3": "4 إصدارات",
+      "v1": "ويندوز · مستقل",
+      "v2": "عربي · إنجليزي · روسي",
+      "v3": "4 إصدارات",
       "note": "<b>الجزء الأصعب.</b> إطلاقه فعلياً: PyInstaller، ومثبّت Inno Setup، وجعله يعمل بنظافة على جهاز لا يحتوي Python. البرنامج لا يكتمل حين يعمل الكود — بل حين يستطيع شخص غريب تثبيته."
     },
     "p5": {
       "tag": "الأساسيات · لغة ثانية",
       "title": "مختبرات <b>جافا</b>",
       "lede": "خمسة مختبرات متدرجة: البرمجة كائنية التوجه، والسجلات عبر log4j2، والتعابير النمطية، وتحليل XML بـ SAX/DOM، والتعامل مع MySQL عبر JDBC.",
-      "v1": "5 · متدرجة", "v2": "OOP وتصميم الأصناف", "v3": "log4j2 بدل الطباعة",
+      "v1": "5 · متدرجة",
+      "v2": "OOP وتصميم الأصناف",
+      "v3": "log4j2 بدل الطباعة",
       "note": "<b>لماذا الأمر يستحق.</b> جافا تُجبرك على الوضوح — الأنواع مُعلنة، والواجهات عقود، وتصميم الأصناف يُحسم مسبقاً. كتابة الأفكار نفسها بلغة ذات أنواع ثابتة جعلتني مطوّر Python أكثر وعياً."
     },
     "p6": {
       "tag": "Python · SQL",
       "title": "تحليل <b>البيانات</b>",
       "lede": "ثلاثة مشاريع على بيانات حقيقية لا تعليمية — الاتجاهات العالمية لكوفيد-19، وإيرادات سوبرماركت، وتحليلات متجر بـ SQL.",
-      "v1": "350,085 · 255 موقعاً", "v2": "2020 – 2023", "v3": "رسوم ونتائج",
+      "v1": "350,085 · 255 موقعاً",
+      "v2": "2020 – 2023",
+      "v3": "رسوم ونتائج",
       "note": "<b>ما بقي معي.</b> البيانات الحقيقية فوضوية. التحليل هو النصف السهل — العمل الحقيقي أن تجعل البيانات جديرة بالثقة. تحقّق مبكراً: هذه العادة انتقلت مباشرة إلى عملي في الواجهة الخلفية."
     },
     "journey": {
@@ -380,9 +488,13 @@
     },
     "end": {
       "title": "لنبنِ شيئاً<br><em>يبقى</em>",
-      "email": "البريد", "github": "غيت هب", "linkedin": "لينكدإن", "telegram": "تيليغرام",
-      "copy": "© 2026 محمد شكارنه",
-      "loc": "بيلغورود، روسيا · متاح للعمل"
+      "email": "البريد",
+      "github": "غيت هب",
+      "linkedin": "لينكدإن",
+      "telegram": "تيليغرام",
+      "copy": "© 2026 Mohammed M.Y. Shakarneh",
+      "loc": "بيلغورود، روسيا · متاح للعمل",
+      "instagram": "إنستغرام"
     }
   }
 }
