@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f2f1ee; --paper-2:#e9e8e4; --ink:#0d0d0e; --ink-2:#4a4a4d; --ink-3:#8a8a8f;
-  --line:#d6d5d0; --accent:#b4472c; --card:#fbfaf8;
+  --paper:#0c0a12; --paper-2:#15111f; --ink:#f4f0f8; --ink-2:#d2ccdf; --ink-3:#b3abc4;
+  --line:rgba(255,255,255,.13); --accent:#ff5f4a; --card:rgba(255,255,255,.045);
 
   /* chapter palette — each project owns a pair. Muted, printed-ink tones,
      never neon, never a gradient. Colour comes from content, not decoration. */
-  --rust:#b4472c;   --amber:#d8863a;
-  --forest:#2e5d4b; --violet:#63488f;
-  --navy:#23355c;   --mustard:#c8983b;
-  --plum:#6a3a58;   --clay:#bd7355;
-  --teal:#1e5f5c;   --coral:#d4664e;
-  --oxblood:#78303a;--sage:#7f9775;
+  --rust:#ff5f4a;   --amber:#ffab5e;
+  --forest:#3ecf8e; --violet:#a78bfa;
+  --navy:#5b8dff;   --mustard:#e8b33c;
+  --plum:#d16ba5;   --clay:#e08a5f;
+  --teal:#3fd0c9;   --coral:#ff737d;
+  --oxblood:#e8556d;--sage:#9fc08a;
   --sans:'Inter',system-ui,-apple-system,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,monospace;
   --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
@@ -29,8 +29,67 @@
   --pad:clamp(20px,5vw,64px); --maxw:1400px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;background:#0c0a12}
+body{background:transparent;color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ════════════════════════════════════════════════════
+   SECTION COLOUR
+   One fixed radial wash behind the whole page: light in
+   the middle, deeper at the edges. Registering the two
+   stops with @property is what lets them *animate* —
+   plain custom properties would snap between sections.
+   Tones are paper stocks, each echoing its chapter accent.
+   ════════════════════════════════════════════════════ */
+@property --c0{syntax:'<color>';inherits:true;initial-value:#ddd3c0}
+@property --c1{syntax:'<color>';inherits:true;initial-value:#cfc2a6}
+@property --c2{syntax:'<color>';inherits:true;initial-value:#e3dac8}
+@property --c3{syntax:'<color>';inherits:true;initial-value:#c7b99e}
+@property --c4{syntax:'<color>';inherits:true;initial-value:#d6cab2}
+
+.bg{
+  position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(ellipse 70% 60% at 14% 18%, var(--c1), transparent 62%),
+    radial-gradient(ellipse 64% 56% at 88% 12%, var(--c2), transparent 64%),
+    radial-gradient(ellipse 72% 62% at 24% 86%, var(--c3), transparent 62%),
+    radial-gradient(ellipse 66% 58% at 84% 80%, var(--c4), transparent 64%),
+    var(--c0);
+  transition:
+    --c0 1.15s cubic-bezier(.4,0,.2,1), --c1 1.15s cubic-bezier(.4,0,.2,1),
+    --c2 1.15s cubic-bezier(.4,0,.2,1), --c3 1.15s cubic-bezier(.4,0,.2,1),
+    --c4 1.15s cubic-bezier(.4,0,.2,1);
+}
+/* a whisper of paper grain so the flat fields don't look digital */
+.bg::before{
+  content:'';position:absolute;inset:0;background:rgba(7,5,12,.62);
+}
+.bg::after{
+  content:'';position:absolute;inset:0;opacity:.9;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+}
+@media(prefers-reduced-motion:reduce){.bg{transition:none}}
+
+/* the mixes — a near-black base under saturated blooms */
+html[data-tone="ivory"] .bg{--c0:#0d0a16;--c1:#f8275b;--c2:#ff574a;--c3:#3d2f68;--c4:#1a1030}
+html[data-tone="ink"] .bg{--c0:#08060c;--c1:#1d1730;--c2:#12101c;--c3:#241a3a;--c4:#0d0a14}
+html[data-tone="stone"] .bg{--c0:#0a0d14;--c1:#3d2f68;--c2:#2f4a7a;--c3:#1a2440;--c4:#101828}
+html[data-tone="blush"] .bg{--c0:#140810;--c1:#f8275b;--c2:#ff574a;--c3:#dc683c;--c4:#3d1a2e}
+html[data-tone="moss"] .bg{--c0:#07120f;--c1:#248c65;--c2:#2ba9a4;--c3:#3d2f68;--c4:#0d2a24}
+html[data-tone="slate"] .bg{--c0:#080c18;--c1:#2f5bd0;--c2:#4a72d6;--c3:#a87f2f;--c4:#141c38}
+html[data-tone="mauve"] .bg{--c0:#120818;--c1:#a43444;--c2:#b3568b;--c3:#dc683c;--c4:#331f39}
+html[data-tone="lagoon"] .bg{--c0:#06120f;--c1:#2ba9a4;--c2:#248c65;--c3:#ff737d;--c4:#02353c}
+html[data-tone="oat"] .bg{--c0:#140a0c;--c1:#a43444;--c2:#dc683c;--c3:#7d9e6c;--c4:#3a1f24}
+html[data-tone="ash"] .bg{--c0:#0d0a12;--c1:#592337;--c2:#331f39;--c3:#3d2f68;--c4:#1a1220}
+html[data-tone="close"] .bg{--c0:#120a1a;--c1:#f8275b;--c2:#dc683c;--c3:#331f39;--c4:#1f0f24}
+
+/* surfaces float on the wash instead of blocking it */
+nav{background:rgba(12,10,18,.72);transition:background .8s ease,color .8s ease,border-color .3s}
+.spec div{background:rgba(255,255,255,.05)}
+.chip{background:rgba(255,255,255,.06)}
+.layer{background:rgba(255,255,255,.045)}
+.hero-links a,.burger,.menu-social a,.lang-set button,.end .row a{background:rgba(255,255,255,.06)}
+.menu{background:rgba(10,8,16,.96);backdrop-filter:blur(10px)}
+
 img,video{display:block;max-width:100%}
 a{color:inherit}
 .shell{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
@@ -91,9 +150,9 @@ nav.stuck{border-color:var(--line)}
   text-transform:uppercase;position:relative;z-index:3;
   font-optical-sizing:auto;font-feature-settings:"kern" 1,"liga" 1;
   text-shadow:
-    0 0 34px rgba(242,241,238,.92),
-    0 0 14px rgba(242,241,238,.85),
-    0 3px 22px rgba(0,0,0,.16);
+    0 0 40px rgba(8,6,14,.92),
+    0 0 16px rgba(8,6,14,.85),
+    0 2px 26px rgba(0,0,0,.5);
 }
 .hero-name .l1{display:block;letter-spacing:-.052em}
 .hero-name .l2{display:block;margin-inline-start:26%;letter-spacing:-.058em;position:relative}
@@ -126,7 +185,7 @@ nav.stuck{border-color:var(--line)}
 @media(max-width:700px){.hero-portrait{width:56vw}}
 
 /* ── bento (dark break) ────────────────────────── */
-.bento-wrap{background:#15140f;color:#efe9dc;padding:clamp(54px,9vh,110px) 0;margin-top:clamp(40px,7vh,90px)}
+.bento-wrap{background:transparent;color:#efe9dc;padding:clamp(54px,9vh,110px) 0;margin-top:clamp(40px,7vh,90px)}
 .bento-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:clamp(20px,3vh,34px);flex-wrap:wrap}
 .bento-head .eyebrow{color:#c8a86b;margin:0}
 .bento-head .who{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2.1rem);font-style:italic;color:#8d8676}
@@ -293,7 +352,7 @@ nav.stuck{border-color:var(--line)}
   border:1px solid var(--ink);transition:.28s cubic-bezier(.16,1,.3,1);display:inline-flex;gap:8px;align-items:center;
 }
 .act:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
-.act.solid{background:var(--a1);border-color:var(--a1);color:#fff}
+.act.solid{background:var(--a1);border-color:var(--a1);color:#0c0a12;font-weight:700}
 .act.solid:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 
 /* visual: flat offset block behind, like an off-register print run */
@@ -307,16 +366,16 @@ nav.stuck{border-color:var(--line)}
 .proj.flip .vis:hover::before{transform:translate3d(-24px,24px,-30px)}
 
 .shot{
-  position:relative;overflow:hidden;border-radius:4px;border:1px solid var(--ink);
+  position:relative;overflow:hidden;border-radius:4px;border:1px solid var(--line);
   background:var(--card);transform:translateZ(0);
 }
-.shot img,.shot video{width:100%;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.shot img,.shot video{width:100%;display:block;box-shadow:0 30px 70px -40px rgba(0,0,0,.9);transition:transform .8s cubic-bezier(.16,1,.3,1)}
 .vis:hover .shot video,.vis:hover .shot img:not([data-par]){transform:scale(1.04)}
 /* parallax images are driven by scroll, so no transition to fight with */
 .shot img[data-par]{transition:none;will-change:transform}
 
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;position:relative}
-.duo img,.duo video{width:100%;border:1px solid var(--ink);border-radius:4px;display:block}
+.duo img,.duo video{width:100%;border:1px solid var(--line);border-radius:4px;display:block}
 .duo.one{grid-template-columns:1fr}
 
 /* ── journey ───────────────────────────────────── */
@@ -573,6 +632,9 @@ body.locked{overflow:hidden}
 </head>
 <body>
 
+<!-- the colour wash every section tints as you scroll -->
+<div class="bg" aria-hidden="true"></div>
+
 <!-- official brand marks, defined once and reused -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <path id="i-github" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
@@ -630,7 +692,7 @@ body.locked{overflow:hidden}
 </div>
 
 <!-- ══ HERO ══ -->
-<header class="hero shell">
+<header class="hero shell" data-tone="ivory">
   <div class="hero-portrait"><img src="assets/photos/portrait-glasses.jpg" alt="Mohammed Shakarneh"></div>
   <div class="hero-idx" data-i18n="hero.idx">Belgorod, Russia · 2026</div>
   <h1 class="hero-name"><span class="l1" data-i18n="hero.first">Mohammed</span><span class="l2" data-i18n="hero.last">Shakarneh</span></h1>
@@ -649,7 +711,7 @@ body.locked{overflow:hidden}
 </header>
 
 <!-- ══ WHO I AM · bento ══ -->
-<div class="bento-wrap">
+<div class="bento-wrap" data-tone="ink">
   <div class="shell">
     <div class="bento-head rv">
       <div class="eyebrow" data-i18n="bento.eyebrow">Who I am</div>
@@ -695,7 +757,7 @@ body.locked{overflow:hidden}
 </div>
 
 <!-- ══ STATS ══ -->
-<section class="shell rv">
+<section class="shell rv" data-tone="stone">
   <div class="stats">
     <div class="stat"><b>2</b><small data-i18n="stats.s1">systems in production</small></div>
     <div class="stat"><b>267</b><small data-i18n="stats.s2">products served live</small></div>
@@ -705,7 +767,7 @@ body.locked{overflow:hidden}
 </section>
 
 <!-- ══ ARCHITECTURE ══ -->
-<section id="architecture" class="shell">
+<section id="architecture" class="shell" data-tone="stone">
   <div class="head rv">
     <div class="eyebrow" data-i18n="arch.eyebrow">How I think</div>
     <h2 data-i18n-html="arch.title">Request<br>lifecycle</h2>
@@ -722,7 +784,7 @@ body.locked{overflow:hidden}
 </section>
 
 <!-- ══ WORK ══ -->
-<div id="work" class="shell">
+<div id="work" class="shell" data-tone="blush">
   <div class="head rv">
     <div class="eyebrow" data-i18n="work.eyebrow">Selected work</div>
     <h2 data-i18n-html="work.title">Built &amp;<br>shipped</h2>
@@ -730,7 +792,7 @@ body.locked{overflow:hidden}
   </div>
 </div>
 
-<section class="proj shell rv" style="--a1:var(--rust);--a2:var(--amber)">
+<section class="proj shell rv" data-tone="blush" style="--a1:var(--rust);--a2:var(--amber)">
   <div class="proj-grid">
     <div class="proj-txt">
       <div class="idx">01</div>
@@ -762,7 +824,7 @@ body.locked{overflow:hidden}
   </div>
 </section>
 
-<section class="proj flip shell rv" style="--a1:var(--forest);--a2:var(--violet)">
+<section class="proj flip shell rv" data-tone="moss" style="--a1:var(--forest);--a2:var(--violet)">
   <div class="proj-grid">
     <div class="vis" data-tilt>
       <figure class="shot"><img data-par src="assets/projects/attendance/swagger.png" alt="Swagger API docs"></figure>
@@ -791,7 +853,7 @@ body.locked{overflow:hidden}
   </div>
 </section>
 
-<section class="proj shell rv" style="--a1:var(--navy);--a2:var(--mustard)">
+<section class="proj shell rv" data-tone="slate" style="--a1:var(--navy);--a2:var(--mustard)">
   <div class="proj-grid">
     <div class="proj-txt">
       <div class="idx">03</div>
@@ -820,7 +882,7 @@ body.locked{overflow:hidden}
   </div>
 </section>
 
-<section class="proj flip shell rv" style="--a1:var(--plum);--a2:var(--clay)">
+<section class="proj flip shell rv" data-tone="mauve" style="--a1:var(--plum);--a2:var(--clay)">
   <div class="proj-grid">
     <div class="vis" data-tilt>
       <figure class="shot"><img data-par src="assets/projects/my-notes/code-theme.png" alt="My Notes source"></figure>
@@ -846,7 +908,7 @@ body.locked{overflow:hidden}
   </div>
 </section>
 
-<section class="proj shell rv" style="--a1:var(--teal);--a2:var(--coral)">
+<section class="proj shell rv" data-tone="lagoon" style="--a1:var(--teal);--a2:var(--coral)">
   <div class="proj-grid">
     <div class="proj-txt">
       <div class="idx">05</div>
@@ -871,7 +933,7 @@ body.locked{overflow:hidden}
   </div>
 </section>
 
-<section class="proj flip shell rv" style="--a1:var(--oxblood);--a2:var(--sage)">
+<section class="proj flip shell rv" data-tone="oat" style="--a1:var(--oxblood);--a2:var(--sage)">
   <div class="proj-grid">
     <div class="vis" data-tilt>
       <figure class="shot"><img data-par src="assets/projects/data-analysis/dataset.png" alt="Dataset"></figure>
@@ -898,7 +960,7 @@ body.locked{overflow:hidden}
 </section>
 
 <!-- ══ JOURNEY ══ -->
-<section id="journey" class="shell">
+<section id="journey" class="shell" data-tone="ash">
   <div class="head rv">
     <div class="eyebrow" data-i18n="journey.eyebrow">The road</div>
     <h2 data-i18n-html="journey.title">Where I<br>started</h2>
@@ -928,7 +990,7 @@ body.locked{overflow:hidden}
 </section>
 
 <!-- ══ END ══ -->
-<section id="contact" class="end shell rv">
+<section id="contact" class="end shell rv" data-tone="close">
   <h2 data-i18n-html="end.title">Let's build<br>something<br><em>that lasts</em></h2>
   <div class="row">
     <a href="mailto:itshakarnehmohammed@gmail.com"><svg viewBox="0 0 24 24"><use href="#i-mail"/></svg> <span data-i18n="end.email">Email</span></a>
@@ -956,6 +1018,20 @@ document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
 const nav = document.getElementById('nav');
 addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 40), { passive: true });
+
+/* ── section colour: whichever band crosses the middle wins ── */
+{
+  const root = document.documentElement;
+  const zones = [...document.querySelectorAll('[data-tone]')];
+  if (zones.length) {
+    // a thin band across the viewport middle — only one section can occupy it
+    const tone = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) root.dataset.tone = e.target.dataset.tone; });
+    }, { rootMargin: '-48% 0px -48% 0px', threshold: 0 });
+    zones.forEach(z => tone.observe(z));
+    root.dataset.tone = zones[0].dataset.tone;
+  }
+}
 
 /* ── touch: scrolling into view replaces hover ─────────────── */
 if (!matchMedia('(hover:hover) and (pointer:fine)').matches) {
