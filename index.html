@@ -388,8 +388,8 @@ a{color:inherit}
 .step:hover figure img,.step:hover figure video{filter:grayscale(0);transform:scale(1.03)}
 /* touch devices have no hover, so scrolling into view does the reveal instead */
 .step.lit figure img,.step.lit figure video{filter:grayscale(0) contrast(1.02)}
-/* the opening step carries a before/after pair, stacked in the media column */
-.step .pair{display:grid;gap:12px}
+/* some steps carry several images, stacked in the media column */
+.step .shots{display:grid;gap:12px}
 
 /* ── closing ───────────────────────────────────── */
 .end{padding:clamp(90px,16vh,190px) 0 clamp(50px,8vh,90px);border-top:1px solid var(--line);text-align:center}
@@ -463,7 +463,7 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
 
   /* journey: photo first reads better than a stranded caption */
   .step{gap:14px}
-  .step figure,.step .pair{order:-1}
+  .step figure,.step .shots{order:-1}
 
   /* two videos side by side is unreadable at this width */
   .duo{grid-template-columns:1fr}
@@ -1036,14 +1036,18 @@ footer span:first-child{font-weight:600;color:var(--ink)}
   <div class="tl">
     <div class="step rv">
       <div><h4 data-i18n="journey.t1">From one crowded desk to a setup that keeps up</h4><p data-i18n="journey.j1">It started at a single old wooden desk with everything crowded onto it — notebooks, printouts, cables and an old laptop already past its best. As the workload grew and I took on more projects, that setup stopped keeping up, so I upgraded both: a proper desk and a far more powerful computer. The equipment was never what mattered — it just stopped getting in the way.</p></div>
-      <div class="pair">
+      <div class="shots">
         <figure><img src="assets/photos/desk-old-cluttered.jpg" alt="The first desk — everything piled on one old table"></figure>
         <figure><img src="assets/photos/desk-new-monitor.jpg" alt="The current desk — a machine that keeps up"></figure>
       </div>
     </div>
     <div class="step rv">
-      <div><h4 data-i18n="journey.t2">Russian, from zero</h4><p data-i18n="journey.j2">A 250-hour language course in Bethlehem, then a preparatory year at SWSU in Kursk — studying in a language I was still learning.</p></div>
-      <figure><video src="assets/media/study-library.mp4" autoplay muted loop playsinline></video></figure>
+      <div><h4 data-i18n="journey.t2">Russian, from zero</h4><p data-i18n="journey.j2">I studied Russian at the Russian Center for Science and Culture in Bethlehem, Palestine, then carried on through the Preparatory Year in Kursk — learning the language I was about to take my degree in. The Vice Dean honoured me for what I achieved there, and the university sent a further letter of appreciation.</p></div>
+      <div class="shots">
+        <figure><img src="assets/photos/cert-russian-course.jpg" alt="Russian language course certificate, Russian Center for Science and Culture, Bethlehem" loading="lazy"></figure>
+        <figure><img src="assets/photos/cert-rki-speech.jpg" alt="Certificate from the Russian Humanitarian Mission" loading="lazy"></figure>
+        <figure><img src="assets/photos/rcsc-bethlehem.webp" alt="The Russian Center for Science and Culture in Bethlehem" loading="lazy"></figure>
+      </div>
     </div>
     <div class="step rv">
       <div><h4 data-i18n="journey.t3">BSTU named after V.G. Shukhov</h4><p data-i18n="journey.j3">B.Sc. Information Systems &amp; Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5.</p></div>
