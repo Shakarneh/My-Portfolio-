@@ -145,14 +145,12 @@
     "journey": {
       "eyebrow": "The road",
       "title": "Where I<br>started",
-      "t1": "One old wooden desk, everything on it",
-      "j1": "It started at a single old wooden table with everything crowded onto it — notebooks, printouts, cables and a tired laptop that was already past its best. No second screen, no room to spread out. The equipment was never what mattered.",
+      "t1": "From one crowded desk to a setup that keeps up",
+      "j1": "It started at a single old wooden desk with everything crowded onto it — notebooks, printouts, cables and an old laptop already past its best. As the workload grew and I took on more projects, that setup stopped keeping up, so I upgraded both: a proper desk and a far more powerful computer. The equipment was never what mattered — it just stopped getting in the way.",
       "t2": "Russian, from zero",
       "j2": "A 250-hour language course in Bethlehem, then a preparatory year at SWSU in Kursk — studying in a language I was still learning.",
       "t3": "BSTU named after V.G. Shukhov",
-      "j3": "B.Sc. Information Systems & Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5.",
-      "t4": "A better desk, a machine that keeps up",
-      "j4": "As the workload grew and I took on more projects, the old setup stopped keeping up — so I upgraded both: a proper desk and a far more powerful computer. On that machine I built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day."
+      "j3": "B.Sc. Information Systems & Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5."
     },
     "end": {
       "title": "Let's build<br>something<br><em>that lasts</em>",
@@ -312,14 +310,12 @@
     "journey": {
       "eyebrow": "Дорога",
       "title": "С чего<br>я начал",
-      "t1": "Один старый деревянный стол — и всё на нём",
-      "j1": "Всё началось за одним старым деревянным столом, где было свалено вместе: тетради, распечатки, провода и уставший ноутбук, давно не в лучшей форме. Ни второго экрана, ни места, чтобы разложиться. Техника никогда не была главным.",
+      "t1": "От заваленного стола к рабочему месту, которое успевает",
+      "j1": "Всё началось за одним старым деревянным столом, где было свалено вместе: тетради, распечатки, провода и старый ноутбук, давно не в лучшей форме. Когда нагрузка выросла и проектов стало больше, эта сборка перестала справляться — и я обновил и стол, и компьютер, взяв заметно более мощный. Техника никогда не была главным — она просто перестала мешать.",
       "t2": "Русский с нуля",
       "j2": "250-часовой языковой курс в Вифлееме, затем подготовительный год в ЮЗГУ в Курске — учёба на языке, который я ещё только осваивал.",
       "t3": "БГТУ им. В.Г. Шухова",
-      "j3": "Бакалавриат «Информационные системы и технологии», Белгород. Веб-технологии — 5, управление ИТ-проектами — 5.",
-      "t4": "Стол получше и машина, которая успевает",
-      "j4": "Когда нагрузка выросла и проектов стало больше, старая сборка перестала справляться — и я обновил и стол, и компьютер, взяв заметно более мощный. Уже на нём я собрал admin API в «Эксперт Чойс СиАйЭс», а затем выпустил магазин, который каждый день обслуживает реальных клиентов."
+      "j3": "Бакалавриат «Информационные системы и технологии», Белгород. Веб-технологии — 5, управление ИТ-проектами — 5."
     },
     "end": {
       "title": "Давайте создадим<br>то, что<br><em>останется</em>",
@@ -479,14 +475,12 @@
     "journey": {
       "eyebrow": "الطريق",
       "title": "من أين<br>بدأت",
-      "t1": "طاولة خشبية قديمة واحدة، وكل شيء فوقها",
-      "j1": "بدأ الأمر على طاولة خشبية قديمة واحدة تكدّس فوقها كل شيء: دفاتر وأوراق مطبوعة وأسلاك وحاسوب محمول متعب تجاوز أفضل أيامه. لا شاشة ثانية ولا مساحة للعمل. لم تكن المعدات يوماً هي المهمة.",
+      "t1": "من طاولة مكدّسة إلى مساحة عمل تواكب",
+      "j1": "بدأ الأمر على طاولة خشبية قديمة واحدة تكدّس فوقها كل شيء: دفاتر وأوراق مطبوعة وأسلاك وحاسوب محمول قديم تجاوز أفضل أيامه. ومع تزايد حجم العمل وكثرة المشاريع، لم تعد تلك العدّة تكفي — فطوّرت الطاولة والحاسوب معاً، وانتقلت إلى جهاز أقوى بكثير. لم تكن المعدات يوماً هي المهمة، لكنها كفّت عن الوقوف في الطريق.",
       "t2": "الروسية من الصفر",
       "j2": "دورة لغة مدتها 250 ساعة في بيت لحم، ثم سنة تحضيرية في جامعة الجنوب الغربي بكورسك — دراسة بلغة كنت ما أزال أتعلّمها.",
       "t3": "جامعة بيلغورود التقنية شوخوف",
-      "j3": "بكالوريوس نظم وتقنيات المعلومات، بيلغورود. تقنيات الويب — 5، إدارة مشاريع تقنية المعلومات — 5.",
-      "t4": "طاولة أفضل، وجهاز يواكب العمل",
-      "j4": "ومع تزايد حجم العمل وكثرة المشاريع، لم تعد العدّة القديمة تكفي — فطوّرت الطاولة والحاسوب معاً، وانتقلت إلى جهاز أقوى بكثير. وعليه بنيت واجهة الإدارة في Expert Choice CIS، ثم أطلقت متجراً يخدم عملاء حقيقيين كل يوم."
+      "j3": "بكالوريوس نظم وتقنيات المعلومات، بيلغورود. تقنيات الويب — 5، إدارة مشاريع تقنية المعلومات — 5."
     },
     "end": {
       "title": "لنبنِ شيئاً<br><em>يبقى</em>",
