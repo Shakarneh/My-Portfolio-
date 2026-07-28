@@ -391,6 +391,23 @@ a{color:inherit}
 /* some steps carry several images, stacked in the media column */
 .step .shots{display:grid;gap:12px}
 
+/* ── writing ───────────────────────────────────── */
+.post{max-width:66ch;padding:clamp(26px,4vh,44px) 0;border-top:1px solid var(--line)}
+.post h3{font-size:clamp(1.25rem,3vw,2rem);font-weight:700;letter-spacing:-.02em;line-height:1.22;margin-bottom:12px}
+.post-lede{color:var(--ink-2);margin-bottom:18px}
+.post-body{border-top:1px solid var(--line);padding-top:14px}
+.post-body summary{
+  cursor:pointer;list-style:none;font-family:var(--mono);font-size:.74rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding:4px 0;transition:opacity .3s;
+}
+.post-body summary::-webkit-details-marker{display:none}
+.post-body summary::after{content:' +'}
+.post-body[open] summary::after{content:' –'}
+.post-body summary:hover{opacity:.7}
+.post-body .prose{padding-top:18px}
+.post-body .prose p{color:var(--ink-2);line-height:1.8;margin-bottom:1.05em}
+.post-body .prose p:last-child{margin-bottom:0}
+
 /* ── closing ───────────────────────────────────── */
 .end{padding:clamp(90px,16vh,190px) 0 clamp(50px,8vh,90px);border-top:1px solid var(--line);text-align:center}
 .end h2{font-size:clamp(2.1rem,9.5vw,7.5rem);font-weight:900;line-height:.9;letter-spacing:-.05em;text-transform:uppercase}
@@ -627,6 +644,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
 [lang="ar"] .hero-name,
 [lang="ar"] .head h2,
 [lang="ar"] .proj h3,
+[lang="ar"] .post h3,
 [lang="ar"] .end h2,
 [lang="ar"] .idx{
   font-family:var(--display-ar);
@@ -637,11 +655,11 @@ footer span:first-child{font-weight:600;color:var(--ink)}
 /* Arabic sits taller than Latin — the damma on بُنيت needs headroom,
    so stacked lines get a little more air between them. 1.42 still let the
    hamza of وأُطلقت crowd the line above, hence 1.62. */
-[lang="ar"] .proj h3,[lang="ar"] .head h2,[lang="ar"] .end h2{line-height:1.62}
+[lang="ar"] .proj h3,[lang="ar"] .head h2,[lang="ar"] .end h2,[lang="ar"] .post h3{line-height:1.62}
 [lang="ar"] .eyebrow,[lang="ar"] .tag,[lang="ar"] .spec dt,
 [lang="ar"] .hero-idx,[lang="ar"] .avail,[lang="ar"] .stat small,
 [lang="ar"] .b-list h3,[lang="ar"] .b-list a span:last-child,
-[lang="ar"] .b-lang small,[lang="ar"] .end .row a{
+[lang="ar"] .b-lang small,[lang="ar"] .end .row a,[lang="ar"] .post-body summary{
   font-family:var(--sans-ar);letter-spacing:0;text-transform:none;
 }
 /* Arabic has no italic — carry the emphasis with weight and colour instead */
@@ -703,6 +721,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
       <a href="#work"><span data-i18n="nav.work">Work</span><sup>6</sup></a>
       <a href="#architecture" data-i18n="nav.arch">Architecture</a>
       <a href="#journey" data-i18n="nav.journey">Journey</a>
+      <a href="#articles" data-i18n="nav.articles">Articles</a>
     </div>
     <a class="talk" href="#contact" data-i18n="nav.talk">Let's talk →</a>
 
@@ -729,7 +748,8 @@ footer span:first-child{font-weight:600;color:var(--ink)}
       <a href="#work"><i>01</i><span data-i18n="nav.work">Work</span></a>
       <a href="#architecture"><i>02</i><span data-i18n="nav.arch">Architecture</span></a>
       <a href="#journey"><i>03</i><span data-i18n="nav.journey">Journey</span></a>
-      <a href="#contact"><i>04</i><span data-i18n="end.email">Contact</span></a>
+      <a href="#articles"><i>04</i><span data-i18n="nav.articles">Articles</span></a>
+      <a href="#contact"><i>05</i><span data-i18n="nav.contact">Contact</span></a>
     </nav>
 
     <div class="menu-foot">
@@ -1062,6 +1082,25 @@ footer span:first-child{font-weight:600;color:var(--ink)}
       <figure><video src="assets/media/study-library.mp4" autoplay muted loop playsinline></video></figure>
     </div>
   </div>
+</section>
+
+<!-- ══ ARTICLES ══ -->
+<section id="articles" class="shell" data-tone="ink">
+  <div class="head rv">
+    <div class="eyebrow" data-i18n="art.eyebrow">Writing</div>
+    <h2 data-i18n-html="art.title">Things I<br>think about</h2>
+    <p data-i18n="art.lede">Notes on how the work is changing — and on what hasn't.</p>
+  </div>
+  <article class="post rv">
+    <h3 data-i18n="art.a1title">Value is moving from execution to judgment</h3>
+    <p class="post-lede" data-i18n="art.a1lede">AI has not made thinking less valuable. It has made thinking the job.</p>
+    <details class="post-body">
+      <summary data-i18n="art.read">Read the full article</summary>
+      <div class="prose" data-i18n-html="art.a1body">
+        <p>One of the most profound shifts I have noticed in the age of artificial intelligence is that value is no longer defined by execution alone. Instead, it is increasingly defined by how we think and the decisions we make.</p>
+      </div>
+    </details>
+  </article>
 </section>
 
 <!-- ══ END ══ -->
