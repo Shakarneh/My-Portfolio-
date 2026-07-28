@@ -388,6 +388,8 @@ a{color:inherit}
 .step:hover figure img,.step:hover figure video{filter:grayscale(0);transform:scale(1.03)}
 /* touch devices have no hover, so scrolling into view does the reveal instead */
 .step.lit figure img,.step.lit figure video{filter:grayscale(0) contrast(1.02)}
+/* the opening step carries a before/after pair, stacked in the media column */
+.step .pair{display:grid;gap:12px}
 
 /* ── closing ───────────────────────────────────── */
 .end{padding:clamp(90px,16vh,190px) 0 clamp(50px,8vh,90px);border-top:1px solid var(--line);text-align:center}
@@ -461,7 +463,7 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
 
   /* journey: photo first reads better than a stranded caption */
   .step{gap:14px}
-  .step figure{order:-1}
+  .step figure,.step .pair{order:-1}
 
   /* two videos side by side is unreadable at this width */
   .duo{grid-template-columns:1fr}
@@ -1033,8 +1035,11 @@ footer span:first-child{font-weight:600;color:var(--ink)}
   </div>
   <div class="tl">
     <div class="step rv">
-      <div><h4 data-i18n="journey.t1">One old wooden desk, everything on it</h4><p data-i18n="journey.j1">It started at a single old wooden table with everything crowded onto it — notebooks, printouts, cables and a tired laptop that was already past its best. No second screen, no room to spread out. The equipment was never what mattered.</p></div>
-      <figure><img src="assets/photos/desk-old-cluttered.jpg" alt="The first desk — everything piled on one old table"></figure>
+      <div><h4 data-i18n="journey.t1">From one crowded desk to a setup that keeps up</h4><p data-i18n="journey.j1">It started at a single old wooden desk with everything crowded onto it — notebooks, printouts, cables and an old laptop already past its best. As the workload grew and I took on more projects, that setup stopped keeping up, so I upgraded both: a proper desk and a far more powerful computer. The equipment was never what mattered — it just stopped getting in the way.</p></div>
+      <div class="pair">
+        <figure><img src="assets/photos/desk-old-cluttered.jpg" alt="The first desk — everything piled on one old table"></figure>
+        <figure><img src="assets/photos/desk-new-monitor.jpg" alt="The current desk — a machine that keeps up"></figure>
+      </div>
     </div>
     <div class="step rv">
       <div><h4 data-i18n="journey.t2">Russian, from zero</h4><p data-i18n="journey.j2">A 250-hour language course in Bethlehem, then a preparatory year at SWSU in Kursk — studying in a language I was still learning.</p></div>
@@ -1043,10 +1048,6 @@ footer span:first-child{font-weight:600;color:var(--ink)}
     <div class="step rv">
       <div><h4 data-i18n="journey.t3">BSTU named after V.G. Shukhov</h4><p data-i18n="journey.j3">B.Sc. Information Systems &amp; Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5.</p></div>
       <figure><img src="assets/photos/award-bstu.jpg" alt="Award ceremony at BSTU"></figure>
-    </div>
-    <div class="step rv">
-      <div><h4 data-i18n="journey.t4">A better desk, a machine that keeps up</h4><p data-i18n="journey.j4">As the workload grew and I took on more projects, the old setup stopped keeping up — so I upgraded both: a proper desk and a far more powerful computer. On that machine I built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day.</p></div>
-      <figure><img src="assets/photos/desk-new-monitor.jpg" alt="The current desk — a machine that keeps up"></figure>
     </div>
   </div>
 </section>
