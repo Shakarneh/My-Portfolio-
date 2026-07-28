@@ -35,11 +35,11 @@
       "do3t": "Python · SQL",
       "do4": "Learn in public, every week",
       "do4t": "Ongoing",
-      "bio1": "Born in Palestine, studying in Russia. Before university I ran my own eBay store for two years — sourcing, pricing, logistics and customer support in two languages, with 100% positive reviews.",
-      "bio2": "That taught me the thing I still care about most: software is only finished when a real person can use it without you standing next to them.",
+      "bio1": "Born in Palestine, studying in Russia. I did my development internship at Expert Choice CIS — ООО «Эксперт Чойс СиАйЭс» — building the back-end of a system the company actually runs, and learning how real software gets planned, reviewed and shipped by a team.",
+      "bio2": "Since then I've shipped work people use every day: a live e-commerce store, a Windows app with its own installer, a deployed full-stack site. Before university I ran my own eBay store for two years with 100% positive reviews — which taught me what I still care about most: software isn't finished when the code works, it's finished when a stranger can use it without you there.",
       "native": "native",
-      "fluent": "fluent",
-      "cta": "Let's<br>talk"
+      "cta": "Let's<br>talk",
+      "intermediate": "intermediate"
     },
     "stats": {
       "s1": "systems in production",
@@ -145,14 +145,14 @@
     "journey": {
       "eyebrow": "The road",
       "title": "Where I<br>started",
-      "t1": "Two laptops on a wooden board",
-      "j1": "Before university I ran my own eBay store for two years — sourcing, pricing, logistics, customer support in Russian and English, 100% positive reviews. The setup was never what mattered.",
+      "t1": "One wooden desk, everything on it",
+      "j1": "It started at a single old table with everything piled together — notebooks, printouts, cables and a tired laptop. I ran my own eBay store from that desk: sourcing, pricing, logistics and customer support in Russian and English, with 100% positive reviews. The equipment was never what mattered.",
       "t2": "Russian, from zero",
       "j2": "A 250-hour language course in Bethlehem, then a preparatory year at SWSU in Kursk — studying in a language I was still learning.",
       "t3": "BSTU named after V.G. Shukhov",
       "j3": "B.Sc. Information Systems & Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5.",
-      "t4": "First real back-end, then production",
-      "j4": "Built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day. Same person — better tools, and a desk."
+      "t4": "A better desk, a machine that keeps up",
+      "j4": "As the workload grew and the projects got heavier, the old setup stopped keeping up — so I upgraded both the desk and the computer. On the new one I built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day."
     },
     "end": {
       "title": "Let's build<br>something<br><em>that lasts</em>",
@@ -202,11 +202,11 @@
       "do3t": "Python · SQL",
       "do4": "Учусь публично, каждую неделю",
       "do4t": "Постоянно",
-      "bio1": "Родился в Палестине, учусь в России. До университета два года вёл собственный магазин на eBay — закупки, ценообразование, логистика и поддержка клиентов на двух языках, 100% положительных отзывов.",
-      "bio2": "Это научило меня главному: программа готова только тогда, когда живой человек может ею пользоваться без вас рядом.",
+      "bio1": "Родился в Палестине, учусь в России. Производственную практику проходил в ООО «Эксперт Чойс СиАйЭс», где разрабатывал backend системы, которой компания пользуется по-настоящему, и увидел изнутри, как программное обеспечение планируют, ревьюят и выпускают в команде.",
+      "bio2": "С тех пор я выпустил то, чем пользуются каждый день: работающий интернет-магазин, приложение для Windows с собственным установщиком, развёрнутый full-stack сайт. До университета два года вёл собственный магазин на eBay со 100% положительных отзывов — это научило меня главному: программа готова не тогда, когда код работает, а когда ею может воспользоваться незнакомый человек без вас рядом.",
       "native": "родной",
-      "fluent": "свободно",
-      "cta": "Давайте<br>обсудим"
+      "cta": "Давайте<br>обсудим",
+      "intermediate": "средний уровень"
     },
     "stats": {
       "s1": "системы в продакшене",
@@ -312,14 +312,14 @@
     "journey": {
       "eyebrow": "Дорога",
       "title": "С чего<br>я начал",
-      "t1": "Два ноутбука на деревянной доске",
-      "j1": "До университета я два года вёл собственный магазин на eBay — закупки, цены, логистика, поддержка клиентов на русском и английском, 100% положительных отзывов. Рабочее место никогда не было главным.",
+      "t1": "Один деревянный стол — и всё на нём",
+      "j1": "Всё началось за одним старым столом, где было свалено вместе: тетради, распечатки, провода и уставший ноутбук. С этого стола я вёл собственный магазин на eBay — закупки, цены, логистика и поддержка клиентов на русском и английском, 100% положительных отзывов. Техника никогда не была главным.",
       "t2": "Русский с нуля",
       "j2": "250-часовой языковой курс в Вифлееме, затем подготовительный год в ЮЗГУ в Курске — учёба на языке, который я ещё только осваивал.",
       "t3": "БГТУ им. В.Г. Шухова",
       "j3": "Бакалавриат «Информационные системы и технологии», Белгород. Веб-технологии — 5, управление ИТ-проектами — 5.",
-      "t4": "Первый настоящий backend, затем продакшен",
-      "j4": "Собрал admin API в «Эксперт Чойс СиАйЭс», затем выпустил магазин, который каждый день обслуживает реальных клиентов. Тот же человек — лучше инструменты и наконец-то стол."
+      "t4": "Стол получше и машина, которая успевает",
+      "j4": "Когда нагрузка выросла, а проекты стали тяжелее, старая сборка перестала справляться — и я обновил и стол, и компьютер. Уже на новом я собрал admin API в «Эксперт Чойс СиАйЭс», а затем выпустил магазин, который каждый день обслуживает реальных клиентов."
     },
     "end": {
       "title": "Давайте создадим<br>то, что<br><em>останется</em>",
@@ -369,11 +369,11 @@
       "do3t": "Python · SQL",
       "do4": "أتعلّم علناً، كل أسبوع",
       "do4t": "مستمر",
-      "bio1": "وُلدت في فلسطين، وأدرس في روسيا. قبل الجامعة أدرت متجري الخاص على eBay لمدة عامين — التوريد والتسعير والشحن ودعم العملاء بلغتين، بتقييم إيجابي 100%.",
-      "bio2": "علّمني ذلك ما أهتم به حتى اليوم: البرنامج لا يكتمل إلا حين يستطيع شخص حقيقي استخدامه دون أن تقف بجانبه.",
+      "bio1": "وُلدت في فلسطين، وأدرس في روسيا. أنجزت تدريبي العملي في شركة Expert Choice CIS — ООО «Эксперт Чойс СиАйЭс» — حيث بنيت الواجهة الخلفية لنظام تستخدمه الشركة فعلياً، وتعلّمت كيف يُخطَّط للبرمجيات وتُراجَع وتُطلَق ضمن فريق.",
+      "bio2": "ومنذ ذلك الحين أطلقت أعمالاً يستخدمها الناس يومياً: متجر إلكتروني يعمل فعلياً، وتطبيق ويندوز بمثبّت خاص، وموقع متكامل منشور. وقبل الجامعة أدرت متجري على eBay لعامين بتقييم إيجابي 100% — وهو ما علّمني ما أهتم به حتى اليوم: البرنامج لا يكتمل حين يعمل الكود، بل حين يستطيع شخص غريب استخدامه دون أن تقف بجانبه.",
       "native": "اللغة الأم",
-      "fluent": "بطلاقة",
-      "cta": "لنتحدث"
+      "cta": "لنتحدث",
+      "intermediate": "مستوى متوسط"
     },
     "stats": {
       "s1": "نظامان قيد التشغيل",
@@ -479,14 +479,14 @@
     "journey": {
       "eyebrow": "الطريق",
       "title": "من أين<br>بدأت",
-      "t1": "حاسوبان على لوح خشبي",
-      "j1": "قبل الجامعة أدرت متجري على eBay لعامين — التوريد والتسعير والشحن ودعم العملاء بالروسية والإنجليزية، بتقييم إيجابي 100%. لم تكن المعدات يوماً هي المهمة.",
+      "t1": "طاولة خشبية واحدة، وكل شيء فوقها",
+      "j1": "بدأ الأمر على طاولة قديمة واحدة تكدّس فوقها كل شيء: دفاتر وأوراق مطبوعة وأسلاك وحاسوب متعب. من تلك الطاولة أدرت متجري على eBay — التوريد والتسعير والشحن ودعم العملاء بالروسية والإنجليزية، بتقييم إيجابي 100%. لم تكن المعدات يوماً هي المهمة.",
       "t2": "الروسية من الصفر",
       "j2": "دورة لغة مدتها 250 ساعة في بيت لحم، ثم سنة تحضيرية في جامعة الجنوب الغربي بكورسك — دراسة بلغة كنت ما أزال أتعلّمها.",
       "t3": "جامعة بيلغورود التقنية شوخوف",
       "j3": "بكالوريوس نظم وتقنيات المعلومات، بيلغورود. تقنيات الويب — 5، إدارة مشاريع تقنية المعلومات — 5.",
-      "t4": "أول واجهة خلفية حقيقية، ثم الإنتاج",
-      "j4": "بنيت واجهة الإدارة في Expert Choice CIS، ثم أطلقت متجراً يخدم عملاء حقيقيين كل يوم. الشخص نفسه — أدوات أفضل، ومكتب أخيراً."
+      "t4": "طاولة أفضل، وجهاز يواكب العمل",
+      "j4": "ومع تزايد حجم العمل وثقل المشاريع، لم تعد العدّة القديمة تكفي — فطوّرت الطاولة والحاسوب معاً. وعلى الجهاز الجديد بنيت واجهة الإدارة في Expert Choice CIS، ثم أطلقت متجراً يخدم عملاء حقيقيين كل يوم."
     },
     "end": {
       "title": "لنبنِ شيئاً<br><em>يبقى</em>",

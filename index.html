@@ -638,7 +638,9 @@ footer span:first-child{font-weight:600;color:var(--ink)}
   text-transform:none;          /* Arabic has no letter case */
 }
 [lang="ar"] .hero-name{line-height:1.15;font-size:clamp(2.2rem,8vw,7.2rem)}
-[lang="ar"] .proj h3,[lang="ar"] .head h2,[lang="ar"] .end h2{line-height:1.25}
+/* Arabic sits taller than Latin — the damma on بُنيت needs headroom,
+   so stacked lines get a little more air between them */
+[lang="ar"] .proj h3,[lang="ar"] .head h2,[lang="ar"] .end h2{line-height:1.42}
 [lang="ar"] .eyebrow,[lang="ar"] .tag,[lang="ar"] .spec dt,
 [lang="ar"] .hero-idx,[lang="ar"] .avail,[lang="ar"] .stat small,
 [lang="ar"] .b-list h3,[lang="ar"] .b-list a span:last-child,
@@ -809,8 +811,8 @@ footer span:first-child{font-weight:600;color:var(--ink)}
 
       <article class="b dark b-lang rv">
         <div><b>العربية</b><small data-i18n="bento.native">native</small></div>
-        <div><b>English</b><small data-i18n="bento.fluent">fluent</small></div>
-        <div><b>Русский</b><small data-i18n="bento.fluent">fluent</small></div>
+        <div><b>English</b><small data-i18n="bento.intermediate">intermediate</small></div>
+        <div><b>Русский</b><small data-i18n="bento.intermediate">intermediate</small></div>
       </article>
 
       <a class="b b-cta rv" href="#contact">
@@ -1034,7 +1036,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
     <div class="step rv">
       <div class="yr">2021 — 2023</div>
       <div><h4 data-i18n="journey.t1">Two laptops on a wooden board</h4><p data-i18n="journey.j1">Before university I ran my own eBay store for two years — sourcing, pricing, logistics, customer support in Russian and English, 100% positive reviews. The setup was never what mattered.</p></div>
-      <figure><img src="assets/photos/desk-old-laptops.jpg" alt="Early setup"></figure>
+      <figure><img src="assets/photos/desk-old-cluttered.jpg" alt="The first desk — everything piled on one old table"></figure>
     </div>
     <div class="step rv">
       <div class="yr">2023</div>
@@ -1049,7 +1051,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
     <div class="step rv">
       <div class="yr">2026</div>
       <div><h4 data-i18n="journey.t4">First real back-end, then production</h4><p data-i18n="journey.j4">Built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day. Same person — better tools, and a desk.</p></div>
-      <figure><img src="assets/photos/desk-new-wide.jpg" alt="Current workspace"></figure>
+      <figure><img src="assets/photos/desk-new-monitor.jpg" alt="The current desk — a machine that keeps up"></figure>
     </div>
   </div>
 </section>
