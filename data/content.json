@@ -8,6 +8,8 @@
       "work": "Work",
       "arch": "Architecture",
       "journey": "Journey",
+      "articles": "Articles",
+      "contact": "Contact",
       "talk": "Let's talk →",
       "language": "Language",
       "menu": "Menu",
@@ -154,6 +156,15 @@
       "t4": "The library's computer room",
       "j4": "I spent a good part of my time in the computer section of the library. It was quiet, and it was the one place I could sit down and work for hours without a single distraction."
     },
+    "art": {
+      "eyebrow": "Writing",
+      "title": "Things I<br>think about",
+      "lede": "Notes on how the work is changing — and on what hasn't.",
+      "read": "Read the full article",
+      "a1title": "Value is moving from execution to judgment",
+      "a1lede": "AI has not made thinking less valuable. It has made thinking the job.",
+      "a1body": "<p>One of the most profound shifts I have noticed in the age of artificial intelligence is that value is no longer defined by execution alone. Instead, it is increasingly defined by how we think and the decisions we make.</p><p>Today, the real challenge is no longer writing thousands of lines of code or spending countless hours completing a complex task. The challenge is accurately defining the problem, asking the right questions, and crafting clear, precise prompts that enable AI systems to produce the best possible outcome.</p><p>For that reason, I don’t believe the rapid advancement of artificial intelligence should make us fear the future. Instead, it should encourage us to rethink the skills that matter most.</p><p>A common concern is that AI is making people less intelligent because it performs much of the work on our behalf. I see it differently.</p><p>Artificial intelligence doesn’t diminish human intelligence; it elevates where our intelligence creates value. Rather than spending most of our time on execution, we are now expected to understand problems more deeply, evaluate alternatives, anticipate consequences, and make better decisions. These are more sophisticated and ultimately more valuable skills than execution alone.</p><p>In the past, the value of work was often measured by the amount of effort invested and the time required to complete it, even though errors were inevitable. That was simply the nature of manual and intellectual work.</p><p>Today, that standard is changing. The emphasis is shifting away from the number of hours spent and toward the quality of the decision and the accuracy of the outcome.</p><p>The question is no longer: “How long did it take?”</p><p>It has become: “Did you make the right decision, and did you achieve the right outcome?”</p><p>This shift does not reduce the importance of human contribution. On the contrary, it makes it even more critical. AI can execute tasks at remarkable speed, but it does not define objectives, fully understand business context, or take responsibility for decisions. Those responsibilities remain fundamentally human.</p><p>Of course, AI can weaken someone’s abilities if it is used as a substitute for learning and understanding. However, when used as a tool to enhance productivity and expand knowledge, it strengthens our thinking rather than replacing it.</p><p>Ultimately, I believe the true purpose of artificial intelligence is not to think for us. Its purpose is to eliminate unnecessary effort, reduce time spent on repetitive execution, and allow us to focus on what machines still cannot replace: critical thinking, sound judgment, creativity, and accountability.</p><p>The most valuable skill in the years ahead will not be the ability to perform every task manually. It will be the ability to think clearly, make informed decisions, and leverage artificial intelligence effectively to create meaningful results.</p>"
+    },
     "end": {
       "title": "Let's build<br>something<br><em>that lasts</em>",
       "email": "Email",
@@ -175,6 +186,8 @@
       "work": "Проекты",
       "arch": "Архитектура",
       "journey": "Путь",
+      "articles": "Статьи",
+      "contact": "Контакты",
       "talk": "Связаться →",
       "language": "Язык",
       "menu": "Меню",
@@ -321,6 +334,15 @@
       "t4": "Компьютерный зал библиотеки",
       "j4": "Немалую часть времени я проводил в компьютерном зале библиотеки. Там было тихо — единственное место, где можно было сесть и работать часами, ни на что не отвлекаясь."
     },
+    "art": {
+      "eyebrow": "Тексты",
+      "title": "О чём я<br>размышляю",
+      "lede": "Заметки о том, как меняется работа — и что остаётся прежним.",
+      "read": "Читать полностью",
+      "a1title": "Ценность смещается от исполнения к суждению",
+      "a1lede": "ИИ не обесценил мышление. Он сделал мышление самой работой.",
+      "a1body": "<p>Одна из самых глубоких перемен, которые я замечаю в эпоху искусственного интеллекта, — ценность больше не определяется одним лишь исполнением. Всё сильнее она определяется тем, как мы думаем и какие решения принимаем.</p><p>Сегодня настоящая сложность — уже не написать тысячи строк кода и не потратить бесчисленные часы на трудную задачу. Сложность в том, чтобы точно сформулировать проблему, задать правильные вопросы и составить ясные, точные запросы, которые позволят системам ИИ выдать наилучший результат.</p><p>Поэтому я не считаю, что стремительное развитие искусственного интеллекта должно заставлять нас бояться будущего. Наоборот, оно должно побудить нас переосмыслить, какие навыки важнее всего.</p><p>Часто опасаются, что ИИ делает людей глупее, потому что берёт значительную часть работы на себя. Я смотрю на это иначе.</p><p>Искусственный интеллект не уменьшает человеческий интеллект — он поднимает планку там, где наш интеллект создаёт ценность. Вместо того чтобы тратить большую часть времени на исполнение, от нас теперь ждут более глубокого понимания задач, оценки альтернатив, предвидения последствий и более качественных решений. Это более сложные и в конечном счёте более ценные навыки, чем одно лишь исполнение.</p><p>Раньше ценность работы часто измерялась объёмом вложенных усилий и временем на её выполнение, хотя ошибки были неизбежны. Такова была природа физического и интеллектуального труда.</p><p>Сегодня этот стандарт меняется. Акцент смещается с количества потраченных часов на качество решения и точность результата.</p><p>Вопрос больше не звучит так: «Сколько времени это заняло?»</p><p>Теперь он звучит так: «Верное ли решение вы приняли и достигли ли верного результата?»</p><p>Эта перемена не снижает значимость человеческого вклада. Напротив, она делает его ещё более критичным. ИИ выполняет задачи с поразительной скоростью, но он не ставит цели, не понимает бизнес-контекст в полной мере и не несёт ответственности за решения. Всё это остаётся принципиально человеческим.</p><p>Разумеется, ИИ может ослабить чьи-то способности, если использовать его как замену обучению и пониманию. Но как инструмент повышения продуктивности и расширения знаний он укрепляет наше мышление, а не подменяет его.</p><p>В конечном счёте я убеждён: подлинное назначение искусственного интеллекта — не думать за нас. Его назначение — устранить лишние усилия, сократить время на повторяющееся исполнение и позволить нам сосредоточиться на том, что машины пока заменить не могут: критическом мышлении, здравом суждении, творчестве и ответственности.</p><p>Самым ценным навыком в ближайшие годы будет не умение выполнять каждую задачу вручную. Это будет умение ясно мыслить, принимать обоснованные решения и эффективно применять искусственный интеллект, чтобы добиваться значимых результатов.</p>"
+    },
     "end": {
       "title": "Давайте создадим<br>то, что<br><em>останется</em>",
       "email": "Почта",
@@ -342,6 +364,8 @@
       "work": "الأعمال",
       "arch": "البنية",
       "journey": "المسيرة",
+      "articles": "المقالات",
+      "contact": "تواصل",
       "talk": "لنتحدث ←",
       "language": "اللغة",
       "menu": "القائمة",
@@ -487,6 +511,15 @@
       "j3": "بكالوريوس نظم وتقنيات المعلومات، بيلغورود. تقنيات الويب — 5، إدارة مشاريع تقنية المعلومات — 5. لكن هذه السنوات منحتني ما هو أبعد من المنهج: عملاً أكاديمياً وأنشطة لا صفّية، ومهارات تقنية وشخصية، وخبرة واسعة في العمل مع أشخاص من خلفيات شديدة التنوّع. لقد وسّعت الجامعة نظرتي وأعدّتني لمسيرة مهنية.",
       "t4": "قاعة الحاسوب في المكتبة",
       "j4": "قضيت جزءاً كبيراً من وقتي في قسم الحاسوب في المكتبة. كان مكاناً هادئاً، وهو المكان الوحيد الذي كنت أجلس فيه لأعمل ساعات دون أي تشتيت."
+    },
+    "art": {
+      "eyebrow": "كتابات",
+      "title": "أفكارٌ<br>أعود إليها",
+      "lede": "ملاحظات عن كيف يتغيّر العمل — وما الذي يبقى على حاله.",
+      "read": "قراءة المقال كاملاً",
+      "a1title": "القيمة تنتقل من التنفيذ إلى الحُكم",
+      "a1lede": "لم يجعل الذكاء الاصطناعي التفكير أقل قيمة، بل جعله جوهر العمل.",
+      "a1body": "<p>من أعمق التحوّلات التي لاحظتها في عصر الذكاء الاصطناعي أن القيمة لم تعد تُقاس بالتنفيذ وحده، بل صارت تُقاس أكثر فأكثر بطريقة تفكيرنا وبالقرارات التي نتخذها.</p><p>التحدي الحقيقي اليوم لم يعد كتابة آلاف الأسطر من الكود ولا قضاء ساعات لا تُحصى في إنجاز مهمة معقدة. التحدي هو تحديد المشكلة بدقة، وطرح الأسئلة الصحيحة، وصياغة تعليمات واضحة ودقيقة تمكّن أنظمة الذكاء الاصطناعي من إنتاج أفضل نتيجة ممكنة.</p><p>ولهذا لا أرى أن التقدّم السريع للذكاء الاصطناعي ينبغي أن يجعلنا نخشى المستقبل، بل ينبغي أن يدفعنا إلى إعادة التفكير في المهارات الأكثر أهمية.</p><p>هناك قلق شائع من أن الذكاء الاصطناعي يجعل الناس أقل ذكاءً لأنه ينجز جزءاً كبيراً من العمل نيابةً عنّا. أنا أرى الأمر على نحو مختلف.</p><p>الذكاء الاصطناعي لا يقلّل الذكاء البشري، بل يرفع الموضع الذي يصنع فيه ذكاؤنا قيمة. فبدل أن نقضي معظم وقتنا في التنفيذ، صار مطلوباً منّا أن نفهم المشكلات بعمق أكبر، وأن نوازن بين البدائل، ونتوقّع العواقب، ونتخذ قرارات أفضل. وهذه مهارات أرقى وأثمن في نهاية المطاف من التنفيذ وحده.</p><p>في الماضي كانت قيمة العمل تُقاس غالباً بحجم الجهد المبذول والوقت اللازم لإنجازه، رغم أن الأخطاء كانت حتمية. كانت تلك ببساطة طبيعة العمل اليدوي والذهني.</p><p>أما اليوم فهذا المعيار يتغيّر. التركيز ينتقل من عدد الساعات المبذولة إلى جودة القرار ودقّة النتيجة.</p><p>لم يعد السؤال: «كم استغرق ذلك من وقت؟»</p><p>صار السؤال: «هل اتخذت القرار الصحيح، وهل حققت النتيجة الصحيحة؟»</p><p>هذا التحوّل لا يقلّل من أهمية الإسهام البشري، بل على العكس يجعله أشدّ حسماً. فالذكاء الاصطناعي ينفّذ المهام بسرعة مذهلة، لكنه لا يحدّد الأهداف، ولا يفهم سياق العمل فهماً كاملاً، ولا يتحمّل مسؤولية القرارات. تبقى هذه المسؤوليات بشرية في جوهرها.</p><p>بالطبع قد يُضعف الذكاء الاصطناعي قدرات المرء إذا استُخدم بديلاً عن التعلّم والفهم. أما حين يُستخدم أداةً لرفع الإنتاجية وتوسيع المعرفة، فإنه يقوّي تفكيرنا بدل أن يحلّ محلّه.</p><p>وفي النهاية أعتقد أن الغاية الحقيقية للذكاء الاصطناعي ليست أن يفكّر عنّا، بل أن يزيل الجهد غير الضروري، ويقلّص الوقت المهدور في التنفيذ المتكرّر، ويتيح لنا التركيز على ما لا تستطيع الآلات استبداله بعد: التفكير النقدي، وسلامة الحكم، والإبداع، والمساءلة.</p><p>لن تكون أثمن مهارة في السنوات القادمة هي القدرة على أداء كل مهمة يدوياً، بل القدرة على التفكير بوضوح، واتخاذ قرارات مدروسة، وتوظيف الذكاء الاصطناعي بفعالية لتحقيق نتائج ذات معنى.</p>"
     },
     "end": {
       "title": "لنبنِ شيئاً<br><em>يبقى</em>",
