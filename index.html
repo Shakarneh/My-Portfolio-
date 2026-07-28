@@ -374,13 +374,8 @@ a{color:inherit}
 
 /* ── journey ───────────────────────────────────── */
 .tl{display:grid;gap:0;padding-bottom:60px}
-.step{display:grid;grid-template-columns:120px 1fr 300px;gap:clamp(18px,3.5vw,48px);align-items:start;padding:clamp(26px,4vh,44px) 0;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:1fr 300px;gap:clamp(18px,3.5vw,48px);align-items:start;padding:clamp(26px,4vh,44px) 0;border-top:1px solid var(--line)}
 @media(max-width:860px){.step{grid-template-columns:1fr;gap:16px}}
-.step .yr{font-family:var(--mono);font-size:.8rem;color:var(--yc);padding-top:5px;font-weight:500}
-.step:nth-child(1){--yc:var(--clay)}
-.step:nth-child(2){--yc:var(--teal)}
-.step:nth-child(3){--yc:var(--mustard)}
-.step:nth-child(4){--yc:var(--rust)}
 .step{perspective:1000px}
 .step figure{transition:transform .5s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d;will-change:transform}
 .step h4{font-size:clamp(1.15rem,2.7vw,1.7rem);font-weight:700;letter-spacing:-.02em;margin-bottom:9px}
@@ -393,6 +388,8 @@ a{color:inherit}
 .step:hover figure img,.step:hover figure video{filter:grayscale(0);transform:scale(1.03)}
 /* touch devices have no hover, so scrolling into view does the reveal instead */
 .step.lit figure img,.step.lit figure video{filter:grayscale(0) contrast(1.02)}
+/* the opening step carries a before/after pair, stacked in the media column */
+.step .pair{display:grid;gap:12px}
 
 /* ── closing ───────────────────────────────────── */
 .end{padding:clamp(90px,16vh,190px) 0 clamp(50px,8vh,90px);border-top:1px solid var(--line);text-align:center}
@@ -466,8 +463,7 @@ footer{padding:26px 0 40px;display:flex;justify-content:space-between;gap:16px;f
 
   /* journey: photo first reads better than a stranded caption */
   .step{gap:14px}
-  .step figure{order:-1}
-  .step .yr{padding-top:0}
+  .step figure,.step .pair{order:-1}
 
   /* two videos side by side is unreadable at this width */
   .duo{grid-template-columns:1fr}
@@ -1039,24 +1035,19 @@ footer span:first-child{font-weight:600;color:var(--ink)}
   </div>
   <div class="tl">
     <div class="step rv">
-      <div class="yr">2021 — 2023</div>
-      <div><h4 data-i18n="journey.t1">Two laptops on a wooden board</h4><p data-i18n="journey.j1">Before university I ran my own eBay store for two years — sourcing, pricing, logistics, customer support in Russian and English, 100% positive reviews. The setup was never what mattered.</p></div>
-      <figure><img src="assets/photos/desk-old-cluttered.jpg" alt="The first desk — everything piled on one old table"></figure>
+      <div><h4 data-i18n="journey.t1">From one crowded desk to a setup that keeps up</h4><p data-i18n="journey.j1">It started at a single old wooden desk with everything crowded onto it — notebooks, printouts, cables and an old laptop already past its best. As the workload grew and I took on more projects, that setup stopped keeping up, so I upgraded both: a proper desk and a far more powerful computer. The equipment was never what mattered — it just stopped getting in the way.</p></div>
+      <div class="pair">
+        <figure><img src="assets/photos/desk-old-cluttered.jpg" alt="The first desk — everything piled on one old table"></figure>
+        <figure><img src="assets/photos/desk-new-monitor.jpg" alt="The current desk — a machine that keeps up"></figure>
+      </div>
     </div>
     <div class="step rv">
-      <div class="yr">2023</div>
       <div><h4 data-i18n="journey.t2">Russian, from zero</h4><p data-i18n="journey.j2">A 250-hour language course in Bethlehem, then a preparatory year at SWSU in Kursk — studying in a language I was still learning.</p></div>
       <figure><video src="assets/media/study-library.mp4" autoplay muted loop playsinline></video></figure>
     </div>
     <div class="step rv">
-      <div class="yr">2023 — 2027</div>
       <div><h4 data-i18n="journey.t3">BSTU named after V.G. Shukhov</h4><p data-i18n="journey.j3">B.Sc. Information Systems &amp; Technologies, Belgorod. Web Technologies — 5, IT Project Management — 5.</p></div>
       <figure><img src="assets/photos/award-bstu.jpg" alt="Award ceremony at BSTU"></figure>
-    </div>
-    <div class="step rv">
-      <div class="yr">2026</div>
-      <div><h4 data-i18n="journey.t4">First real back-end, then production</h4><p data-i18n="journey.j4">Built the admin API at Expert Choice CIS, then shipped a store that serves real customers every day. Same person — better tools, and a desk.</p></div>
-      <figure><img src="assets/photos/desk-new-monitor.jpg" alt="The current desk — a machine that keeps up"></figure>
     </div>
   </div>
 </section>
