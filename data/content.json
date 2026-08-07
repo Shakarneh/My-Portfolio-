@@ -144,6 +144,15 @@
       "v3": "Charts & insights",
       "note": "<b>What stayed with me.</b> Real data is messy. The analysis is the easy half — making the data trustworthy is the work. Validate early: that habit went straight into my back-end."
     },
+    "p7": {
+      "tag": "Live · deployed on Render",
+      "title": "bench<b>Flow</b>",
+      "lede": "An IT outstaffing company has to decide who goes on which client request — fast, and without over-committing anyone. Done properly that is the assignment problem, not a CRUD form.",
+      "v1": "Solo — domain to deployment",
+      "v2": "649 tests · 21 phases",
+      "v3": "Live, with CI/CD",
+      "note": "<b>The hard part.</b> The matcher. A greedy algorithm left one client unstaffed to save 47 in cost — locally optimal, globally wrong. The Hungarian algorithm fills every request, and it is checked against brute force on 200 random worlds, because you don't ship an algorithm you can't prove."
+    },
     "journey": {
       "eyebrow": "The road",
       "title": "Where I<br>started",
@@ -322,6 +331,15 @@
       "v3": "Графики и выводы",
       "note": "<b>Что осталось со мной.</b> Реальные данные грязные. Анализ — лёгкая половина, работа в том, чтобы данным можно было доверять. Проверяй рано: эта привычка перешла прямо в мой backend."
     },
+    "p7": {
+      "tag": "В продакшене · развёрнут на Render",
+      "title": "bench<b>Flow</b>",
+      "lede": "ИТ-аутстаффинговой компании нужно решать, кого поставить на какой запрос клиента — быстро и никого не перегружая. Сделанное правильно, это задача о назначениях, а не CRUD-форма.",
+      "v1": "Соло — от домена до деплоя",
+      "v2": "649 тестов · 21 этап",
+      "v3": "В продакшене, с CI/CD",
+      "note": "<b>Самое сложное.</b> Матчер. Жадный алгоритм оставил клиента без специалиста ради экономии 47 — локально оптимально, глобально неверно. Венгерский алгоритм закрывает все запросы, и он сверен с полным перебором на 200 случайных сценариях: нельзя выпускать алгоритм, который не можешь доказать."
+    },
     "journey": {
       "eyebrow": "Дорога",
       "title": "С чего<br>я начал",
@@ -499,6 +517,15 @@
       "v2": "2020 – 2023",
       "v3": "رسوم ونتائج",
       "note": "<b>ما بقي معي.</b> البيانات الحقيقية فوضوية. التحليل هو النصف السهل — العمل الحقيقي أن تجعل البيانات جديرة بالثقة. تحقّق مبكراً: هذه العادة انتقلت مباشرة إلى عملي في الواجهة الخلفية."
+    },
+    "p7": {
+      "tag": "يعمل الآن · منشور على Render",
+      "title": "bench<b>Flow</b>",
+      "lede": "شركة الاستقدام التقني عليها أن تقرّر من يذهب إلى أي طلب من العملاء — بسرعة، ودون تحميل أحد فوق طاقته. القيام بذلك على الوجه الصحيح هو «مسألة الإسناد»، لا مجرد نموذج CRUD.",
+      "v1": "منفرداً — من النطاق إلى النشر",
+      "v2": "649 اختباراً · 21 مرحلة",
+      "v3": "يعمل الآن، مع CI/CD",
+      "note": "<b>الجزء الصعب.</b> محرّك المطابقة. الخوارزمية الجشعة تركت عميلاً دون فريق لتوفّر 47 في التكلفة — مثالية محلياً وخاطئة عالمياً. الخوارزمية المجرية تملأ كل الطلبات، وقد تم التحقق منها مقابل البحث الشامل في 200 سيناريو عشوائي، لأنك لا تُطلق خوارزمية لا تستطيع إثباتها."
     },
     "journey": {
       "eyebrow": "الطريق",
