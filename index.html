@@ -80,6 +80,7 @@ html[data-tone="mauve"] .bg{--c0:#120818;--c1:#a43444;--c2:#b3568b;--c3:#dc683c;
 html[data-tone="lagoon"] .bg{--c0:#06120f;--c1:#2ba9a4;--c2:#248c65;--c3:#ff737d;--c4:#02353c}
 html[data-tone="oat"] .bg{--c0:#140a0c;--c1:#a43444;--c2:#dc683c;--c3:#7d9e6c;--c4:#3a1f24}
 html[data-tone="ash"] .bg{--c0:#0d0a12;--c1:#592337;--c2:#331f39;--c3:#3d2f68;--c4:#1a1220}
+html[data-tone="bronze"] .bg{--c0:#120c08;--c1:#a86a2e;--c2:#dc683c;--c3:#5b6b3a;--c4:#2e1d10}
 html[data-tone="close"] .bg{--c0:#120a1a;--c1:#f8275b;--c2:#dc683c;--c3:#331f39;--c4:#1f0f24}
 
 
@@ -718,7 +719,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
   <div class="nav-in">
     <div class="avail"><span class="pulse"></span> <span data-i18n="nav.available">Available for work</span></div>
     <div class="nav-mid">
-      <a href="#work"><span data-i18n="nav.work">Work</span><sup>6</sup></a>
+      <a href="#work"><span data-i18n="nav.work">Work</span><sup>7</sup></a>
       <a href="#architecture" data-i18n="nav.arch">Architecture</a>
       <a href="#journey" data-i18n="nav.journey">Journey</a>
       <a href="#articles" data-i18n="nav.articles">Articles</a>
@@ -876,10 +877,48 @@ footer span:first-child{font-weight:600;color:var(--ink)}
   </div>
 </div>
 
+<section class="proj flip shell rv" data-tone="bronze" style="--a1:var(--amber);--a2:var(--sage)">
+  <div class="proj-grid">
+    <div class="vis" data-tilt>
+      <figure class="shot"><img data-par src="assets/projects/benchflow/dashboard.png" alt="The benchFlow dashboard listing open client requests with their skills, dates and budgets"></figure>
+      <!-- the result shot is 907px wide, so it goes full width where nothing
+           scales it up -- in the parallax frame it would upscale and soften -->
+      <div class="duo one">
+        <img src="assets/projects/benchflow/dashboard-result.png" alt="benchFlow proposing a specialist for a client request, with every rejected candidate showing the exact reason" loading="lazy">
+      </div>
+      <div class="duo">
+        <img src="assets/projects/benchflow/admin.png" alt="The Django admin, rethemed to match" loading="lazy">
+        <img src="assets/projects/benchflow/swagger.png" alt="The auto-generated OpenAPI documentation" loading="lazy">
+      </div>
+    </div>
+    <div class="proj-txt">
+      <div class="idx">01</div>
+      <div class="tag"><i></i> <span data-i18n="p7.tag">Live · deployed on Render</span></div>
+      <h3 data-i18n-html="p7.title">bench<b>Flow</b></h3>
+      <p class="lede" data-i18n="p7.lede">An IT outstaffing company has to decide who goes on which client request — fast, and without over-committing anyone. Done properly that is the assignment problem, not a CRUD form.</p>
+      <dl class="spec">
+        <div><dt data-i18n="work.role">Role</dt><dd data-i18n="p7.v1">Solo — domain to deployment</dd></div>
+        <div><dt data-i18n="work.scale">Scale</dt><dd data-i18n="p7.v2">649 tests · 21 phases</dd></div>
+        <div><dt data-i18n="work.status">Status</dt><dd data-i18n="p7.v3">Live, with CI/CD</dd></div>
+      </dl>
+      <p class="note-h" data-i18n-html="p7.note"><b>The hard part.</b> The matcher. A greedy algorithm left one client unstaffed to save 47 in cost — locally optimal, globally wrong. The Hungarian algorithm fills every request, and it is checked against brute force on 200 random worlds, because you don't ship an algorithm you can't prove.</p>
+      <div class="chips">
+        <span class="chip">Python 3.13</span><span class="chip">Django 5.2</span><span class="chip">DRF</span><span class="chip">PostgreSQL</span>
+        <span class="chip">Redis</span><span class="chip">Celery</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span>
+        <span class="chip">pytest</span><span class="chip">mypy</span>
+      </div>
+      <div class="acts">
+        <a class="act solid" href="https://benchflow-qfzq.onrender.com" data-i18n="work.visit" target="_blank" rel="noopener">Visit site →</a>
+        <a class="act" href="https://github.com/Shakarneh/BenchFlow" data-i18n="work.source" target="_blank" rel="noopener">Source</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="proj shell rv" data-tone="blush" style="--a1:var(--rust);--a2:var(--amber)">
   <div class="proj-grid">
     <div class="proj-txt">
-      <div class="idx">01</div>
+      <div class="idx">02</div>
       <div class="tag"><i></i> <span data-i18n="p1.tag">Live in production</span></div>
       <h3 data-i18n-html="p1.title">Lolo <b>Cosmetics</b></h3>
       <p class="lede" data-i18n="p1.lede">A real beauty brand was selling through WhatsApp screenshots — no catalogue, no stock control, no way to scale. I built the whole thing, front to back.</p>
@@ -922,7 +961,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
       </div>
     </div>
     <div class="proj-txt">
-      <div class="idx">02</div>
+      <div class="idx">03</div>
       <div class="tag"><i></i> <span data-i18n="p2.tag">Internship · Expert Choice CIS</span></div>
       <h3 data-i18n-html="p2.title">Attendance <b>System</b></h3>
       <p class="lede" data-i18n="p2.lede">Attendance lived on paper and in Excel. One administrator spent 3–5 hours merging it by hand — every single time. I built the back-end everything else sits on.</p>
@@ -944,7 +983,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
 <section class="proj shell rv" data-tone="slate" style="--a1:var(--navy);--a2:var(--mustard)">
   <div class="proj-grid">
     <div class="proj-txt">
-      <div class="idx">03</div>
+      <div class="idx">04</div>
       <div class="tag"><i></i> <span data-i18n="p3.tag">Live · deployed</span></div>
       <h3 data-i18n-html="p3.title">AI <b>Knowledge</b></h3>
       <p class="lede" data-i18n="p3.lede">A full-stack site about artificial intelligence — written from scratch in PHP, with no framework anywhere in it.</p>
@@ -980,7 +1019,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
       </div>
     </div>
     <div class="proj-txt">
-      <div class="idx">04</div>
+      <div class="idx">05</div>
       <div class="tag"><i></i> <span data-i18n="p4.tag">Shipped · with a real installer</span></div>
       <h3 data-i18n-html="p4.title">My <b>Notes</b></h3>
       <p class="lede" data-i18n="p4.lede">A Windows desktop app written in Python — not a web app in a wrapper. You download it, install it, and it runs.</p>
@@ -999,7 +1038,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
 <section class="proj shell rv" data-tone="lagoon" style="--a1:var(--teal);--a2:var(--coral)">
   <div class="proj-grid">
     <div class="proj-txt">
-      <div class="idx">05</div>
+      <div class="idx">06</div>
       <div class="tag"><i></i> <span data-i18n="p5.tag">Foundations · a second language</span></div>
       <h3 data-i18n-html="p5.title">Java <b>Labs</b></h3>
       <p class="lede" data-i18n="p5.lede">Five progressive labs: OOP, log4j2 logging, regex, XML parsing with SAX/DOM, and MySQL over JDBC.</p>
@@ -1027,7 +1066,7 @@ footer span:first-child{font-weight:600;color:var(--ink)}
       <figure class="shot"><img data-par src="assets/projects/data-analysis/dataset.png" alt="Dataset"></figure>
     </div>
     <div class="proj-txt">
-      <div class="idx">06</div>
+      <div class="idx">07</div>
       <div class="tag"><i></i> <span data-i18n="p6.tag">Python · SQL</span></div>
       <h3 data-i18n-html="p6.title">Data <b>Analysis</b></h3>
       <p class="lede" data-i18n="p6.lede">Three projects on real datasets, not tutorial ones — COVID-19 global trends, supermarket revenue, and SQL store analytics.</p>
