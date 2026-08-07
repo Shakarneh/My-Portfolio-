@@ -396,6 +396,11 @@ a{color:inherit}
 .post{max-width:66ch;padding:clamp(26px,4vh,44px) 0;border-top:1px solid var(--line)}
 .post h3{font-size:clamp(1.25rem,3vw,2rem);font-weight:700;letter-spacing:-.02em;line-height:1.22;margin-bottom:12px}
 .post-lede{color:var(--ink-2);margin-bottom:18px}
+.post-img{margin:0 0 20px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--card)}
+/* height:auto is required: the width/height attributes on the img reserve
+   space against layout shift, but without this the browser uses that literal
+   height and stretches the picture. */
+.post-img img{width:100%;height:auto;display:block}
 .post-body{border-top:1px solid var(--line);padding-top:14px}
 .post-body summary{
   cursor:pointer;list-style:none;font-family:var(--mono);font-size:.74rem;
